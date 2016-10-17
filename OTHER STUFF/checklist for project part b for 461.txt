@@ -1,0 +1,22 @@
+To do list for part B:
+-login through google, log out button
+-basic functionalities of each page
+-basic design of each of our 3 pages (grocery list, kitchen list, login)
+-add/delete items
+-database: storing data (associated with users)
+
+
+
+
+
+Later:
+-importing from lists (when removing items off one list)
+-expiration dates and amount
+-notifications for expiration
+-api with cost
+
+
+Stretch goals:
+-synchronizing grocery lists between roommates
+-requesting ingredients/items from friends
+-settings: colors, how often for reminders, 
