@@ -2,74 +2,94 @@
 <items version="2" >
 
     <item
-        jar="/Users/sonal/Library/Android/sdk/extras/android/m2repository/com/android/support/support-annotations/23.4.0/support-annotations-23.4.0.jar"
+        is-multidex="true"
+        jar="C:\Users\Ali\Documents\My-Easy-Kitchen\app\build\intermediates\exploded-aar\com.android.support\support-v4\23.4.0\jars\libs\internal_impl-23.4.0.jar"
         jumboMode="true"
-        revision="23.0.3"
-        sha1="ffbe55fdb2bb456b1485831706a9eac3300bb6b8">
-        <dex dex="/Users/sonal/Documents/Android/My-Easy-Kitchen/app/build/intermediates/transforms/dex/debug/folders/1000/10/support-annotations-23.4.0_099e8c1397a8af319b78d664baa95b957f051cb0/classes.dex" />
-    </item>
-    <item
-        jar="/Users/sonal/Documents/Android/My-Easy-Kitchen/app/build/intermediates/exploded-aar/com.android.support/design/23.4.0/jars/classes.jar"
-        jumboMode="true"
-        revision="23.0.3"
-        sha1="5326d9a850d491714fef8cbfaa9ea3416f0bf0d2">
-        <dex dex="/Users/sonal/Documents/Android/My-Easy-Kitchen/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-design-23.4.0_35009a083ba622da33effe51d64988eba994d687/classes.dex" />
-    </item>
-    <item
-        jar="/Users/sonal/Documents/Android/My-Easy-Kitchen/app/build/intermediates/incremental-classes/debug/instant-run-bootstrap.jar"
-        jumboMode="true"
-        revision="23.0.3"
-        sha1="fa5c1919a25fd4e3313308a1e43f69362a8dbca1">
-        <dex dex="/Users/sonal/Documents/Android/My-Easy-Kitchen/app/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run-bootstrap_3771812953dc91ff9d169a7b2c5b072f78e34fb9/classes.dex" />
-    </item>
-    <item
-        jar="/Users/sonal/Documents/Android/My-Easy-Kitchen/app/build/intermediates/incremental-runtime-classes/debug/instant-run.jar"
-        jumboMode="true"
-        revision="23.0.3"
-        sha1="89821942513771e35b7ddae30407a090dd340bff">
-        <dex dex="/Users/sonal/Documents/Android/My-Easy-Kitchen/app/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run_027484de7cacaca1740ad4112be1e235d9aaeee6/classes.dex" />
-    </item>
-    <item
-        jar="/Users/sonal/Documents/Android/My-Easy-Kitchen/app/build/intermediates/exploded-aar/com.android.support/support-vector-drawable/23.4.0/jars/classes.jar"
-        jumboMode="true"
-        revision="23.0.3"
-        sha1="c2c594cace5d83a3227b2b6e658ecbfd586d3ed9">
-        <dex dex="/Users/sonal/Documents/Android/My-Easy-Kitchen/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-support-vector-drawable-23.4.0_7cdb3405432148b7100e932931f46e4e4795c813/classes.dex" />
-    </item>
-    <item
-        jar="/Users/sonal/Documents/Android/My-Easy-Kitchen/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.4.0/jars/classes.jar"
-        jumboMode="true"
-        revision="23.0.3"
-        sha1="548f06de403a9409f00554b3ee12a9fdea0e236c">
-        <dex dex="/Users/sonal/Documents/Android/My-Easy-Kitchen/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-appcompat-v7-23.4.0_7061ccfb8215f4e18cb5b5e4159ddd0fd6951c42/classes.dex" />
-    </item>
-    <item
-        jar="/Users/sonal/Documents/Android/My-Easy-Kitchen/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.4.0/jars/classes.jar"
-        jumboMode="true"
-        revision="23.0.3"
-        sha1="67bd36ee9340ec7c254108936ad16b24bed160cc">
-        <dex dex="/Users/sonal/Documents/Android/My-Easy-Kitchen/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-support-v4-23.4.0_492dfb80b4bc4da5d7e667e1f17671358ae69683/classes.dex" />
-    </item>
-    <item
-        jar="/Users/sonal/Documents/Android/My-Easy-Kitchen/app/build/intermediates/exploded-aar/com.android.support/recyclerview-v7/23.4.0/jars/classes.jar"
-        jumboMode="true"
-        revision="23.0.3"
-        sha1="ec75036c3c52e451d0cde50a5aedaf5fd32354a0">
-        <dex dex="/Users/sonal/Documents/Android/My-Easy-Kitchen/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-recyclerview-v7-23.4.0_f3ae3e45cd5ad66f7f1c109c5e169b8b666fe11d/classes.dex" />
-    </item>
-    <item
-        jar="/Users/sonal/Documents/Android/My-Easy-Kitchen/app/build/intermediates/exploded-aar/com.android.support/animated-vector-drawable/23.4.0/jars/classes.jar"
-        jumboMode="true"
-        revision="23.0.3"
-        sha1="de4db3785756bfb0915a9f59a9b3f2fea7407be4">
-        <dex dex="/Users/sonal/Documents/Android/My-Easy-Kitchen/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-animated-vector-drawable-23.4.0_7afa0d165a054f7b1b926c2ae5484afb8b31545f/classes.dex" />
-    </item>
-    <item
-        jar="/Users/sonal/Documents/Android/My-Easy-Kitchen/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.4.0/jars/libs/internal_impl-23.4.0.jar"
-        jumboMode="true"
+        optimize="true"
         revision="23.0.3"
         sha1="ea3c07504d2c8f4b13aa17c45c1b68ed9c1c3674">
-        <dex dex="/Users/sonal/Documents/Android/My-Easy-Kitchen/app/build/intermediates/transforms/dex/debug/folders/1000/10/internal_impl-23.4.0_1d8c9645a56bcab72c2dbca94edcea92c8b7a254/classes.dex" />
+        <dex dex="C:\Users\Ali\Documents\My-Easy-Kitchen\app\build\intermediates\transforms\dex\debug\folders\1000\10\internal_impl-23.4.0_c66163f23ed37f5594e15f19518bf1b3613d1bf4\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Ali\Documents\My-Easy-Kitchen\app\build\intermediates\incremental-classes\debug\instant-run-bootstrap.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="23.0.3"
+        sha1="c541d4e3873392f5d74db723f0ab33bb6ba37e22">
+        <dex dex="C:\Users\Ali\Documents\My-Easy-Kitchen\app\build\intermediates\transforms\dex\debug\folders\1000\10\instant-run-bootstrap_b05719f385994dce5bc6e8d4c1114e512e66d9bb\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Ali\AppData\Local\Android\sdk\extras\android\m2repository\com\android\support\support-annotations\23.4.0\support-annotations-23.4.0.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="23.0.3"
+        sha1="ffbe55fdb2bb456b1485831706a9eac3300bb6b8">
+        <dex dex="C:\Users\Ali\Documents\My-Easy-Kitchen\app\build\intermediates\transforms\dex\debug\folders\1000\10\support-annotations-23.4.0_313a571cb89767c7be671d7b82e7dd35b3cedbd9\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Ali\Documents\My-Easy-Kitchen\app\build\intermediates\incremental-runtime-classes\debug\instant-run.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="23.0.3"
+        sha1="13d390ae8a0a6086121ca16cc576629ad0f4a46e">
+        <dex dex="C:\Users\Ali\Documents\My-Easy-Kitchen\app\build\intermediates\transforms\dex\debug\folders\1000\10\instant-run_2ff2f894f6b8397246f7c4a3edaedc43321bebce\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Ali\Documents\My-Easy-Kitchen\app\build\intermediates\exploded-aar\com.android.support\recyclerview-v7\23.4.0\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="23.0.3"
+        sha1="ec75036c3c52e451d0cde50a5aedaf5fd32354a0">
+        <dex dex="C:\Users\Ali\Documents\My-Easy-Kitchen\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-recyclerview-v7-23.4.0_32e8cd87ad1e1f049031d7409eb6974508b23266\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Ali\Documents\My-Easy-Kitchen\app\build\intermediates\exploded-aar\com.android.support\animated-vector-drawable\23.4.0\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="23.0.3"
+        sha1="de4db3785756bfb0915a9f59a9b3f2fea7407be4">
+        <dex dex="C:\Users\Ali\Documents\My-Easy-Kitchen\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-animated-vector-drawable-23.4.0_dfc2f8c661a86b3d77c9054c6085a2f3861858c9\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Ali\Documents\My-Easy-Kitchen\app\build\intermediates\exploded-aar\com.android.support\support-vector-drawable\23.4.0\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="23.0.3"
+        sha1="c2c594cace5d83a3227b2b6e658ecbfd586d3ed9">
+        <dex dex="C:\Users\Ali\Documents\My-Easy-Kitchen\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-support-vector-drawable-23.4.0_83a0343c0f4b4438a82b518f80aa3c96a363b04b\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Ali\Documents\My-Easy-Kitchen\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\23.4.0\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="23.0.3"
+        sha1="548f06de403a9409f00554b3ee12a9fdea0e236c">
+        <dex dex="C:\Users\Ali\Documents\My-Easy-Kitchen\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-appcompat-v7-23.4.0_b02fcec21ef1dee23b7901f431bd0fed9b7b9ddc\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Ali\Documents\My-Easy-Kitchen\app\build\intermediates\exploded-aar\com.android.support\design\23.4.0\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="23.0.3"
+        sha1="5326d9a850d491714fef8cbfaa9ea3416f0bf0d2">
+        <dex dex="C:\Users\Ali\Documents\My-Easy-Kitchen\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-design-23.4.0_da850a3226515e2a5c47b227784d883dfd94dcac\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Ali\Documents\My-Easy-Kitchen\app\build\intermediates\exploded-aar\com.android.support\support-v4\23.4.0\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="23.0.3"
+        sha1="67bd36ee9340ec7c254108936ad16b24bed160cc">
+        <dex dex="C:\Users\Ali\Documents\My-Easy-Kitchen\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-support-v4-23.4.0_02bbcded8957ac9c95181a59b7dfea884acfc374\classes.dex" />
     </item>
 
 </items>

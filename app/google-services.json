@@ -1,0 +1,59 @@
+{
+  "project_info": {
+    "project_number": "936145210267",
+    "firebase_url": "https://my-easy-kitchen.firebaseio.com",
+    "project_id": "my-easy-kitchen",
+    "storage_bucket": "my-easy-kitchen.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:936145210267:android:daa87a7be157ecac",
+        "android_client_info": {
+          "package_name": "com.myeasykitchen.myeasykitchen"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "936145210267-ofihb5vd4b56plcpk11j0hm9v0ml1b2p.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.myeasykitchen.myeasykitchen",
+            "certificate_hash": "98654CC010577F426D5E42F0811CFD2416F8F4F6"
+          }
+        },
+        {
+          "client_id": "936145210267-gg341qnqfipe3n1t3vpgtgjpqcfilm3m.apps.googleusercontent.com",
+          "client_type": 3
+        },
+        {
+          "client_id": "936145210267-026n799vund6peboh0781ek1ovkrfoch.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAduQVhs-cw8tUvU2cUmfgiPrn3azIIeNU"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "936145210267-gg341qnqfipe3n1t3vpgtgjpqcfilm3m.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
