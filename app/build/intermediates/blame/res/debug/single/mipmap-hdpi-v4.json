@@ -1,10 +1,6 @@
 [
     {
-        "merged": "C:\\Users\\Ali\\Documents\\MyEasyKitchen\\MyEasyKitchen\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-hdpi-v4\\ic_launcher.png",
-        "source": "C:\\Users\\Ali\\Documents\\MyEasyKitchen\\MyEasyKitchen\\app\\src\\main\\res\\mipmap-hdpi\\ic_launcher.png"
-    },
-    {
-        "merged": "C:\\Users\\Ali\\Documents\\My-Easy-Kitchen\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-hdpi-v4\\ic_launcher.png",
-        "source": "C:\\Users\\Ali\\Documents\\My-Easy-Kitchen\\app\\src\\main\\res\\mipmap-hdpi\\ic_launcher.png"
+        "merged": "/Users/sonal/Documents/Android/My-Easy-Kitchen/app/build/intermediates/res/merged/debug/mipmap-hdpi-v4/ic_launcher.png",
+        "source": "/Users/sonal/Documents/Android/My-Easy-Kitchen/app/src/main/res/mipmap-hdpi/ic_launcher.png"
     }
 ]

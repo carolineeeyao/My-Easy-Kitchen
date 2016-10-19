@@ -28,7 +28,10 @@
         </activity>
         <activity
             android:name="com.myeasykitchen.myeasykitchen.LoginActivity"
-            android:label="@string/title_activity_login" />
+            android:label="@string/title_activity_login" >
+        </activity>
+        <activity android:name="com.myeasykitchen.myeasykitchen.KitchenActivity" />
+        <activity android:name="com.myeasykitchen.myeasykitchen.AddItemActivity" />
     </application>
 
 </manifest>
