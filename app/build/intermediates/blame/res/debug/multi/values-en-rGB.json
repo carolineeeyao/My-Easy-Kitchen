@@ -368,17 +368,17 @@
                     "startLine": 21,
                     "startColumn": 4,
                     "startOffset": 2019,
-                    "endColumn": 261,
-                    "endOffset": 2276
+                    "endColumn": 106,
+                    "endOffset": 2121
                 },
                 "from": {
-                    "file": "C:\\Users\\Ali\\Documents\\My-Easy-Kitchen\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-base\\9.2.1\\res\\values-en-rGB\\values.xml",
+                    "file": "C:\\Users\\Ali\\Documents\\My-Easy-Kitchen\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-base\\9.6.1\\res\\values-en-rGB\\values.xml",
                     "position": {
                         "startLine": 4,
                         "startColumn": 4,
-                        "startOffset": 333,
-                        "endColumn": 261,
-                        "endOffset": 590
+                        "startOffset": 344,
+                        "endColumn": 106,
+                        "endOffset": 446
                     }
                 }
             },
@@ -386,18 +386,18 @@
                 "to": {
                     "startLine": 22,
                     "startColumn": 4,
-                    "startOffset": 2281,
-                    "endColumn": 127,
-                    "endOffset": 2404
+                    "startOffset": 2126,
+                    "endColumn": 183,
+                    "endOffset": 2305
                 },
                 "from": {
-                    "file": "C:\\Users\\Ali\\Documents\\My-Easy-Kitchen\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-base\\9.2.1\\res\\values-en-rGB\\values.xml",
+                    "file": "C:\\Users\\Ali\\Documents\\My-Easy-Kitchen\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-base\\9.6.1\\res\\values-en-rGB\\values.xml",
                     "position": {
                         "startLine": 5,
                         "startColumn": 4,
-                        "startOffset": 595,
-                        "endColumn": 127,
-                        "endOffset": 718
+                        "startOffset": 451,
+                        "endColumn": 183,
+                        "endOffset": 630
                     }
                 }
             },
@@ -405,18 +405,18 @@
                 "to": {
                     "startLine": 23,
                     "startColumn": 4,
-                    "startOffset": 2409,
-                    "endColumn": 183,
-                    "endOffset": 2588
+                    "startOffset": 2310,
+                    "endColumn": 126,
+                    "endOffset": 2432
                 },
                 "from": {
-                    "file": "C:\\Users\\Ali\\Documents\\My-Easy-Kitchen\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-base\\9.2.1\\res\\values-en-rGB\\values.xml",
+                    "file": "C:\\Users\\Ali\\Documents\\My-Easy-Kitchen\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-base\\9.6.1\\res\\values-en-rGB\\values.xml",
                     "position": {
                         "startLine": 6,
                         "startColumn": 4,
-                        "startOffset": 723,
-                        "endColumn": 183,
-                        "endOffset": 902
+                        "startOffset": 635,
+                        "endColumn": 126,
+                        "endOffset": 757
                     }
                 }
             },
@@ -424,18 +424,18 @@
                 "to": {
                     "startLine": 24,
                     "startColumn": 4,
-                    "startOffset": 2593,
-                    "endColumn": 126,
-                    "endOffset": 2715
+                    "startOffset": 2437,
+                    "endColumn": 108,
+                    "endOffset": 2541
                 },
                 "from": {
-                    "file": "C:\\Users\\Ali\\Documents\\My-Easy-Kitchen\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-base\\9.2.1\\res\\values-en-rGB\\values.xml",
+                    "file": "C:\\Users\\Ali\\Documents\\My-Easy-Kitchen\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-base\\9.6.1\\res\\values-en-rGB\\values.xml",
                     "position": {
                         "startLine": 7,
                         "startColumn": 4,
-                        "startOffset": 907,
-                        "endColumn": 126,
-                        "endOffset": 1029
+                        "startOffset": 762,
+                        "endColumn": 108,
+                        "endOffset": 866
                     }
                 }
             },
@@ -443,18 +443,18 @@
                 "to": {
                     "startLine": 25,
                     "startColumn": 4,
-                    "startOffset": 2720,
-                    "endColumn": 125,
-                    "endOffset": 2841
+                    "startOffset": 2546,
+                    "endColumn": 214,
+                    "endOffset": 2756
                 },
                 "from": {
-                    "file": "C:\\Users\\Ali\\Documents\\My-Easy-Kitchen\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-base\\9.2.1\\res\\values-en-rGB\\values.xml",
+                    "file": "C:\\Users\\Ali\\Documents\\My-Easy-Kitchen\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-base\\9.6.1\\res\\values-en-rGB\\values.xml",
                     "position": {
                         "startLine": 8,
                         "startColumn": 4,
-                        "startOffset": 1034,
-                        "endColumn": 125,
-                        "endOffset": 1155
+                        "startOffset": 871,
+                        "endColumn": 214,
+                        "endOffset": 1081
                     }
                 }
             },
@@ -462,18 +462,18 @@
                 "to": {
                     "startLine": 26,
                     "startColumn": 4,
-                    "startOffset": 2846,
-                    "endColumn": 214,
-                    "endOffset": 3056
+                    "startOffset": 2761,
+                    "endColumn": 216,
+                    "endOffset": 2973
                 },
                 "from": {
-                    "file": "C:\\Users\\Ali\\Documents\\My-Easy-Kitchen\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-base\\9.2.1\\res\\values-en-rGB\\values.xml",
+                    "file": "C:\\Users\\Ali\\Documents\\My-Easy-Kitchen\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-base\\9.6.1\\res\\values-en-rGB\\values.xml",
                     "position": {
                         "startLine": 9,
                         "startColumn": 4,
-                        "startOffset": 1160,
-                        "endColumn": 214,
-                        "endOffset": 1370
+                        "startOffset": 1086,
+                        "endColumn": 216,
+                        "endOffset": 1298
                     }
                 }
             },
@@ -481,18 +481,18 @@
                 "to": {
                     "startLine": 27,
                     "startColumn": 4,
-                    "startOffset": 3061,
-                    "endColumn": 216,
-                    "endOffset": 3273
+                    "startOffset": 2978,
+                    "endColumn": 124,
+                    "endOffset": 3098
                 },
                 "from": {
-                    "file": "C:\\Users\\Ali\\Documents\\My-Easy-Kitchen\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-base\\9.2.1\\res\\values-en-rGB\\values.xml",
+                    "file": "C:\\Users\\Ali\\Documents\\My-Easy-Kitchen\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-base\\9.6.1\\res\\values-en-rGB\\values.xml",
                     "position": {
                         "startLine": 10,
                         "startColumn": 4,
-                        "startOffset": 1375,
-                        "endColumn": 216,
-                        "endOffset": 1587
+                        "startOffset": 1303,
+                        "endColumn": 124,
+                        "endOffset": 1423
                     }
                 }
             },
@@ -500,18 +500,18 @@
                 "to": {
                     "startLine": 28,
                     "startColumn": 4,
-                    "startOffset": 3278,
-                    "endColumn": 124,
-                    "endOffset": 3398
+                    "startOffset": 3103,
+                    "endColumn": 131,
+                    "endOffset": 3230
                 },
                 "from": {
-                    "file": "C:\\Users\\Ali\\Documents\\My-Easy-Kitchen\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-base\\9.2.1\\res\\values-en-rGB\\values.xml",
+                    "file": "C:\\Users\\Ali\\Documents\\My-Easy-Kitchen\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-base\\9.6.1\\res\\values-en-rGB\\values.xml",
                     "position": {
                         "startLine": 11,
                         "startColumn": 4,
-                        "startOffset": 1592,
-                        "endColumn": 124,
-                        "endOffset": 1712
+                        "startOffset": 1428,
+                        "endColumn": 131,
+                        "endOffset": 1555
                     }
                 }
             },
@@ -519,218 +519,9 @@
                 "to": {
                     "startLine": 29,
                     "startColumn": 4,
-                    "startOffset": 3403,
-                    "endColumn": 193,
-                    "endOffset": 3592
-                },
-                "from": {
-                    "file": "C:\\Users\\Ali\\Documents\\My-Easy-Kitchen\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-base\\9.2.1\\res\\values-en-rGB\\values.xml",
-                    "position": {
-                        "startLine": 12,
-                        "startColumn": 4,
-                        "startOffset": 1717,
-                        "endColumn": 193,
-                        "endOffset": 1906
-                    }
-                }
-            },
-            {
-                "to": {
-                    "startLine": 30,
-                    "startColumn": 4,
-                    "startOffset": 3597,
-                    "endColumn": 123,
-                    "endOffset": 3716
-                },
-                "from": {
-                    "file": "C:\\Users\\Ali\\Documents\\My-Easy-Kitchen\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-base\\9.2.1\\res\\values-en-rGB\\values.xml",
-                    "position": {
-                        "startLine": 13,
-                        "startColumn": 4,
-                        "startOffset": 1911,
-                        "endColumn": 123,
-                        "endOffset": 2030
-                    }
-                }
-            },
-            {
-                "to": {
-                    "startLine": 31,
-                    "startColumn": 4,
-                    "startOffset": 3721,
-                    "endColumn": 170,
-                    "endOffset": 3887
-                },
-                "from": {
-                    "file": "C:\\Users\\Ali\\Documents\\My-Easy-Kitchen\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-base\\9.2.1\\res\\values-en-rGB\\values.xml",
-                    "position": {
-                        "startLine": 14,
-                        "startColumn": 4,
-                        "startOffset": 2035,
-                        "endColumn": 170,
-                        "endOffset": 2201
-                    }
-                }
-            },
-            {
-                "to": {
-                    "startLine": 32,
-                    "startColumn": 4,
-                    "startOffset": 3892,
-                    "endColumn": 119,
-                    "endOffset": 4007
-                },
-                "from": {
-                    "file": "C:\\Users\\Ali\\Documents\\My-Easy-Kitchen\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-base\\9.2.1\\res\\values-en-rGB\\values.xml",
-                    "position": {
-                        "startLine": 15,
-                        "startColumn": 4,
-                        "startOffset": 2206,
-                        "endColumn": 119,
-                        "endOffset": 2321
-                    }
-                }
-            },
-            {
-                "to": {
-                    "startLine": 33,
-                    "startColumn": 4,
-                    "startOffset": 4012,
-                    "endColumn": 131,
-                    "endOffset": 4139
-                },
-                "from": {
-                    "file": "C:\\Users\\Ali\\Documents\\My-Easy-Kitchen\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-base\\9.2.1\\res\\values-en-rGB\\values.xml",
-                    "position": {
-                        "startLine": 16,
-                        "startColumn": 4,
-                        "startOffset": 2326,
-                        "endColumn": 131,
-                        "endOffset": 2453
-                    }
-                }
-            },
-            {
-                "to": {
-                    "startLine": 34,
-                    "startColumn": 4,
-                    "startOffset": 4144,
-                    "endColumn": 180,
-                    "endOffset": 4320
-                },
-                "from": {
-                    "file": "C:\\Users\\Ali\\Documents\\My-Easy-Kitchen\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-base\\9.2.1\\res\\values-en-rGB\\values.xml",
-                    "position": {
-                        "startLine": 17,
-                        "startColumn": 4,
-                        "startOffset": 2458,
-                        "endColumn": 180,
-                        "endOffset": 2634
-                    }
-                }
-            },
-            {
-                "to": {
-                    "startLine": 35,
-                    "startColumn": 4,
-                    "startOffset": 4325,
-                    "endColumn": 151,
-                    "endOffset": 4472
-                },
-                "from": {
-                    "file": "C:\\Users\\Ali\\Documents\\My-Easy-Kitchen\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-base\\9.2.1\\res\\values-en-rGB\\values.xml",
-                    "position": {
-                        "startLine": 18,
-                        "startColumn": 4,
-                        "startOffset": 2639,
-                        "endColumn": 151,
-                        "endOffset": 2786
-                    }
-                }
-            },
-            {
-                "to": {
-                    "startLine": 36,
-                    "startColumn": 4,
-                    "startOffset": 4477,
-                    "endColumn": 172,
-                    "endOffset": 4645
-                },
-                "from": {
-                    "file": "C:\\Users\\Ali\\Documents\\My-Easy-Kitchen\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-base\\9.2.1\\res\\values-en-rGB\\values.xml",
-                    "position": {
-                        "startLine": 19,
-                        "startColumn": 4,
-                        "startOffset": 2791,
-                        "endColumn": 172,
-                        "endOffset": 2959
-                    }
-                }
-            },
-            {
-                "to": {
-                    "startLine": 37,
-                    "startColumn": 4,
-                    "startOffset": 4650,
-                    "endColumn": 129,
-                    "endOffset": 4775
-                },
-                "from": {
-                    "file": "C:\\Users\\Ali\\Documents\\My-Easy-Kitchen\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-base\\9.2.1\\res\\values-en-rGB\\values.xml",
-                    "position": {
-                        "startLine": 20,
-                        "startColumn": 4,
-                        "startOffset": 2964,
-                        "endColumn": 129,
-                        "endOffset": 3089
-                    }
-                }
-            },
-            {
-                "to": {
-                    "startLine": 38,
-                    "startColumn": 4,
-                    "startOffset": 4780,
-                    "endColumn": 180,
-                    "endOffset": 4956
-                },
-                "from": {
-                    "file": "C:\\Users\\Ali\\Documents\\My-Easy-Kitchen\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-base\\9.2.1\\res\\values-en-rGB\\values.xml",
-                    "position": {
-                        "startLine": 21,
-                        "startColumn": 4,
-                        "startOffset": 3094,
-                        "endColumn": 180,
-                        "endOffset": 3270
-                    }
-                }
-            },
-            {
-                "to": {
-                    "startLine": 39,
-                    "startColumn": 4,
-                    "startOffset": 4961,
-                    "endColumn": 121,
-                    "endOffset": 5078
-                },
-                "from": {
-                    "file": "C:\\Users\\Ali\\Documents\\My-Easy-Kitchen\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-base\\9.2.1\\res\\values-en-rGB\\values.xml",
-                    "position": {
-                        "startLine": 22,
-                        "startColumn": 4,
-                        "startOffset": 3275,
-                        "endColumn": 121,
-                        "endOffset": 3392
-                    }
-                }
-            },
-            {
-                "to": {
-                    "startLine": 40,
-                    "startColumn": 4,
-                    "startOffset": 5083,
+                    "startOffset": 3235,
                     "endColumn": 248,
-                    "endOffset": 5327
+                    "endOffset": 3479
                 },
                 "from": {
                     "file": "C:\\Users\\Ali\\Documents\\My-Easy-Kitchen\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-basement\\9.6.1\\res\\values-en-rGB\\values.xml",
@@ -745,220 +536,220 @@
             },
             {
                 "to": {
+                    "startLine": 30,
+                    "startColumn": 4,
+                    "startOffset": 3484,
+                    "endColumn": 248,
+                    "endOffset": 3728
+                },
+                "from": {
+                    "file": "C:\\Users\\Ali\\Documents\\My-Easy-Kitchen\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-base\\9.6.1\\res\\values-en-rGB\\values.xml",
+                    "position": {
+                        "startLine": 12,
+                        "startColumn": 4,
+                        "startOffset": 1560,
+                        "endColumn": 248,
+                        "endOffset": 1804
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 31,
+                    "startColumn": 4,
+                    "startOffset": 3733,
+                    "endColumn": 123,
+                    "endOffset": 3852
+                },
+                "from": {
+                    "file": "C:\\Users\\Ali\\Documents\\My-Easy-Kitchen\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-base\\9.6.1\\res\\values-en-rGB\\values.xml",
+                    "position": {
+                        "startLine": 13,
+                        "startColumn": 4,
+                        "startOffset": 1809,
+                        "endColumn": 123,
+                        "endOffset": 1928
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 32,
+                    "startColumn": 4,
+                    "startOffset": 3857,
+                    "endColumn": 106,
+                    "endOffset": 3959
+                },
+                "from": {
+                    "file": "C:\\Users\\Ali\\Documents\\My-Easy-Kitchen\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-base\\9.6.1\\res\\values-en-rGB\\values.xml",
+                    "position": {
+                        "startLine": 14,
+                        "startColumn": 4,
+                        "startOffset": 1933,
+                        "endColumn": 106,
+                        "endOffset": 2035
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 33,
+                    "startColumn": 4,
+                    "startOffset": 3964,
+                    "endColumn": 182,
+                    "endOffset": 4142
+                },
+                "from": {
+                    "file": "C:\\Users\\Ali\\Documents\\My-Easy-Kitchen\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-base\\9.6.1\\res\\values-en-rGB\\values.xml",
+                    "position": {
+                        "startLine": 15,
+                        "startColumn": 4,
+                        "startOffset": 2040,
+                        "endColumn": 182,
+                        "endOffset": 2218
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 34,
+                    "startColumn": 4,
+                    "startOffset": 4147,
+                    "endColumn": 126,
+                    "endOffset": 4269
+                },
+                "from": {
+                    "file": "C:\\Users\\Ali\\Documents\\My-Easy-Kitchen\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-base\\9.6.1\\res\\values-en-rGB\\values.xml",
+                    "position": {
+                        "startLine": 16,
+                        "startColumn": 4,
+                        "startOffset": 2223,
+                        "endColumn": 126,
+                        "endOffset": 2345
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 35,
+                    "startColumn": 4,
+                    "startOffset": 4274,
+                    "endColumn": 204,
+                    "endOffset": 4474
+                },
+                "from": {
+                    "file": "C:\\Users\\Ali\\Documents\\My-Easy-Kitchen\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-base\\9.6.1\\res\\values-en-rGB\\values.xml",
+                    "position": {
+                        "startLine": 17,
+                        "startColumn": 4,
+                        "startOffset": 2350,
+                        "endColumn": 204,
+                        "endOffset": 2550
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 36,
+                    "startColumn": 4,
+                    "startOffset": 4479,
+                    "endColumn": 134,
+                    "endOffset": 4609
+                },
+                "from": {
+                    "file": "C:\\Users\\Ali\\Documents\\My-Easy-Kitchen\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-base\\9.6.1\\res\\values-en-rGB\\values.xml",
+                    "position": {
+                        "startLine": 18,
+                        "startColumn": 4,
+                        "startOffset": 2555,
+                        "endColumn": 134,
+                        "endOffset": 2685
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 37,
+                    "startColumn": 4,
+                    "startOffset": 4614,
+                    "endColumn": 177,
+                    "endOffset": 4787
+                },
+                "from": {
+                    "file": "C:\\Users\\Ali\\Documents\\My-Easy-Kitchen\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-base\\9.6.1\\res\\values-en-rGB\\values.xml",
+                    "position": {
+                        "startLine": 19,
+                        "startColumn": 4,
+                        "startOffset": 2690,
+                        "endColumn": 177,
+                        "endOffset": 2863
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 38,
+                    "startColumn": 4,
+                    "startOffset": 4792,
+                    "endColumn": 92,
+                    "endOffset": 4880
+                },
+                "from": {
+                    "file": "C:\\Users\\Ali\\Documents\\My-Easy-Kitchen\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-base\\9.6.1\\res\\values-en-rGB\\values.xml",
+                    "position": {
+                        "startLine": 20,
+                        "startColumn": 4,
+                        "startOffset": 2868,
+                        "endColumn": 92,
+                        "endOffset": 2956
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 39,
+                    "startColumn": 4,
+                    "startOffset": 4885,
+                    "endColumn": 91,
+                    "endOffset": 4972
+                },
+                "from": {
+                    "file": "C:\\Users\\Ali\\Documents\\My-Easy-Kitchen\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-base\\9.6.1\\res\\values-en-rGB\\values.xml",
+                    "position": {
+                        "startLine": 21,
+                        "startColumn": 4,
+                        "startOffset": 2961,
+                        "endColumn": 91,
+                        "endOffset": 3048
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 40,
+                    "startColumn": 4,
+                    "startOffset": 4977,
+                    "endColumn": 107,
+                    "endOffset": 5080
+                },
+                "from": {
+                    "file": "C:\\Users\\Ali\\Documents\\My-Easy-Kitchen\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-base\\9.6.1\\res\\values-en-rGB\\values.xml",
+                    "position": {
+                        "startLine": 22,
+                        "startColumn": 4,
+                        "startOffset": 3053,
+                        "endColumn": 107,
+                        "endOffset": 3156
+                    }
+                }
+            },
+            {
+                "to": {
                     "startLine": 41,
                     "startColumn": 4,
-                    "startOffset": 5332,
-                    "endColumn": 248,
-                    "endOffset": 5576
-                },
-                "from": {
-                    "file": "C:\\Users\\Ali\\Documents\\My-Easy-Kitchen\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-base\\9.2.1\\res\\values-en-rGB\\values.xml",
-                    "position": {
-                        "startLine": 23,
-                        "startColumn": 4,
-                        "startOffset": 3397,
-                        "endColumn": 248,
-                        "endOffset": 3641
-                    }
-                }
-            },
-            {
-                "to": {
-                    "startLine": 42,
-                    "startColumn": 4,
-                    "startOffset": 5581,
-                    "endColumn": 123,
-                    "endOffset": 5700
-                },
-                "from": {
-                    "file": "C:\\Users\\Ali\\Documents\\My-Easy-Kitchen\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-base\\9.2.1\\res\\values-en-rGB\\values.xml",
-                    "position": {
-                        "startLine": 24,
-                        "startColumn": 4,
-                        "startOffset": 3646,
-                        "endColumn": 123,
-                        "endOffset": 3765
-                    }
-                }
-            },
-            {
-                "to": {
-                    "startLine": 43,
-                    "startColumn": 4,
-                    "startOffset": 5705,
-                    "endColumn": 106,
-                    "endOffset": 5807
-                },
-                "from": {
-                    "file": "C:\\Users\\Ali\\Documents\\My-Easy-Kitchen\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-base\\9.2.1\\res\\values-en-rGB\\values.xml",
-                    "position": {
-                        "startLine": 25,
-                        "startColumn": 4,
-                        "startOffset": 3770,
-                        "endColumn": 106,
-                        "endOffset": 3872
-                    }
-                }
-            },
-            {
-                "to": {
-                    "startLine": 44,
-                    "startColumn": 4,
-                    "startOffset": 5812,
-                    "endColumn": 182,
-                    "endOffset": 5990
-                },
-                "from": {
-                    "file": "C:\\Users\\Ali\\Documents\\My-Easy-Kitchen\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-base\\9.2.1\\res\\values-en-rGB\\values.xml",
-                    "position": {
-                        "startLine": 26,
-                        "startColumn": 4,
-                        "startOffset": 3877,
-                        "endColumn": 182,
-                        "endOffset": 4055
-                    }
-                }
-            },
-            {
-                "to": {
-                    "startLine": 45,
-                    "startColumn": 4,
-                    "startOffset": 5995,
-                    "endColumn": 126,
-                    "endOffset": 6117
-                },
-                "from": {
-                    "file": "C:\\Users\\Ali\\Documents\\My-Easy-Kitchen\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-base\\9.2.1\\res\\values-en-rGB\\values.xml",
-                    "position": {
-                        "startLine": 27,
-                        "startColumn": 4,
-                        "startOffset": 4060,
-                        "endColumn": 126,
-                        "endOffset": 4182
-                    }
-                }
-            },
-            {
-                "to": {
-                    "startLine": 46,
-                    "startColumn": 4,
-                    "startOffset": 6122,
-                    "endColumn": 204,
-                    "endOffset": 6322
-                },
-                "from": {
-                    "file": "C:\\Users\\Ali\\Documents\\My-Easy-Kitchen\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-base\\9.2.1\\res\\values-en-rGB\\values.xml",
-                    "position": {
-                        "startLine": 28,
-                        "startColumn": 4,
-                        "startOffset": 4187,
-                        "endColumn": 204,
-                        "endOffset": 4387
-                    }
-                }
-            },
-            {
-                "to": {
-                    "startLine": 47,
-                    "startColumn": 4,
-                    "startOffset": 6327,
-                    "endColumn": 134,
-                    "endOffset": 6457
-                },
-                "from": {
-                    "file": "C:\\Users\\Ali\\Documents\\My-Easy-Kitchen\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-base\\9.2.1\\res\\values-en-rGB\\values.xml",
-                    "position": {
-                        "startLine": 29,
-                        "startColumn": 4,
-                        "startOffset": 4392,
-                        "endColumn": 134,
-                        "endOffset": 4522
-                    }
-                }
-            },
-            {
-                "to": {
-                    "startLine": 48,
-                    "startColumn": 4,
-                    "startOffset": 6462,
-                    "endColumn": 177,
-                    "endOffset": 6635
-                },
-                "from": {
-                    "file": "C:\\Users\\Ali\\Documents\\My-Easy-Kitchen\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-base\\9.2.1\\res\\values-en-rGB\\values.xml",
-                    "position": {
-                        "startLine": 30,
-                        "startColumn": 4,
-                        "startOffset": 4527,
-                        "endColumn": 177,
-                        "endOffset": 4700
-                    }
-                }
-            },
-            {
-                "to": {
-                    "startLine": 49,
-                    "startColumn": 4,
-                    "startOffset": 6640,
-                    "endColumn": 92,
-                    "endOffset": 6728
-                },
-                "from": {
-                    "file": "C:\\Users\\Ali\\Documents\\My-Easy-Kitchen\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-base\\9.2.1\\res\\values-en-rGB\\values.xml",
-                    "position": {
-                        "startLine": 31,
-                        "startColumn": 4,
-                        "startOffset": 4705,
-                        "endColumn": 92,
-                        "endOffset": 4793
-                    }
-                }
-            },
-            {
-                "to": {
-                    "startLine": 50,
-                    "startColumn": 4,
-                    "startOffset": 6733,
-                    "endColumn": 91,
-                    "endOffset": 6820
-                },
-                "from": {
-                    "file": "C:\\Users\\Ali\\Documents\\My-Easy-Kitchen\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-base\\9.2.1\\res\\values-en-rGB\\values.xml",
-                    "position": {
-                        "startLine": 32,
-                        "startColumn": 4,
-                        "startOffset": 4798,
-                        "endColumn": 91,
-                        "endOffset": 4885
-                    }
-                }
-            },
-            {
-                "to": {
-                    "startLine": 51,
-                    "startColumn": 4,
-                    "startOffset": 6825,
-                    "endColumn": 107,
-                    "endOffset": 6928
-                },
-                "from": {
-                    "file": "C:\\Users\\Ali\\Documents\\My-Easy-Kitchen\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-base\\9.2.1\\res\\values-en-rGB\\values.xml",
-                    "position": {
-                        "startLine": 33,
-                        "startColumn": 4,
-                        "startOffset": 4890,
-                        "endColumn": 107,
-                        "endOffset": 4993
-                    }
-                }
-            },
-            {
-                "to": {
-                    "startLine": 52,
-                    "startColumn": 4,
-                    "startOffset": 6933,
+                    "startOffset": 5085,
                     "endColumn": 100,
-                    "endOffset": 7029
+                    "endOffset": 5181
                 },
                 "from": {
                     "file": "C:\\Users\\Ali\\Documents\\My-Easy-Kitchen\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\values-en-rGB\\values-en-rGB.xml",

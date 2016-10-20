@@ -3,8 +3,9 @@ package com.myeasykitchen.myeasykitchen;
 
 public class Item {
 
-    public String name;
-    public String quantity;
+    private String name;
+    private String quantity;
+
 
     public Item(String name, String quantity)
     {
@@ -25,5 +26,10 @@ public class Item {
     public String getName()
     {
         return this.name;
+    }
+
+
+    public String getQuantity() {
+        return quantity;
     }
 }

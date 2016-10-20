@@ -48,7 +48,7 @@ public class ItemAdapter extends ArrayAdapter<Item> {
         }
 
         Item item = data.get(position);
-        holder.name.setText(item.name);
+        holder.name.setText(item.getName());
 
         return row;
     }
