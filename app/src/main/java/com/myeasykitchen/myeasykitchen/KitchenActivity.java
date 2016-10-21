@@ -16,7 +16,7 @@ public class KitchenActivity extends AppCompatActivity {
         setContentView(R.layout.activity_kitchen);
 
 
-        ItemAdapter adapter = new ItemAdapter(this, R.layout.listview_item_row, StaticData.kitchen_data);
+        ItemAdapter adapter = new ItemAdapter(this, R.layout.listview_item_row, StaticData.kitchen_list);
 
         listView1 = (ListView)findViewById(R.id.listView1);
         listView1.setAdapter(adapter);

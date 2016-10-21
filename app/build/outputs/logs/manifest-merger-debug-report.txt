@@ -100,6 +100,8 @@ MERGED from [com.google.firebase:firebase-auth:9.6.1] C:\Users\Ali\Documents\My-
 MERGED from [com.google.android.gms:play-services-base:9.6.1] C:\Users\Ali\Documents\My-Easy-Kitchen\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-base\9.6.1\AndroidManifest.xml:17:5-42
 MERGED from [com.google.firebase:firebase-auth-common:9.6.1] C:\Users\Ali\Documents\My-Easy-Kitchen\app\build\intermediates\exploded-aar\com.google.firebase\firebase-auth-common\9.6.1\AndroidManifest.xml:17:5-42
 MERGED from [com.google.firebase:firebase-auth-module:9.6.1] C:\Users\Ali\Documents\My-Easy-Kitchen\app\build\intermediates\exploded-aar\com.google.firebase\firebase-auth-module\9.6.1\AndroidManifest.xml:3:5-42
+MERGED from [com.google.firebase:firebase-database:9.6.1] C:\Users\Ali\Documents\My-Easy-Kitchen\app\build\intermediates\exploded-aar\com.google.firebase\firebase-database\9.6.1\AndroidManifest.xml:3:5-42
+MERGED from [com.google.firebase:firebase-database-connection:9.6.1] C:\Users\Ali\Documents\My-Easy-Kitchen\app\build\intermediates\exploded-aar\com.google.firebase\firebase-database-connection\9.6.1\AndroidManifest.xml:3:5-42
 MERGED from [com.google.android.gms:play-services-auth:9.6.1] C:\Users\Ali\Documents\My-Easy-Kitchen\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-auth\9.6.1\AndroidManifest.xml:17:5-42
 MERGED from [com.google.android.gms:play-services-auth-base:9.6.1] C:\Users\Ali\Documents\My-Easy-Kitchen\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-auth-base\9.6.1\AndroidManifest.xml:4:5-42
 	tools:overrideLibrary

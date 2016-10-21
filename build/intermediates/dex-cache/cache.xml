@@ -3,24 +3,6 @@
 
     <item
         is-multidex="true"
-        jar="C:\Users\Ali\Documents\My-Easy-Kitchen\app\build\intermediates\exploded-aar\com.google.firebase\firebase-analytics-impl\9.6.1\jars\classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="23.0.3"
-        sha1="0efd1b44f47c134fb245914a1d54a55adbfc2f8d">
-        <dex dex="C:\Users\Ali\Documents\My-Easy-Kitchen\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.firebase-firebase-analytics-impl-9.6.1_e5cdcb9ab862b13f2e6ed197223d1927dcae8060\classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="C:\Users\Ali\Documents\My-Easy-Kitchen\app\build\intermediates\exploded-aar\com.google.firebase\firebase-auth-module\9.6.1\jars\classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="23.0.3"
-        sha1="6ffe8b28ab61e5ee92ab9431a220379790c71ddf">
-        <dex dex="C:\Users\Ali\Documents\My-Easy-Kitchen\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.firebase-firebase-auth-module-9.6.1_911497676e048a2884be23e06b00547ae9d5de67\classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
         jar="C:\Users\Ali\Documents\My-Easy-Kitchen\app\build\intermediates\exploded-aar\com.google.firebase\firebase-analytics\9.6.1\jars\classes.jar"
         jumboMode="true"
         optimize="true"
@@ -48,29 +30,11 @@
     </item>
     <item
         is-multidex="true"
-        jar="C:\Users\Ali\Documents\My-Easy-Kitchen\app\build\intermediates\exploded-aar\com.google.firebase\firebase-auth-common\9.6.1\jars\classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="23.0.3"
-        sha1="77558e74bb2056ef38516296f13a27c4c4fc3e5c">
-        <dex dex="C:\Users\Ali\Documents\My-Easy-Kitchen\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.firebase-firebase-auth-common-9.6.1_64fb9e02c5ae385ff15d9c72244e8ec4f5f637a3\classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="C:\Users\Ali\Documents\My-Easy-Kitchen\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-tasks\9.6.1\jars\classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="23.0.3"
-        sha1="4a36600281a648769411ef642c331851732bf29e">
-        <dex dex="C:\Users\Ali\Documents\My-Easy-Kitchen\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.android.gms-play-services-tasks-9.6.1_149027cf52dec5a537be831f720149e19eebe6ee\classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
         jar="C:\Users\Ali\Documents\My-Easy-Kitchen\app\build\intermediates\incremental-runtime-classes\debug\instant-run.jar"
         jumboMode="true"
         optimize="true"
         revision="23.0.3"
-        sha1="fbf91fe08a1fb2ec27ad247f9ad88046e24c7c0d">
+        sha1="f7be10a2de3ea709438bf698b7fcfb99a1ff1834">
         <dex dex="C:\Users\Ali\Documents\My-Easy-Kitchen\app\build\intermediates\transforms\dex\debug\folders\1000\10\instant-run_2ff2f894f6b8397246f7c4a3edaedc43321bebce\classes.dex" />
     </item>
     <item
@@ -111,21 +75,12 @@
     </item>
     <item
         is-multidex="true"
-        jar="C:\Users\Ali\Documents\My-Easy-Kitchen\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-basement\9.6.1\jars\classes.jar"
+        jar="C:\Users\Ali\Documents\My-Easy-Kitchen\app\build\intermediates\exploded-aar\com.google.firebase\firebase-database\9.6.1\jars\classes.jar"
         jumboMode="true"
         optimize="true"
         revision="23.0.3"
-        sha1="eccaaa9ffa6bb4bfbd2e870f01aaf69655d353be">
-        <dex dex="C:\Users\Ali\Documents\My-Easy-Kitchen\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.android.gms-play-services-basement-9.6.1_263d7aeb725974afdaedece6a10706100a22a764\classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="C:\Users\Ali\Documents\My-Easy-Kitchen\app\build\intermediates\exploded-aar\com.google.firebase\firebase-common\9.6.1\jars\classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="23.0.3"
-        sha1="1ef72e72bc0d05602c366582afa9439f58bb31d6">
-        <dex dex="C:\Users\Ali\Documents\My-Easy-Kitchen\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.firebase-firebase-common-9.6.1_822ee939e9e1bf7a067ded65be488c2d52e366c0\classes.dex" />
+        sha1="b75ecdd04a37d31b4a0da2729fc5c558962a529b">
+        <dex dex="C:\Users\Ali\Documents\My-Easy-Kitchen\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.firebase-firebase-database-9.6.1_def8ec163a30e57fff17d2c934a356906be01613\classes.dex" />
     </item>
     <item
         is-multidex="true"
@@ -142,17 +97,8 @@
         jumboMode="true"
         optimize="true"
         revision="23.0.3"
-        sha1="a996b1d4e598d5727a8c52154376d9664396b3c6">
+        sha1="16a4cbd082cfd9a0c18408eb832c1014b45a27c9">
         <dex dex="C:\Users\Ali\Documents\My-Easy-Kitchen\app\build\intermediates\transforms\dex\debug\folders\1000\10\instant-run-bootstrap_b05719f385994dce5bc6e8d4c1114e512e66d9bb\classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="C:\Users\Ali\Documents\My-Easy-Kitchen\app\build\intermediates\exploded-aar\com.google.firebase\firebase-auth\9.6.1\jars\classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="23.0.3"
-        sha1="2a18547ea91d258866d132c2a763185f15b01b25">
-        <dex dex="C:\Users\Ali\Documents\My-Easy-Kitchen\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.firebase-firebase-auth-9.6.1_937aaed1dc51863b72b6305d6ce622be87c04969\classes.dex" />
     </item>
     <item
         is-multidex="true"
@@ -192,12 +138,84 @@
     </item>
     <item
         is-multidex="true"
+        jar="C:\Users\Ali\Documents\My-Easy-Kitchen\app\build\intermediates\exploded-aar\com.google.firebase\firebase-database-connection\9.6.1\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="23.0.3"
+        sha1="ac8365c87591065db07f7bac8551504504832cd4">
+        <dex dex="C:\Users\Ali\Documents\My-Easy-Kitchen\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.firebase-firebase-database-connection-9.6.1_68993dfc984ed725bcf8bc9ef6c67421be6b10d9\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
         jar="C:\Users\Ali\AppData\Local\Android\sdk\extras\android\m2repository\com\android\support\support-annotations\24.0.0\support-annotations-24.0.0.jar"
         jumboMode="true"
         optimize="true"
         revision="23.0.3"
         sha1="2943c74db6d4346ab8c6531adac91fa05c137c40">
         <dex dex="C:\Users\Ali\Documents\My-Easy-Kitchen\app\build\intermediates\transforms\dex\debug\folders\1000\10\support-annotations-24.0.0_ed36f017483111ced9feaa832a290feb3effde1f\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Ali\Documents\My-Easy-Kitchen\app\build\intermediates\exploded-aar\com.google.firebase\firebase-analytics-impl\9.6.1\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="23.0.3"
+        sha1="0efd1b44f47c134fb245914a1d54a55adbfc2f8d">
+        <dex dex="C:\Users\Ali\Documents\My-Easy-Kitchen\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.firebase-firebase-analytics-impl-9.6.1_e5cdcb9ab862b13f2e6ed197223d1927dcae8060\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Ali\Documents\My-Easy-Kitchen\app\build\intermediates\exploded-aar\com.google.firebase\firebase-auth-module\9.6.1\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="23.0.3"
+        sha1="6ffe8b28ab61e5ee92ab9431a220379790c71ddf">
+        <dex dex="C:\Users\Ali\Documents\My-Easy-Kitchen\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.firebase-firebase-auth-module-9.6.1_911497676e048a2884be23e06b00547ae9d5de67\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Ali\Documents\My-Easy-Kitchen\app\build\intermediates\exploded-aar\com.google.firebase\firebase-auth-common\9.6.1\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="23.0.3"
+        sha1="77558e74bb2056ef38516296f13a27c4c4fc3e5c">
+        <dex dex="C:\Users\Ali\Documents\My-Easy-Kitchen\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.firebase-firebase-auth-common-9.6.1_64fb9e02c5ae385ff15d9c72244e8ec4f5f637a3\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Ali\Documents\My-Easy-Kitchen\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-tasks\9.6.1\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="23.0.3"
+        sha1="4a36600281a648769411ef642c331851732bf29e">
+        <dex dex="C:\Users\Ali\Documents\My-Easy-Kitchen\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.android.gms-play-services-tasks-9.6.1_149027cf52dec5a537be831f720149e19eebe6ee\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Ali\Documents\My-Easy-Kitchen\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-basement\9.6.1\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="23.0.3"
+        sha1="eccaaa9ffa6bb4bfbd2e870f01aaf69655d353be">
+        <dex dex="C:\Users\Ali\Documents\My-Easy-Kitchen\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.android.gms-play-services-basement-9.6.1_263d7aeb725974afdaedece6a10706100a22a764\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Ali\Documents\My-Easy-Kitchen\app\build\intermediates\exploded-aar\com.google.firebase\firebase-common\9.6.1\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="23.0.3"
+        sha1="1ef72e72bc0d05602c366582afa9439f58bb31d6">
+        <dex dex="C:\Users\Ali\Documents\My-Easy-Kitchen\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.firebase-firebase-common-9.6.1_822ee939e9e1bf7a067ded65be488c2d52e366c0\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Ali\Documents\My-Easy-Kitchen\app\build\intermediates\exploded-aar\com.google.firebase\firebase-auth\9.6.1\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="23.0.3"
+        sha1="2a18547ea91d258866d132c2a763185f15b01b25">
+        <dex dex="C:\Users\Ali\Documents\My-Easy-Kitchen\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.firebase-firebase-auth-9.6.1_937aaed1dc51863b72b6305d6ce622be87c04969\classes.dex" />
     </item>
 
 </items>

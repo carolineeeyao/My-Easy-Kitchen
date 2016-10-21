@@ -13,6 +13,7 @@ import android.widget.Button;
 import com.google.android.gms.common.api.GoogleApiClient;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
+import com.google.firebase.database.DatabaseReference;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -23,6 +24,7 @@ public class MainActivity extends AppCompatActivity {
     // Firebase instance variables
     private FirebaseAuth mFirebaseAuth;
     private FirebaseUser mFirebaseUser;
+    private DatabaseReference mFirebaseDatabaseReference;
 
     private String mUsername;
     private String mPhotoUrl;
@@ -34,24 +36,24 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        mSharedPreferences = PreferenceManager.getDefaultSharedPreferences(this);
-        // Set default username is anonymous.
-        mUsername = ANONYMOUS;
-
-        // Initialize Firebase Auth
-        mFirebaseAuth = FirebaseAuth.getInstance();
-        mFirebaseUser = mFirebaseAuth.getCurrentUser();
-        if (mFirebaseUser == null) {
-            // Not signed in, launch the Sign In activity
-            startActivity(new Intent(this, LoginActivity.class));
-            finish();
-            return;
-        } else {
-            mUsername = mFirebaseUser.getDisplayName();
-            if (mFirebaseUser.getPhotoUrl() != null) {
-                mPhotoUrl = mFirebaseUser.getPhotoUrl().toString();
-            }
-        }
+//        mSharedPreferences = PreferenceManager.getDefaultSharedPreferences(this);
+//        // Set default username is anonymous.
+//        mUsername = ANONYMOUS;
+//
+//        // Initialize Firebase Auth
+//        mFirebaseAuth = FirebaseAuth.getInstance();
+//        mFirebaseUser = mFirebaseAuth.getCurrentUser();
+//        if (mFirebaseUser == null) {
+//            // Not signed in, launch the Sign In activity
+//            startActivity(new Intent(this, LoginActivity.class));
+//            finish();
+//            return;
+//        } else {
+//            mUsername = mFirebaseUser.getDisplayName();
+//            if (mFirebaseUser.getPhotoUrl() != null) {
+//                mPhotoUrl = mFirebaseUser.getPhotoUrl().toString();
+//            }
+//        }
 
         //populate a little of kitchen_data
         StaticData.kitchen_data.add(new Item("bread", "1"));
@@ -63,6 +65,8 @@ public class MainActivity extends AppCompatActivity {
         StaticData.kitchen_data.add(new Item("cookies", "1"));
         StaticData.kitchen_data.add(new Item("cake", "1"));
         StaticData.kitchen_data.add(new Item("candy", "1"));
+
+        StaticData.kitchen_list.setGroceryList(StaticData.kitchen_data);
 
         Button add_button = (Button)findViewById(R.id.add_button);
         Button kitchen_button = (Button)findViewById(R.id.kitchen_button);

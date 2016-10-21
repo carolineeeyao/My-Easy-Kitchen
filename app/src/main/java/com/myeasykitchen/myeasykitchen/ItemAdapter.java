@@ -2,7 +2,6 @@ package com.myeasykitchen.myeasykitchen;
 
 import android.app.Activity;
 import android.content.Context;
-import android.database.ContentObservable;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -17,6 +16,7 @@ public class ItemAdapter extends ArrayAdapter<Item> {
     Context context;
     int layoutResourceId;
     ArrayList<Item> data;
+    ItemList list;
 
     public ItemAdapter(Context context, int layoutResourceId, ArrayList<Item> data)
     {
@@ -24,6 +24,14 @@ public class ItemAdapter extends ArrayAdapter<Item> {
         this.layoutResourceId = layoutResourceId;
         this.context = context;
         this.data = data;
+    }
+    public ItemAdapter(Context context, int layoutResourceId, ItemList list)
+    {
+        super(context, layoutResourceId, list.getGroceryList());
+        this.layoutResourceId = layoutResourceId;
+        this.context = context;
+        this.list = list;
+        this.data = list.getGroceryList();
     }
 
     @Override

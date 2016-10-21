@@ -1,7 +1,10 @@
 package com.myeasykitchen.myeasykitchen;
 
 
-public class Item {
+import java.util.Observable;
+import java.util.Observer;
+
+public class Item extends Observable {
 
     private String name;
     private String quantity;
@@ -27,7 +30,6 @@ public class Item {
     {
         return this.name;
     }
-
 
     public String getQuantity() {
         return quantity;
