@@ -55,7 +55,10 @@ public class DatabaseClient {
                 // [END_EXCLUDE]
             }
         };
-        return new ItemList();
+
+        ItemList itemList = new ItemList();
+        mFirebaseDatabaseReference.addChildEventListener(itemList);
+        return itemList;
     }
 
     /**

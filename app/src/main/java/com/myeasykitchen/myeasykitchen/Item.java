@@ -5,7 +5,7 @@ import java.util.Date;
 import java.util.Observable;
 import java.util.Observer;
 
-public class Item extends Observable {
+public class Item {
 
     private long timeToAdd = 3*24*60*60*1000;
     private String name;
@@ -51,7 +51,7 @@ public class Item extends Observable {
     // called every 24 hours
     public void checkExpiration() {
         if (expireDate.getTime() - (new Date()).getTime() < timeToAdd) {
-            notifyObservers();
+//            notifyObservers();
         }
     }
 }
