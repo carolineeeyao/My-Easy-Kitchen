@@ -12,7 +12,7 @@ import java.util.Observer;
  * Created by Ali on 10/19/2016.
  */
 
-public class ItemList implements ChildEventListener {
+public class ItemList  {
     private ArrayList<Item> gList;
 
     public ItemList() {
@@ -27,28 +27,4 @@ public class ItemList implements ChildEventListener {
         this.gList = gList;
     }
 
-    @Override
-    public void onChildAdded(DataSnapshot dataSnapshot, String s) {
-        gList.add(dataSnapshot.getValue(Item.class));
-    }
-
-    @Override
-    public void onChildChanged(DataSnapshot dataSnapshot, String s) {
-
-    }
-
-    @Override
-    public void onChildRemoved(DataSnapshot dataSnapshot) {
-
-    }
-
-    @Override
-    public void onChildMoved(DataSnapshot dataSnapshot, String s) {
-
-    }
-
-    @Override
-    public void onCancelled(DatabaseError databaseError) {
-
-    }
 }

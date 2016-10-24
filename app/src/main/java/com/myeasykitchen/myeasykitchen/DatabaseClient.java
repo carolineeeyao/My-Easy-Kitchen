@@ -1,12 +1,17 @@
 package com.myeasykitchen.myeasykitchen;
 
+import android.content.Context;
+import android.widget.ListView;
+
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 
+import java.io.DataInputStream;
 import java.util.ArrayList;
+import java.util.Iterator;
 import java.util.List;
 import java.util.Map;
 import java.util.Objects;
@@ -21,9 +26,8 @@ public class DatabaseClient {
     private DatabaseReference userListsReference;
 
     private final String USER_CHILD = "users";
-    private final String USER_LIST = "lists";
-    private final String LIST_CHILD = "lists";
-    private final String LIST_ITEMS = "items";
+    private final String USER_LIST = "list users";
+    private final String LIST_CHILD = "list item";
 
 
     public DatabaseClient(String userUID) {
@@ -41,8 +45,6 @@ public class DatabaseClient {
         ValueEventListener postListener = new ValueEventListener() {
             @Override
             public void onDataChange(DataSnapshot dataSnapshot) {
-                // Get Post object and use the values to update the UI
-                Map<String,Object> post = (Map<String, Object>) dataSnapshot.getValue();
             }
 
             @Override
@@ -57,7 +59,7 @@ public class DatabaseClient {
         };
 
         ItemList itemList = new ItemList();
-        mFirebaseDatabaseReference.addChildEventListener(itemList);
+//        mFirebaseDatabaseReference.addChildEventListener(itemList);
         return itemList;
     }
 
@@ -68,5 +70,27 @@ public class DatabaseClient {
      */
     public void storeUserList(String listID, ItemList itemList) {
 
+    }
+
+    public void displayList(String listID, final ListView listView1, final Context context ) {
+        DatabaseReference mListRef = mFirebaseDatabaseReference.child("list items").child(listID);
+        mListRef.addValueEventListener(new ValueEventListener() {
+            @Override
+            public void onDataChange(DataSnapshot dataSnapshot) {
+                ArrayList<Item> list = new ArrayList<>();
+                Iterator<DataSnapshot> iterator = dataSnapshot.getChildren().iterator();
+                while(iterator.hasNext()) {
+                    String value = iterator.next().getKey();
+                    list.add(new Item(value,"0"));
+                }
+                KitchenAdapter adapter = new KitchenAdapter(context, R.layout.listview_item_row, list);
+                listView1.setAdapter(adapter);
+            }
+
+            @Override
+            public void onCancelled(DatabaseError databaseError) {
+
+            }
+        });
     }
 }
