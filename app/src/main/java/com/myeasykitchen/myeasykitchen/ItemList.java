@@ -19,11 +19,11 @@ public class ItemList implements ChildEventListener {
         gList = new ArrayList<>();
     }
 
-    public ArrayList<Item> getGroceryList() {
+    public ArrayList<Item> getList() {
         return gList;
     }
 
-    public void setGroceryList(ArrayList<Item> gList) {
+    public void setList(ArrayList<Item> gList) {
         this.gList = gList;
     }
 

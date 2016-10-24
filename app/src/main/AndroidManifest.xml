@@ -22,10 +22,10 @@
         </activity>
         <activity
             android:name=".LoginActivity"
-            android:label="@string/title_activity_login">
-        </activity>
-        <activity android:name=".KitchenActivity"></activity>
-        <activity android:name=".AddItemActivity"></activity>
+            android:label="@string/title_activity_login"></activity>
+        <activity android:name=".KitchenActivity" />
+        <activity android:name=".AddItemActivity" />
+        <activity android:name=".GroceryActivity"></activity>
     </application>
 
 </manifest>

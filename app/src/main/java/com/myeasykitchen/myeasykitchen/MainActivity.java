@@ -66,10 +66,23 @@ public class MainActivity extends AppCompatActivity {
         StaticData.kitchen_data.add(new Item("cake", "1"));
         StaticData.kitchen_data.add(new Item("candy", "1"));
 
-        StaticData.kitchen_list.setGroceryList(StaticData.kitchen_data);
+        //populate a little of kitchen_data
+        StaticData.grocery_data.add(new Item("bread", "1"));
+        StaticData.grocery_data.add(new Item("eggs", "1"));
+        StaticData.grocery_data.add(new Item("milk", "1"));
+        StaticData.grocery_data.add(new Item("cheese", "1"));
+        StaticData.grocery_data.add(new Item("cereal", "1"));
+        StaticData.grocery_data.add(new Item("popcorn", "1"));
+        StaticData.grocery_data.add(new Item("cookies", "1"));
+        StaticData.grocery_data.add(new Item("cake", "1"));
+        StaticData.grocery_data.add(new Item("candy", "1"));
+
+        StaticData.kitchen_list.setList(StaticData.kitchen_data);
+        StaticData.grocery_list.setList(StaticData.grocery_data);
 
         Button add_button = (Button)findViewById(R.id.add_button);
         Button kitchen_button = (Button)findViewById(R.id.kitchen_button);
+        Button grocery_button = (Button)findViewById(R.id.grocery_button);
 
         add_button.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -83,6 +96,14 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent myIntent = new Intent(context, KitchenActivity.class);
+                context.startActivity(myIntent);
+            }
+        });
+
+        grocery_button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent myIntent = new Intent(context, GroceryActivity.class);
                 context.startActivity(myIntent);
             }
         });
