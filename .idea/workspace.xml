@@ -7,31 +7,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e1163298-111d-4fe2-abb6-506ff21d0892" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.14.1/taskArtifacts/cache.properties.lock" afterPath="$PROJECT_DIR$/.gradle/2.14.1/taskArtifacts/cache.properties.lock" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.14.1/taskArtifacts/fileHashes.bin" afterPath="$PROJECT_DIR$/.gradle/2.14.1/taskArtifacts/fileHashes.bin" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.14.1/taskArtifacts/fileSnapshots.bin" afterPath="$PROJECT_DIR$/.gradle/2.14.1/taskArtifacts/fileSnapshots.bin" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.14.1/taskArtifacts/fileSnapshotsToTreeSnapshotsIndex.bin" afterPath="$PROJECT_DIR$/.gradle/2.14.1/taskArtifacts/fileSnapshotsToTreeSnapshotsIndex.bin" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.14.1/taskArtifacts/taskArtifacts.bin" afterPath="$PROJECT_DIR$/.gradle/2.14.1/taskArtifacts/taskArtifacts.bin" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.14.1/tasks/_app_compileDebugJavaWithJavac/localClassSetAnalysis/localClassSetAnalysis.bin" afterPath="$PROJECT_DIR$/.gradle/2.14.1/tasks/_app_compileDebugJavaWithJavac/localClassSetAnalysis/localClassSetAnalysis.bin" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.14.1/tasks/_app_compileDebugJavaWithJavac/localClassSetAnalysis/localClassSetAnalysis.lock" afterPath="$PROJECT_DIR$/.gradle/2.14.1/tasks/_app_compileDebugJavaWithJavac/localClassSetAnalysis/localClassSetAnalysis.lock" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.14.1/tasks/_app_compileDebugJavaWithJavac/localJarClasspathSnapshot/localJarClasspathSnapshot.bin" afterPath="$PROJECT_DIR$/.gradle/2.14.1/tasks/_app_compileDebugJavaWithJavac/localJarClasspathSnapshot/localJarClasspathSnapshot.bin" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.14.1/tasks/_app_compileDebugJavaWithJavac/localJarClasspathSnapshot/localJarClasspathSnapshot.lock" afterPath="$PROJECT_DIR$/.gradle/2.14.1/tasks/_app_compileDebugJavaWithJavac/localJarClasspathSnapshot/localJarClasspathSnapshot.lock" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/res/resources-debug-androidTest.ap_" afterPath="$PROJECT_DIR$/app/build/intermediates/res/resources-debug-androidTest.ap_" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/res/resources-debug.ap_" afterPath="$PROJECT_DIR$/app/build/intermediates/res/resources-debug.ap_" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/generated/source/r/debug/com/myeasykitchen/myeasykitchen/R.java" afterPath="$PROJECT_DIR$/app/build/generated/source/r/debug/com/myeasykitchen/myeasykitchen/R.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/blame/res/debug/single/drawable.json" afterPath="$PROJECT_DIR$/app/build/intermediates/blame/res/debug/single/drawable.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/blame/res/debug/single/layout.json" afterPath="$PROJECT_DIR$/app/build/intermediates/blame/res/debug/single/layout.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/layout/activity_main.xml" afterPath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/layout/activity_main.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/symbols/debug/R.txt" afterPath="$PROJECT_DIR$/app/build/intermediates/symbols/debug/R.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/myeasykitchen/myeasykitchen/AddItemActivity.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/myeasykitchen/myeasykitchen/AddItemActivity.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/myeasykitchen/myeasykitchen/GroceryActivity.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/myeasykitchen/myeasykitchen/GroceryActivity.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/myeasykitchen/myeasykitchen/GroceryAdapter.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/myeasykitchen/myeasykitchen/GroceryAdapter.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/myeasykitchen/myeasykitchen/MainActivity.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/myeasykitchen/myeasykitchen/MainActivity.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_grocery.xml" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_grocery.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/res/layout/grocery_item_row.xml" afterPath="$PROJECT_DIR$/app/src/main/res/layout/grocery_item_row.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/intermediates/dex-cache/cache.xml" afterPath="$PROJECT_DIR$/build/intermediates/dex-cache/cache.xml" />
     </list>
     <ignored path="My-Easy-Kitchen.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -103,7 +79,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="GroceryActivity.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="GroceryActivity.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/com/myeasykitchen/myeasykitchen/GroceryActivity.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="189">
@@ -112,6 +88,47 @@
                 <element signature="e#1638#1930#0" expanded="true" />
                 <element signature="e#1929#1930#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="activity_login.xml" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_login.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="236">
+              <caret line="64" column="0" selection-start-line="64" selection-start-column="0" selection-end-line="72" selection-end-column="43" />
+              <folding>
+                <element signature="e#1642#1664#0" expanded="true" />
+                <element signature="e#2260#2285#0" expanded="true" />
+                <element signature="e#2382#2412#0" expanded="true" />
+                <element signature="e#2988#3012#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+          <provider editor-type-id="android-designer2">
+            <state />
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="MainActivity.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/myeasykitchen/myeasykitchen/MainActivity.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="629">
+              <caret line="55" column="9" selection-start-line="38" selection-start-column="9" selection-end-line="55" selection-end-column="9" />
+              <folding>
+                <marker date="1477354066331" expanded="false" signature="3444:3536" ph="(v) → {" />
+                <marker date="1477354066331" expanded="false" signature="3672:3687" ph="}" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="LoginActivity.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/myeasykitchen/myeasykitchen/LoginActivity.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="119">
+              <caret line="56" column="13" selection-start-line="56" selection-start-column="13" selection-end-line="56" selection-end-column="13" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -1893,13 +1910,14 @@
         <option value="$PROJECT_DIR$/app/src/main/java/com/myeasykitchen/myeasykitchen/ItemList.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/myeasykitchen/myeasykitchen/DatabaseClient.java" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_kitchen.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/myeasykitchen/myeasykitchen/MainActivity.java" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/myeasykitchen/myeasykitchen/AddItemActivity.java" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/grocery_item_row.xml" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/myeasykitchen/myeasykitchen/GroceryActivity.java" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_grocery.xml" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/myeasykitchen/myeasykitchen/GroceryAdapter.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/myeasykitchen/myeasykitchen/MainActivity.java" />
+        <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_login.xml" />
       </list>
     </option>
   </component>
@@ -2485,8 +2503,8 @@
         <state relative-caret-position="1139">
           <caret line="80" column="35" selection-start-line="80" selection-start-column="35" selection-end-line="80" selection-end-column="35" />
           <folding>
-            <element signature="e#3480#3723#0" expanded="true" />
-            <element signature="e#3722#3723#0" expanded="true" />
+            <marker date="1477354066331" expanded="false" signature="3444:3536" ph="(v) → {" />
+            <marker date="1477354066331" expanded="false" signature="3672:3687" ph="}" />
           </folding>
         </state>
       </provider>
@@ -2591,8 +2609,8 @@
         <state relative-caret-position="1139">
           <caret line="80" column="35" selection-start-line="80" selection-start-column="35" selection-end-line="80" selection-end-column="35" />
           <folding>
-            <element signature="e#3480#3723#0" expanded="true" />
-            <element signature="e#3722#3723#0" expanded="true" />
+            <marker date="1477354066331" expanded="false" signature="3444:3536" ph="(v) → {" />
+            <marker date="1477354066331" expanded="false" signature="3672:3687" ph="}" />
           </folding>
         </state>
       </provider>
@@ -2763,17 +2781,6 @@
         <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/myeasykitchen/myeasykitchen/MainActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-204">
-          <caret line="19" column="4" selection-start-line="19" selection-start-column="4" selection-end-line="19" selection-end-column="27" />
-          <folding>
-            <element signature="e#3480#3723#0" expanded="true" />
-            <element signature="e#3722#3723#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/myeasykitchen/myeasykitchen/KitchenActivity.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="255">
@@ -2831,6 +2838,17 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/myeasykitchen/myeasykitchen/MainActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="629">
+          <caret line="55" column="9" selection-start-line="38" selection-start-column="9" selection-end-line="55" selection-end-column="9" />
+          <folding>
+            <marker date="1477354066331" expanded="false" signature="3444:3536" ph="(v) → {" />
+            <marker date="1477354066331" expanded="false" signature="3672:3687" ph="}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/myeasykitchen/myeasykitchen/GroceryActivity.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="189">
@@ -2840,6 +2858,30 @@
             <element signature="e#1929#1930#0" expanded="true" />
           </folding>
         </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/myeasykitchen/myeasykitchen/LoginActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="56" column="13" selection-start-line="56" selection-start-column="13" selection-end-line="56" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_login.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="236">
+          <caret line="64" column="0" selection-start-line="64" selection-start-column="0" selection-end-line="72" selection-end-column="43" />
+          <folding>
+            <element signature="e#1642#1664#0" expanded="true" />
+            <element signature="e#2260#2285#0" expanded="true" />
+            <element signature="e#2382#2412#0" expanded="true" />
+            <element signature="e#2988#3012#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+      <provider editor-type-id="android-designer2">
+        <state />
       </provider>
     </entry>
   </component>

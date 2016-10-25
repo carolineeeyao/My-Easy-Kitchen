@@ -36,24 +36,24 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-//        mSharedPreferences = PreferenceManager.getDefaultSharedPreferences(this);
-//        // Set default username is anonymous.
-//        mUsername = ANONYMOUS;
-//
-//        // Initialize Firebase Auth
-//        mFirebaseAuth = FirebaseAuth.getInstance();
-//        mFirebaseUser = mFirebaseAuth.getCurrentUser();
-//        if (mFirebaseUser == null) {
-//            // Not signed in, launch the Sign In activity
-//            startActivity(new Intent(this, LoginActivity.class));
-//            finish();
-//            return;
-//        } else {
-//            mUsername = mFirebaseUser.getDisplayName();
-//            if (mFirebaseUser.getPhotoUrl() != null) {
-//                mPhotoUrl = mFirebaseUser.getPhotoUrl().toString();
-//            }
-//        }
+        mSharedPreferences = PreferenceManager.getDefaultSharedPreferences(this);
+        // Set default username is anonymous.
+        mUsername = ANONYMOUS;
+
+        // Initialize Firebase Auth
+        mFirebaseAuth = FirebaseAuth.getInstance();
+        mFirebaseUser = mFirebaseAuth.getCurrentUser();
+        if (mFirebaseUser == null) {
+            // Not signed in, launch the Sign In activity
+            startActivity(new Intent(this, LoginActivity.class));
+            finish();
+            return;
+        } else {
+            mUsername = mFirebaseUser.getDisplayName();
+            if (mFirebaseUser.getPhotoUrl() != null) {
+                mPhotoUrl = mFirebaseUser.getPhotoUrl().toString();
+            }
+        }
 
         //populate a little of kitchen_data
         StaticData.kitchen_data.add(new Item("bread", "1"));
