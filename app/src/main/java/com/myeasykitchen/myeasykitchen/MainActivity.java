@@ -80,17 +80,8 @@ public class MainActivity extends AppCompatActivity {
         StaticData.kitchen_list.setList(StaticData.kitchen_data);
         StaticData.grocery_list.setList(StaticData.grocery_data);
 
-        Button add_button = (Button)findViewById(R.id.add_button);
         Button kitchen_button = (Button)findViewById(R.id.kitchen_button);
         Button grocery_button = (Button)findViewById(R.id.grocery_button);
-
-        add_button.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent myIntent = new Intent(context, AddItemActivity.class);
-                context.startActivity(myIntent);
-            }
-        });
 
         kitchen_button.setOnClickListener(new View.OnClickListener() {
             @Override
