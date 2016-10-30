@@ -11,6 +11,7 @@ import com.google.firebase.database.ValueEventListener;
 
 import java.io.DataInputStream;
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.Iterator;
 import java.util.List;
 import java.util.Map;
@@ -32,45 +33,23 @@ public class DatabaseClient {
 
     public DatabaseClient(String userUID) {
         mFirebaseDatabaseReference = FirebaseDatabase.getInstance().getReference();
-        userListsReference = mFirebaseDatabaseReference.child(USER_CHILD).child(userUID);
+        try {
+            userListsReference = mFirebaseDatabaseReference.child(USER_CHILD).child(userUID);
+        } catch (Exception e) {
+            String newListID = mFirebaseDatabaseReference.child(USER_LIST).push().getKey();
+            Map<String, Object> newList = new HashMap<>();
+            newList.put(newListID, new ArrayList<>());
+
+            mFirebaseDatabaseReference.child(USER_LIST).updateChildren(newList);
+            mFirebaseDatabaseReference.child(LIST_CHILD).updateChildren(newList);
+
+
+            Map<String, Object> newUser = new HashMap<>();
+            newUser.put(userUID,newListID);
+            userListsReference = mFirebaseDatabaseReference.child(USER_CHILD);
+        }
     }
 
-    /**
-     * Gets list of items in given list of given user
-     * @param listID id of list requested
-     * @return list of items
-     */
-    public ItemList getUserList(String listID) {
-        List<Item> lists = new ArrayList<>();
-        ValueEventListener postListener = new ValueEventListener() {
-            @Override
-            public void onDataChange(DataSnapshot dataSnapshot) {
-            }
-
-            @Override
-            public void onCancelled(DatabaseError databaseError) {
-                // Getting Post failed, log a message
-//                Log.w(TAG, "loadPost:onCancelled", databaseError.toException());
-//                // [START_EXCLUDE]
-//                Toast.makeText(PostDetailActivity.this, "Failed to load post.",
-//                        Toast.LENGTH_SHORT).show();
-                // [END_EXCLUDE]
-            }
-        };
-
-        ItemList itemList = new ItemList();
-//        mFirebaseDatabaseReference.addChildEventListener(itemList);
-        return itemList;
-    }
-
-    /**
-     * Stores lists of items in given list of given user
-     * @param listID id of list to update
-     * @param itemList updated lists
-     */
-    public void storeUserList(String listID, ItemList itemList) {
-
-    }
 
     public void displayList(String listID, final ListView listView1, final Context context ) {
         DatabaseReference mListRef = mFirebaseDatabaseReference.child("list items").child(listID);

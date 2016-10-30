@@ -34,7 +34,7 @@
         jumboMode="true"
         optimize="true"
         revision="23.0.3"
-        sha1="0b4c2bdbd64f2b43065c3c7b774de7a1d2af5e14">
+        sha1="54b9d222f60c04e7e549b1ff24c9fe8469261217">
         <dex dex="C:\Users\Ali\Documents\My-Easy-Kitchen\app\build\intermediates\transforms\dex\debug\folders\1000\10\instant-run_2ff2f894f6b8397246f7c4a3edaedc43321bebce\classes.dex" />
     </item>
     <item
@@ -97,7 +97,7 @@
         jumboMode="true"
         optimize="true"
         revision="23.0.3"
-        sha1="b608ef45c25441403d1bd65efe88932ad0661959">
+        sha1="a5973bdce6deb1f07a0fa0e3347fbeb7e4911c2d">
         <dex dex="C:\Users\Ali\Documents\My-Easy-Kitchen\app\build\intermediates\transforms\dex\debug\folders\1000\10\instant-run-bootstrap_b05719f385994dce5bc6e8d4c1114e512e66d9bb\classes.dex" />
     </item>
     <item
