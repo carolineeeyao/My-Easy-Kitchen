@@ -93,4 +93,10 @@ public class DatabaseClient {
             }
         });
     }
+
+    public void addItemQuery(String listID, Item newItem) {
+        DatabaseReference mListRef = mFirebaseDatabaseReference.child(LIST_CHILD).child(listID);
+        //mListRef.push().getKey();
+
+    }
 }
