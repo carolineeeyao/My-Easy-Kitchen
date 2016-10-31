@@ -330,6 +330,7 @@
     </string>
     <string name="prompt_email">Email</string>
     <string name="prompt_password">Password (optional)</string>
+    <string name="server_client_id">936145210267-gg341qnqfipe3n1t3vpgtgjpqcfilm3m.apps.googleusercontent.com</string>
     <string name="status_bar_notification_info_overflow">999+</string>
     <string name="title_activity_login">Sign in</string>
     <style name="AlertDialog.AppCompat" parent="Base.AlertDialog.AppCompat"/>

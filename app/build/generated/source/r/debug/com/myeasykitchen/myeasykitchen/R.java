@@ -2657,8 +2657,9 @@ containing a value of this type.
         public static final int permission_rationale=0x7f060039;
         public static final int prompt_email=0x7f06003a;
         public static final int prompt_password=0x7f06003b;
+        public static final int server_client_id=0x7f06003c;
         public static final int status_bar_notification_info_overflow=0x7f060027;
-        public static final int title_activity_login=0x7f06003c;
+        public static final int title_activity_login=0x7f06003d;
     }
     public static final class style {
         public static final int AlertDialog_AppCompat=0x7f090087;
