@@ -896,8 +896,9 @@ int string permission_rationale 0x7f060039
 int string prompt_email 0x7f06003a
 int string prompt_password 0x7f06003b
 int string server_client_id 0x7f06003c
+int string server_client_id2 0x7f06003d
 int string status_bar_notification_info_overflow 0x7f060027
-int string title_activity_login 0x7f06003d
+int string title_activity_login 0x7f06003e
 int style AlertDialog_AppCompat 0x7f090087
 int style AlertDialog_AppCompat_Light 0x7f090088
 int style Animation_AppCompat_Dialog 0x7f090089

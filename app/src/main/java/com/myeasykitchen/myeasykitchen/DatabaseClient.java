@@ -33,26 +33,15 @@ public class DatabaseClient {
 
     public DatabaseClient(String userUID) {
         mFirebaseDatabaseReference = FirebaseDatabase.getInstance().getReference();
-        try {
-            userListsReference = mFirebaseDatabaseReference.child(USER_CHILD).child(userUID);
-        } catch (Exception e) {
-            String newListID = mFirebaseDatabaseReference.child(USER_LIST).push().getKey();
-            Map<String, Object> newList = new HashMap<>();
-            newList.put(newListID, new ArrayList<>());
+        userListsReference = mFirebaseDatabaseReference.child(USER_CHILD).child(userUID);
 
-            mFirebaseDatabaseReference.child(USER_LIST).updateChildren(newList);
-            mFirebaseDatabaseReference.child(LIST_CHILD).updateChildren(newList);
-
-
-            Map<String, Object> newUser = new HashMap<>();
-            newUser.put(userUID,newListID);
-            userListsReference = mFirebaseDatabaseReference.child(USER_CHILD);
-        }
+//            String newListID = mFirebaseDatabaseReference.child(USER_LIST).push().getKey();
+//            userListsReference.child("lists").child(newListID).setValue(true);
     }
 
 
     public void displayList(String listID, final ListView listView1, final Context context ) {
-        DatabaseReference mListRef = mFirebaseDatabaseReference.child("list items").child(listID);
+        DatabaseReference mListRef = mFirebaseDatabaseReference.child(LIST_CHILD).child(listID);
         mListRef.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(DataSnapshot dataSnapshot) {

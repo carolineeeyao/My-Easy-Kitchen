@@ -23,6 +23,10 @@
           }
         },
         {
+          "client_id": "936145210267-2apv1728j8b3aammo52k1tjfincidauq.apps.googleusercontent.com",
+          "client_type": 3
+        },
+        {
           "client_id": "936145210267-gg341qnqfipe3n1t3vpgtgjpqcfilm3m.apps.googleusercontent.com",
           "client_type": 3
         },
@@ -44,7 +48,7 @@
           "status": 2,
           "other_platform_oauth_client": [
             {
-              "client_id": "936145210267-gg341qnqfipe3n1t3vpgtgjpqcfilm3m.apps.googleusercontent.com",
+              "client_id": "936145210267-2apv1728j8b3aammo52k1tjfincidauq.apps.googleusercontent.com",
               "client_type": 3
             }
           ]
