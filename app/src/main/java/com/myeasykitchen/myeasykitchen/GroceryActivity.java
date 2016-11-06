@@ -12,8 +12,6 @@ import android.widget.ListView;
 
 import java.util.List;
 
-import static com.myeasykitchen.myeasykitchen.R.id.listView1;
-
 public class GroceryActivity extends AppCompatActivity {
 
     Context context = this;

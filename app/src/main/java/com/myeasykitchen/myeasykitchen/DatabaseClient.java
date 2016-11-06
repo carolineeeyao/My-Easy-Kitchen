@@ -63,38 +63,43 @@ public class DatabaseClient {
     }
 
     public void displayList(String listID, final ListView listView1, final Context context ) {
-        DatabaseReference mListRef = mFirebaseDatabaseReference.child(LIST_CHILD).child(listID);
-        mListRef.addValueEventListener(new ValueEventListener() {
-            @Override
-            public void onDataChange(DataSnapshot dataSnapshot) {
-                ArrayList<Item> list = new ArrayList<>();
-                Iterator<DataSnapshot> iterator = dataSnapshot.getChildren().iterator();
-                while(iterator.hasNext()) {
-                    String value = iterator.next().getKey();
-                    list.add(new Item(value,"0"));
-//                    list.add(iterator.next().getValue(Item.class));
-                }
-                // TODO: change to firebase recycler adapter
-                KitchenAdapter adapter = new KitchenAdapter(context, R.layout.listview_item_row, list);
-                listView1.setAdapter(adapter);
-            }
-
-            @Override
-            public void onCancelled(DatabaseError databaseError) {
-
-            }
-        });
+//        DatabaseReference mListRef = mFirebaseDatabaseReference.child(LIST_CHILD).child(listID);
+//        mListRef.addValueEventListener(new ValueEventListener() {
+//            @Override
+//            public void onDataChange(DataSnapshot dataSnapshot) {
+//                ArrayList<Item> list = new ArrayList<>();
+//                Iterator<DataSnapshot> iterator = dataSnapshot.getChildren().iterator();
+//                while(iterator.hasNext()) {
+//                    String value = iterator.next().getKey();
+//                    list.add(new Item(value,"0"));
+////                    list.add(iterator.next().getValue(Item.class));
+//                }
+//                // TODO: change to firebase recycler adapter
+//                KitchenAdapter adapter = new KitchenAdapter(context, R.layout.listview_item_row, list);
+//                listView1.setAdapter(adapter);
+//            }
+//
+//            @Override
+//            public void onCancelled(DatabaseError databaseError) {
+//
+//            }
+//        });
     }
 
     public void addItem(String listID, Item newItem) {
         DatabaseReference mListRef = mFirebaseDatabaseReference.child(LIST_CHILD).child(listID);
-        String key = mListRef.push().getKey();
-        newItem.setKey(key);
-        mListRef.child(key).setValue(newItem);
+//        String key = mListRef.push().getKey();
+//        newItem.setKey(key);
+        mListRef.child(newItem.getName()).setValue(newItem);
     }
 
     public void removeItem(String listID, Item item) {
         DatabaseReference mListRef = mFirebaseDatabaseReference.child(LIST_CHILD).child(listID);
-        mListRef.child(item.getKey()).removeValue();
+        mListRef.child(item.getName()).removeValue();
+    }
+
+    public Query getList(String listID) {
+        Query mListRef = mFirebaseDatabaseReference.child(LIST_CHILD).child(listID);
+        return mListRef;
     }
 }

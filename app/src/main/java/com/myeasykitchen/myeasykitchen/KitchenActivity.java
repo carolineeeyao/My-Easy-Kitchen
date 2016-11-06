@@ -4,24 +4,54 @@ import android.content.Context;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.widget.LinearLayoutManager;
+import android.support.v7.widget.RecyclerView;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ListView;
 
+import com.firebase.ui.database.FirebaseRecyclerAdapter;
+import com.google.firebase.database.DatabaseReference;
+
 public class KitchenActivity extends AppCompatActivity {
 
     Context context = this;
+
     private ListView listView1;
+
+    private DatabaseClient databaseClient;
+
+    private FirebaseRecyclerAdapter<Item, ItemViewHolder> mAdapter;
+    private RecyclerView mRecycler;
+    private LinearLayoutManager mManager;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_kitchen);
 
-        DatabaseClient databaseClient = DatabaseClient.getInstance();
-        databaseClient.displayList("1", (ListView)findViewById(R.id.listView1),this);
+        databaseClient = DatabaseClient.getInstance();
+//        databaseClient.displayList("1", (ListView)findViewById(R.id.activity_kitchen_recycler_view),this);
 
-        Button add_button = (Button)findViewById(R.id.add_grocery_item);
+        mRecycler = (RecyclerView) findViewById(R.id.activity_kitchen_recycler_view);
+        Button add_button = (Button)findViewById(R.id.add_kitchen_item);
+
+
+        mManager = new LinearLayoutManager(this);
+        mManager.setReverseLayout(true);
+        mManager.setStackFromEnd(true);
+        mRecycler.setLayoutManager(mManager);
+        mAdapter = new FirebaseRecyclerAdapter<Item, ItemViewHolder>(Item.class, R.layout.listview_item_row,
+                ItemViewHolder.class, databaseClient.getList("1")) {
+            @Override
+            protected void populateViewHolder(ItemViewHolder viewHolder, Item model, int position) {
+                final DatabaseReference itemRef = getRef(position);
+
+                viewHolder.bindToItem(model);
+            }
+        };
+
+        mRecycler.setAdapter(mAdapter);
 
         add_button.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -30,10 +60,8 @@ public class KitchenActivity extends AppCompatActivity {
                 context.startActivity(myIntent);
             }
         });
-//        KitchenAdapter adapter = new KitchenAdapter(this, R.layout.listview_item_row, StaticData.kitchen_list);
-//
-//        listView1 = (ListView)findViewById(R.id.listView1);
-//        listView1.setAdapter(adapter);
+
+
 
     }
 }
