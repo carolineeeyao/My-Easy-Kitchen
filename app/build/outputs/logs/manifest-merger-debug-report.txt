@@ -75,7 +75,7 @@ ADDED from C:\Users\Ali\Documents\My-Easy-Kitchen\app\src\main\AndroidManifest.x
 	android:name
 		ADDED from C:\Users\Ali\Documents\My-Easy-Kitchen\app\src\main\AndroidManifest.xml:21:27-74
 activity#com.myeasykitchen.myeasykitchen.LoginActivity
-ADDED from C:\Users\Ali\Documents\My-Easy-Kitchen\app\src\main\AndroidManifest.xml:24:9-26:69
+ADDED from C:\Users\Ali\Documents\My-Easy-Kitchen\app\src\main\AndroidManifest.xml:24:9-26:60
 	android:label
 		ADDED from C:\Users\Ali\Documents\My-Easy-Kitchen\app\src\main\AndroidManifest.xml:26:13-57
 	android:name
@@ -89,7 +89,7 @@ ADDED from C:\Users\Ali\Documents\My-Easy-Kitchen\app\src\main\AndroidManifest.x
 	android:name
 		ADDED from C:\Users\Ali\Documents\My-Easy-Kitchen\app\src\main\AndroidManifest.xml:28:19-50
 activity#com.myeasykitchen.myeasykitchen.GroceryActivity
-ADDED from C:\Users\Ali\Documents\My-Easy-Kitchen\app\src\main\AndroidManifest.xml:29:9-62
+ADDED from C:\Users\Ali\Documents\My-Easy-Kitchen\app\src\main\AndroidManifest.xml:29:9-53
 	android:name
 		ADDED from C:\Users\Ali\Documents\My-Easy-Kitchen\app\src\main\AndroidManifest.xml:29:19-50
 uses-sdk

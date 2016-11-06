@@ -39,7 +39,7 @@ public class AddItemActivity extends AppCompatActivity {
         TextView name_text = (TextView)findViewById(R.id.name_text);
         TextView quantity_text = (TextView)findViewById(R.id.quantity_text);
 
-        StaticData.grocery_list.getList().add(new Item(name_text.getText().toString(), quantity_text.getText().toString()));
+        DatabaseClient.getInstance().addItem("1", new Item(name_text.getText().toString(), quantity_text.getText().toString()));
         finish();
     }
 }

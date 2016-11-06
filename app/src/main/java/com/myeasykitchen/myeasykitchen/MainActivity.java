@@ -53,7 +53,8 @@ public class MainActivity extends AppCompatActivity {
             if (mFirebaseUser.getPhotoUrl() != null) {
                 mPhotoUrl = mFirebaseUser.getPhotoUrl().toString();
             }
-            DatabaseClient databaseClient = new DatabaseClient(mFirebaseUser.getUid());
+            DatabaseClient databaseClient = DatabaseClient.getInstance();
+            databaseClient.setUser(mFirebaseUser.getUid());
         }
 
         //populate a little of kitchen_data

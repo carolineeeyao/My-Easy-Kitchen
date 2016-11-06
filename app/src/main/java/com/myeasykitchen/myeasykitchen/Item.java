@@ -8,9 +8,10 @@ import java.util.Observer;
 public class Item {
 
     private long timeToAdd = 3*24*60*60*1000;
-    private String name;
-    private String quantity;
-    private Date expireDate;
+    private String name = "";
+    private String quantity = "";
+    private String key = "";
+    private Date expireDate = new Date();
 
 
     public Item(String name, String quantity) {
@@ -24,6 +25,11 @@ public class Item {
         this.name = name;
     }
 
+    public void setKey(String key)
+    {
+        this.key = key;
+    }
+
     public void setQuantity(String quantity)
     {
         this.quantity =  quantity;
@@ -32,6 +38,11 @@ public class Item {
     public String getName()
     {
         return this.name;
+    }
+
+    public String getKey()
+    {
+        return this.key;
     }
 
     public String getQuantity() {
