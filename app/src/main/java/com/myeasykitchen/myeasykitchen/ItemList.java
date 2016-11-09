@@ -13,18 +13,22 @@ import java.util.Observer;
  */
 
 public class ItemList  {
-    private ArrayList<Item> gList;
+    private String name;
 
     public ItemList() {
-        gList = new ArrayList<>();
+        this.name = "";
     }
 
-    public ArrayList<Item> getList() {
-        return gList;
+    public ItemList(String name) {
+        this.name = name;
     }
 
-    public void setList(ArrayList<Item> gList) {
-        this.gList = gList;
+    public String getName() {
+        return name;
     }
 
+    public void setName(String name)
+    {
+        this.name = name;
+    }
 }

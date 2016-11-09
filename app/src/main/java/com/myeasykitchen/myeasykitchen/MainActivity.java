@@ -6,10 +6,13 @@ import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.preference.PreferenceManager;
 import android.support.v7.app.AppCompatActivity;
-import android.view.MenuItem;
+import android.support.v7.widget.LinearLayoutManager;
+import android.support.v7.widget.RecyclerView;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 
+import com.firebase.ui.database.FirebaseRecyclerAdapter;
 import com.google.android.gms.common.api.GoogleApiClient;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
@@ -25,11 +28,18 @@ public class MainActivity extends AppCompatActivity {
     private FirebaseAuth mFirebaseAuth;
     private FirebaseUser mFirebaseUser;
     private DatabaseReference mFirebaseDatabaseReference;
+    private DatabaseClient databaseClient;
 
     private String mUsername;
     private String mPhotoUrl;
     private SharedPreferences mSharedPreferences;
     private GoogleApiClient mGoogleApiClient;
+
+    private FirebaseRecyclerAdapter<ItemList, ItemListViewHolder> mAdapter;
+    private RecyclerView mRecycler;
+    private LinearLayoutManager mManager;
+
+    private static final String TAG = "MainActivity";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -53,37 +63,31 @@ public class MainActivity extends AppCompatActivity {
             if (mFirebaseUser.getPhotoUrl() != null) {
                 mPhotoUrl = mFirebaseUser.getPhotoUrl().toString();
             }
-            DatabaseClient databaseClient = DatabaseClient.getInstance();
+            databaseClient = DatabaseClient.getInstance();
             databaseClient.setUser(mFirebaseUser.getUid());
         }
 
-        //populate a little of kitchen_data
-        StaticData.kitchen_data.add(new Item("bread", "1"));
-        StaticData.kitchen_data.add(new Item("eggs", "1"));
-        StaticData.kitchen_data.add(new Item("milk", "1"));
-        StaticData.kitchen_data.add(new Item("cheese", "1"));
-        StaticData.kitchen_data.add(new Item("cereal", "1"));
-        StaticData.kitchen_data.add(new Item("popcorn", "1"));
-        StaticData.kitchen_data.add(new Item("cookies", "1"));
-        StaticData.kitchen_data.add(new Item("cake", "1"));
-        StaticData.kitchen_data.add(new Item("candy", "1"));
-
-        //populate a little of kitchen_data
-        StaticData.grocery_data.add(new Item("bread", "1"));
-        StaticData.grocery_data.add(new Item("eggs", "1"));
-        StaticData.grocery_data.add(new Item("milk", "1"));
-        StaticData.grocery_data.add(new Item("cheese", "1"));
-        StaticData.grocery_data.add(new Item("cereal", "1"));
-        StaticData.grocery_data.add(new Item("popcorn", "1"));
-        StaticData.grocery_data.add(new Item("cookies", "1"));
-        StaticData.grocery_data.add(new Item("cake", "1"));
-        StaticData.grocery_data.add(new Item("candy", "1"));
-
-        StaticData.kitchen_list.setList(StaticData.kitchen_data);
-        StaticData.grocery_list.setList(StaticData.grocery_data);
-
         Button kitchen_button = (Button)findViewById(R.id.kitchen_button);
         Button grocery_button = (Button)findViewById(R.id.grocery_button);
+
+        mRecycler = (RecyclerView) findViewById(R.id.user_lists);
+
+        mManager = new LinearLayoutManager(this);
+        mManager.setReverseLayout(true);
+        mManager.setStackFromEnd(true);
+        mRecycler.setLayoutManager(mManager);
+        mAdapter = new FirebaseRecyclerAdapter<ItemList, ItemListViewHolder>(ItemList.class, R.layout.user_list_item_row,
+                ItemListViewHolder.class, databaseClient.getUserLists()) {
+            @Override
+            protected void populateViewHolder(ItemListViewHolder viewHolder, ItemList model, int position) {
+                final DatabaseReference itemRef = getRef(position);
+
+                viewHolder.bindToItem(model);
+                Log.d(TAG,"stuff should happen");
+            }
+        };
+
+        mRecycler.setAdapter(mAdapter);
 
         kitchen_button.setOnClickListener(new View.OnClickListener() {
             @Override

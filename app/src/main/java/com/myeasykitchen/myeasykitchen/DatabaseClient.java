@@ -11,13 +11,7 @@ import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.Query;
 import com.google.firebase.database.ValueEventListener;
 
-import java.io.DataInputStream;
-import java.util.ArrayList;
-import java.util.HashMap;
 import java.util.Iterator;
-import java.util.List;
-import java.util.Map;
-import java.util.Objects;
 
 /**
  * Created by Ali on 10/21/2016.
@@ -51,7 +45,7 @@ public class DatabaseClient {
                 Iterator<DataSnapshot> iterator = dataSnapshot.getChildren().iterator();
                 if(!iterator.hasNext()) {
                     String newListID = mFirebaseDatabaseReference.child(USER_LIST).push().getKey();
-                    userListsReference.child("lists").child(newListID).setValue(true);
+                    userListsReference.child("lists").child(newListID).child("name").setValue("List");
                 }
             }
 
@@ -59,33 +53,7 @@ public class DatabaseClient {
             public void onCancelled(DatabaseError databaseError) {
             }
         });
-
     }
-
-    public void displayList(String listID, final ListView listView1, final Context context ) {
-//        DatabaseReference mListRef = mFirebaseDatabaseReference.child(LIST_CHILD).child(listID);
-//        mListRef.addValueEventListener(new ValueEventListener() {
-//            @Override
-//            public void onDataChange(DataSnapshot dataSnapshot) {
-//                ArrayList<Item> list = new ArrayList<>();
-//                Iterator<DataSnapshot> iterator = dataSnapshot.getChildren().iterator();
-//                while(iterator.hasNext()) {
-//                    String value = iterator.next().getKey();
-//                    list.add(new Item(value,"0"));
-////                    list.add(iterator.next().getValue(Item.class));
-//                }
-//                // TODO: change to firebase recycler adapter
-//                KitchenAdapter adapter = new KitchenAdapter(context, R.layout.listview_item_row, list);
-//                listView1.setAdapter(adapter);
-//            }
-//
-//            @Override
-//            public void onCancelled(DatabaseError databaseError) {
-//
-//            }
-//        });
-    }
-
     public void addItem(String listID, Item newItem) {
         DatabaseReference mListRef = mFirebaseDatabaseReference.child(LIST_CHILD).child(listID);
 //        String key = mListRef.push().getKey();
@@ -99,7 +67,11 @@ public class DatabaseClient {
     }
 
     public Query getList(String listID) {
-        Query mListRef = mFirebaseDatabaseReference.child(LIST_CHILD).child(listID);
-        return mListRef;
+        return mFirebaseDatabaseReference.child(LIST_CHILD).child(listID);
+    }
+
+    public Query getUserLists() {
+//        return mFirebaseDatabaseReference.child(USER_CHILD);
+        return userListsReference.child("lists");
     }
 }

@@ -15,14 +15,14 @@ import java.util.Observer;
 public class Item {
 
 //    private long timeToAdd = 3*24*60*60*1000;
-    private String name = "";
+    private String name;
 //    private String quantity = "";
 //    private String key = "";
 //    private Date expireDate = new Date();
 
 
     public Item () {
-
+        this.name = "";
     }
     public Item(String name, String quantity) {
         this.name = name;

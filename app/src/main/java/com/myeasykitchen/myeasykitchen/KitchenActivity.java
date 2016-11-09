@@ -31,8 +31,6 @@ public class KitchenActivity extends AppCompatActivity {
         setContentView(R.layout.activity_kitchen);
 
         databaseClient = DatabaseClient.getInstance();
-//        databaseClient.displayList("1", (ListView)findViewById(R.id.activity_kitchen_recycler_view),this);
-
         mRecycler = (RecyclerView) findViewById(R.id.activity_kitchen_recycler_view);
         Button add_button = (Button)findViewById(R.id.add_kitchen_item);
 
@@ -41,7 +39,7 @@ public class KitchenActivity extends AppCompatActivity {
         mManager.setReverseLayout(true);
         mManager.setStackFromEnd(true);
         mRecycler.setLayoutManager(mManager);
-        mAdapter = new FirebaseRecyclerAdapter<Item, ItemViewHolder>(Item.class, R.layout.listview_item_row,
+        mAdapter = new FirebaseRecyclerAdapter<Item, ItemViewHolder>(Item.class, R.layout.kitchen_item_row,
                 ItemViewHolder.class, databaseClient.getList("1")) {
             @Override
             protected void populateViewHolder(ItemViewHolder viewHolder, Item model, int position) {
