@@ -2651,6 +2651,7 @@ containing a value of this type.
         public static final int line3=0x7f0c00a8;
         public static final int listMode=0x7f0c000b;
         public static final int list_item=0x7f0c004a;
+        public static final int list_name=0x7f0c00ab;
         public static final int login_form=0x7f0c0082;
         public static final int login_progress=0x7f0c0081;
         public static final int media_actions=0x7f0c009a;
@@ -2806,6 +2807,7 @@ containing a value of this type.
         public static final int select_dialog_multichoice_material=0x7f04003d;
         public static final int select_dialog_singlechoice_material=0x7f04003e;
         public static final int support_simple_spinner_dropdown_item=0x7f04003f;
+        public static final int user_list_item_row=0x7f040040;
     }
     public static final class mipmap {
         public static final int ic_launcher=0x7f030000;
