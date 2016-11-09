@@ -71,7 +71,6 @@ public class DatabaseClient {
     }
 
     public Query getUserLists() {
-//        return mFirebaseDatabaseReference.child(USER_CHILD);
         return userListsReference.child("lists");
     }
 }
