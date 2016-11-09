@@ -30,34 +30,34 @@ public class KitchenActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_kitchen);
 
-//        databaseClient = DatabaseClient.getInstance();
-//        mRecycler = (RecyclerView) findViewById(R.id.activity_kitchen_recycler_view);
-//        Button add_button = (Button)findViewById(R.id.add_kitchen_item);
-//
-//
-//        mManager = new LinearLayoutManager(this);
-//        mManager.setReverseLayout(true);
-//        mManager.setStackFromEnd(true);
-//        mRecycler.setLayoutManager(mManager);
-//        mAdapter = new FirebaseRecyclerAdapter<Item, ItemViewHolder>(Item.class, R.layout.listview_item_row,
-//                ItemViewHolder.class, databaseClient.getList("1")) {
-//            @Override
-//            protected void populateViewHolder(ItemViewHolder viewHolder, Item model, int position) {
-//                final DatabaseReference itemRef = getRef(position);
-//
-//                viewHolder.bindToItem(model);
-//            }
-//        };
-//
-//        mRecycler.setAdapter(mAdapter);
-//
-//        add_button.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View v) {
-//                Intent myIntent = new Intent(context, AddItemActivity.class);
-//                context.startActivity(myIntent);
-//            }
-//        });
+        databaseClient = DatabaseClient.getInstance();
+        mRecycler = (RecyclerView) findViewById(R.id.activity_kitchen_recycler_view);
+        Button add_button = (Button)findViewById(R.id.add_kitchen_item);
+
+
+        mManager = new LinearLayoutManager(this);
+        mManager.setReverseLayout(true);
+        mManager.setStackFromEnd(true);
+        mRecycler.setLayoutManager(mManager);
+        mAdapter = new FirebaseRecyclerAdapter<Item, ItemViewHolder>(Item.class, R.layout.kitchen_item_row,
+                ItemViewHolder.class, databaseClient.getList("1")) {
+            @Override
+            protected void populateViewHolder(ItemViewHolder viewHolder, Item model, int position) {
+                final DatabaseReference itemRef = getRef(position);
+
+                viewHolder.bindToItem(model);
+            }
+        };
+
+        mRecycler.setAdapter(mAdapter);
+
+        add_button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent myIntent = new Intent(context, AddItemActivity.class);
+                context.startActivity(myIntent);
+            }
+        });
 
 
 

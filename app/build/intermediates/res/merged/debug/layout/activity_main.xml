@@ -25,4 +25,12 @@
         android:layout_below="@+id/kitchen_button"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true" />
+
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/user_lists"
+        android:layout_below="@+id/grocery_button"
+        android:scrollbars="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
 </RelativeLayout>
