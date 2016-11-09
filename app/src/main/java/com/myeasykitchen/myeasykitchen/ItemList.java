@@ -23,4 +23,7 @@ public class ItemList  {
         this.name = name;
     }
 
+    public String getName() {
+        return name;
+    }
 }
