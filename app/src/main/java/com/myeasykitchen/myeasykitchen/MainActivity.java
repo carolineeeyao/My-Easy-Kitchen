@@ -1,5 +1,7 @@
 package com.myeasykitchen.myeasykitchen;
 
+import android.app.AlarmManager;
+import android.app.PendingIntent;
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
@@ -11,12 +13,17 @@ import android.support.v7.widget.RecyclerView;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
+import android.widget.Toast;
 
 import com.firebase.ui.database.FirebaseRecyclerAdapter;
 import com.google.android.gms.common.api.GoogleApiClient;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.database.DatabaseReference;
+import com.myeasykitchen.notifications.AlarmCreator;
+import com.myeasykitchen.notifications.AlarmReceiver;
+
+import java.util.Calendar;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -46,6 +53,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+
         mSharedPreferences = PreferenceManager.getDefaultSharedPreferences(this);
         // Set default username is anonymous.
         mUsername = ANONYMOUS;
@@ -67,9 +75,6 @@ public class MainActivity extends AppCompatActivity {
             databaseClient.setUser(mFirebaseUser.getUid());
         }
 
-        Button kitchen_button = (Button)findViewById(R.id.kitchen_button);
-        Button grocery_button = (Button)findViewById(R.id.grocery_button);
-
         mRecycler = (RecyclerView) findViewById(R.id.user_lists);
 
         mManager = new LinearLayoutManager(this);
@@ -88,6 +93,11 @@ public class MainActivity extends AppCompatActivity {
         };
 
         mRecycler.setAdapter(mAdapter);
+        
+
+
+        Button kitchen_button = (Button)findViewById(R.id.kitchen_button);
+        Button grocery_button = (Button)findViewById(R.id.grocery_button);
 
         kitchen_button.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -104,6 +114,21 @@ public class MainActivity extends AppCompatActivity {
                 context.startActivity(myIntent);
             }
         });
+
+
+        //how to create notifications
+        //ADD THIS TO WHEN CREATE/ADD ITEM
+        //set the time using Calendar
+        Calendar calendar = Calendar.getInstance();
+
+        int minute = 15;
+        calendar.set(Calendar.HOUR_OF_DAY, 11);
+        calendar.set(Calendar.MINUTE, minute);
+
+        int uniqueId = 1;
+        String title = "This item is about to expire";
+        String text = "Name of Item";
+        AlarmCreator.create(context, calendar, uniqueId, title, text);
 
 
     }
