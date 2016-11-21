@@ -1,6 +1,5 @@
-package com.myeasykitchen.notifications;
+package com.myeasykitchen.myeasykitchen.notifications;
 
-import android.app.Notification;
 import android.app.NotificationManager;
 import android.app.PendingIntent;
 import android.content.BroadcastReceiver;
@@ -8,7 +7,7 @@ import android.content.Context;
 import android.content.Intent;
 import android.support.v4.app.NotificationCompat;
 
-import com.myeasykitchen.myeasykitchen.*;
+import com.myeasykitchen.myeasykitchen.MainActivity;
 
 /**
  * Created by sonal on 11/12/16.

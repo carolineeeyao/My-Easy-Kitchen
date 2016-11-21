@@ -12,6 +12,8 @@ import android.widget.ListView;
 
 import com.firebase.ui.database.FirebaseRecyclerAdapter;
 import com.google.firebase.database.DatabaseReference;
+import com.myeasykitchen.myeasykitchen.models.Item;
+import com.myeasykitchen.myeasykitchen.viewholder.ItemViewHolder;
 
 public class KitchenActivity extends AppCompatActivity {
 
@@ -45,7 +47,12 @@ public class KitchenActivity extends AppCompatActivity {
             protected void populateViewHolder(ItemViewHolder viewHolder, Item model, int position) {
                 final DatabaseReference itemRef = getRef(position);
 
-                viewHolder.bindToItem(model);
+                viewHolder.bindToItem(model, new View.OnLongClickListener() {
+                    @Override
+                    public boolean onLongClick(View v) {
+                        return false;
+                    }
+                });
             }
         };
 

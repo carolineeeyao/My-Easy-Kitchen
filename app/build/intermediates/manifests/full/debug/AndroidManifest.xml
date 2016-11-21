@@ -44,7 +44,7 @@
         <activity android:name="com.myeasykitchen.myeasykitchen.AddItemActivity" />
         <activity android:name="com.myeasykitchen.myeasykitchen.GroceryActivity" />
 
-        <receiver android:name="com.myeasykitchen.notifications.AlarmReceiver" />
+        <receiver android:name="com.myeasykitchen.myeasykitchen.notifications.AlarmReceiver" />
         <receiver
             android:name="com.google.android.gms.measurement.AppMeasurementReceiver"
             android:enabled="true"

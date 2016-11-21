@@ -1,5 +1,7 @@
 package com.myeasykitchen.myeasykitchen;
 
+import com.myeasykitchen.myeasykitchen.models.Item;
+
 /**
  * Created by Ali on 10/21/2016.
  */

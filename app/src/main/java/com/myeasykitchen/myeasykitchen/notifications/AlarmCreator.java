@@ -1,4 +1,4 @@
-package com.myeasykitchen.notifications;
+package com.myeasykitchen.myeasykitchen.notifications;
 
 import android.app.AlarmManager;
 import android.app.PendingIntent;

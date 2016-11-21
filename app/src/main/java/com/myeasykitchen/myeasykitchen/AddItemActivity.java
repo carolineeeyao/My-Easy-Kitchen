@@ -6,7 +6,9 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
-import org.w3c.dom.Text;
+import com.myeasykitchen.myeasykitchen.DatabaseClient;
+import com.myeasykitchen.myeasykitchen.models.Item;
+import com.myeasykitchen.myeasykitchen.R;
 
 public class AddItemActivity extends AppCompatActivity {
 

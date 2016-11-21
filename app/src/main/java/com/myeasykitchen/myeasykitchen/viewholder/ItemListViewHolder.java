@@ -1,8 +1,11 @@
-package com.myeasykitchen.myeasykitchen;
+package com.myeasykitchen.myeasykitchen.viewholder;
 
 import android.support.v7.widget.RecyclerView;
 import android.view.View;
 import android.widget.TextView;
+
+import com.myeasykitchen.myeasykitchen.models.ItemList;
+import com.myeasykitchen.myeasykitchen.R;
 
 /**
  * Created by Ali on 11/8/2016.

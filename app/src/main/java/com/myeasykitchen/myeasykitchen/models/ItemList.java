@@ -1,12 +1,4 @@
-package com.myeasykitchen.myeasykitchen;
-
-import com.google.firebase.database.ChildEventListener;
-import com.google.firebase.database.DataSnapshot;
-import com.google.firebase.database.DatabaseError;
-
-import java.util.ArrayList;
-import java.util.Observable;
-import java.util.Observer;
+package com.myeasykitchen.myeasykitchen.models;
 
 /**
  * Created by Ali on 10/19/2016.

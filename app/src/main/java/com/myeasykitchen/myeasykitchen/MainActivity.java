@@ -1,7 +1,5 @@
 package com.myeasykitchen.myeasykitchen;
 
-import android.app.AlarmManager;
-import android.app.PendingIntent;
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
@@ -13,15 +11,15 @@ import android.support.v7.widget.RecyclerView;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
-import android.widget.Toast;
 
 import com.firebase.ui.database.FirebaseRecyclerAdapter;
 import com.google.android.gms.common.api.GoogleApiClient;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.database.DatabaseReference;
-import com.myeasykitchen.notifications.AlarmCreator;
-import com.myeasykitchen.notifications.AlarmReceiver;
+import com.myeasykitchen.myeasykitchen.models.ItemList;
+import com.myeasykitchen.myeasykitchen.viewholder.ItemListViewHolder;
+import com.myeasykitchen.myeasykitchen.notifications.AlarmCreator;
 
 import java.util.Calendar;
 
@@ -104,6 +102,15 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
                 Intent myIntent = new Intent(context, KitchenActivity.class);
                 context.startActivity(myIntent);
+            }
+        });
+
+        kitchen_button.setOnLongClickListener(new View.OnLongClickListener() {
+
+            @Override
+            public boolean onLongClick(View v) {
+                Log.d(TAG,"hi");
+                return true;
             }
         });
 
