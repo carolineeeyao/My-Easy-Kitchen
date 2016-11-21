@@ -1,4 +1,4 @@
-package com.myeasykitchen.myeasykitchen;
+package com.myeasykitchen.myeasykitchen.activities;
 
 import android.content.Context;
 import android.content.Intent;
@@ -17,6 +17,8 @@ import com.google.android.gms.common.api.GoogleApiClient;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.database.DatabaseReference;
+import com.myeasykitchen.myeasykitchen.DatabaseClient;
+import com.myeasykitchen.myeasykitchen.R;
 import com.myeasykitchen.myeasykitchen.models.ItemList;
 import com.myeasykitchen.myeasykitchen.viewholder.ItemListViewHolder;
 import com.myeasykitchen.myeasykitchen.notifications.AlarmCreator;

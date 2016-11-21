@@ -1,7 +1,8 @@
-package com.myeasykitchen.myeasykitchen;
+package com.myeasykitchen.myeasykitchen.activities;
 
 import android.content.Context;
 import android.content.Intent;
+import android.support.v4.app.FragmentManager;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
@@ -12,6 +13,9 @@ import android.widget.ListView;
 
 import com.firebase.ui.database.FirebaseRecyclerAdapter;
 import com.google.firebase.database.DatabaseReference;
+import com.myeasykitchen.myeasykitchen.DatabaseClient;
+import com.myeasykitchen.myeasykitchen.R;
+import com.myeasykitchen.myeasykitchen.fragments.ItemMenuFragment;
 import com.myeasykitchen.myeasykitchen.models.Item;
 import com.myeasykitchen.myeasykitchen.viewholder.ItemViewHolder;
 
@@ -44,12 +48,16 @@ public class KitchenActivity extends AppCompatActivity {
         mAdapter = new FirebaseRecyclerAdapter<Item, ItemViewHolder>(Item.class, R.layout.kitchen_item_row,
                 ItemViewHolder.class, databaseClient.getList("1")) {
             @Override
-            protected void populateViewHolder(ItemViewHolder viewHolder, Item model, int position) {
+            protected void populateViewHolder(ItemViewHolder viewHolder, final Item model, int position) {
                 final DatabaseReference itemRef = getRef(position);
 
                 viewHolder.bindToItem(model, new View.OnLongClickListener() {
                     @Override
                     public boolean onLongClick(View v) {
+                        FragmentManager fm = getSupportFragmentManager();
+                        ItemMenuFragment fragment = ItemMenuFragment.newInstance(model);
+                        fragment.show(fm, "fragment_item_menu");
+
                         return false;
                     }
                 });
@@ -65,6 +73,7 @@ public class KitchenActivity extends AppCompatActivity {
                 context.startActivity(myIntent);
             }
         });
+
 
 
 

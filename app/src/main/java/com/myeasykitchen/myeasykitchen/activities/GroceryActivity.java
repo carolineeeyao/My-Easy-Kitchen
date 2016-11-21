@@ -1,4 +1,4 @@
-package com.myeasykitchen.myeasykitchen;
+package com.myeasykitchen.myeasykitchen.activities;
 
 import android.content.Context;
 import android.support.v7.app.AppCompatActivity;

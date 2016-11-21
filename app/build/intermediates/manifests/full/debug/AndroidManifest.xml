@@ -30,7 +30,7 @@
         android:label="@string/app_name"
         android:supportsRtl="true"
         android:theme="@style/AppTheme" >
-        <activity android:name="com.myeasykitchen.myeasykitchen.MainActivity" >
+        <activity android:name="com.myeasykitchen.myeasykitchen.activities.MainActivity" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -38,11 +38,11 @@
             </intent-filter>
         </activity>
         <activity
-            android:name="com.myeasykitchen.myeasykitchen.LoginActivity"
+            android:name="com.myeasykitchen.myeasykitchen.activities.LoginActivity"
             android:label="@string/title_activity_login" />
-        <activity android:name="com.myeasykitchen.myeasykitchen.KitchenActivity" />
-        <activity android:name="com.myeasykitchen.myeasykitchen.AddItemActivity" />
-        <activity android:name="com.myeasykitchen.myeasykitchen.GroceryActivity" />
+        <activity android:name="com.myeasykitchen.myeasykitchen.activities.KitchenActivity" />
+        <activity android:name="com.myeasykitchen.myeasykitchen.activities.AddItemActivity" />
+        <activity android:name="com.myeasykitchen.myeasykitchen.activities.GroceryActivity" />
 
         <receiver android:name="com.myeasykitchen.myeasykitchen.notifications.AlarmReceiver" />
         <receiver

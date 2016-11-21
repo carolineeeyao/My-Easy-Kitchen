@@ -2,10 +2,12 @@ package com.myeasykitchen.myeasykitchen.fragments;
 
 import android.os.Bundle;
 import android.support.v4.app.DialogFragment;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.myeasykitchen.myeasykitchen.R;
 import com.myeasykitchen.myeasykitchen.models.Item;
@@ -33,7 +35,7 @@ public class ItemMenuFragment extends DialogFragment {
     }
 
     @Override
-    public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
+    public View onCreateView(LayoutInflater inflater, final ViewGroup container, Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_item_menu, container);
         editItem = (TextView) view.findViewById(R.id.edit_item);
         removeItem = (TextView) view.findViewById(R.id.remove_item);
@@ -42,7 +44,8 @@ public class ItemMenuFragment extends DialogFragment {
         editItem.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
+                // TODO: edit the item
+                ItemMenuFragment.this.dismiss();
             }
         });
 

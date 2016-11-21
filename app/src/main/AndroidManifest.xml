@@ -15,7 +15,7 @@
         android:label="@string/app_name"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".MainActivity">
+        <activity android:name=".activities.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -23,11 +23,11 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".LoginActivity"
+            android:name=".activities.LoginActivity"
             android:label="@string/title_activity_login" />
-        <activity android:name=".KitchenActivity" />
-        <activity android:name=".AddItemActivity" />
-        <activity android:name=".GroceryActivity" />
+        <activity android:name=".activities.KitchenActivity" />
+        <activity android:name=".activities.AddItemActivity" />
+        <activity android:name=".activities.GroceryActivity" />
 
         <receiver android:name=".notifications.AlarmReceiver" />
 

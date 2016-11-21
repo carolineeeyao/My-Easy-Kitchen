@@ -7,7 +7,7 @@ import android.content.Context;
 import android.content.Intent;
 import android.support.v4.app.NotificationCompat;
 
-import com.myeasykitchen.myeasykitchen.MainActivity;
+import com.myeasykitchen.myeasykitchen.activities.MainActivity;
 
 /**
  * Created by sonal on 11/12/16.
