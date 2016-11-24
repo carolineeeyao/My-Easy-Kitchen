@@ -72,7 +72,7 @@ public class MainActivity extends AppCompatActivity {
                 mPhotoUrl = mFirebaseUser.getPhotoUrl().toString();
             }
             databaseClient = DatabaseClient.getInstance();
-            databaseClient.setUser(mFirebaseUser.getUid());
+            databaseClient.setUser(mFirebaseUser.getUid(),mUsername);
         }
 
         mRecycler = (RecyclerView) findViewById(R.id.user_lists);
@@ -84,10 +84,22 @@ public class MainActivity extends AppCompatActivity {
         mAdapter = new FirebaseRecyclerAdapter<ItemList, ItemListViewHolder>(ItemList.class, R.layout.user_list_item_row,
                 ItemListViewHolder.class, databaseClient.getUserLists()) {
             @Override
-            protected void populateViewHolder(ItemListViewHolder viewHolder, ItemList model, int position) {
+            protected void populateViewHolder(ItemListViewHolder viewHolder, final ItemList model, int position) {
                 final DatabaseReference itemRef = getRef(position);
 
-                viewHolder.bindToItem(model);
+                viewHolder.bindToItem(model, new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        Intent myIntent;
+                        if(model.getListType().equals("kitchen")) {
+                            myIntent = new Intent(context, KitchenActivity.class);
+                        } else {
+                            myIntent = new Intent(context, GroceryActivity.class);
+                        }
+                        myIntent.putExtra("list name", itemRef.getKey());
+                        context.startActivity(myIntent);
+                    }
+                });
                 Log.d(TAG,"stuff should happen");
             }
         };

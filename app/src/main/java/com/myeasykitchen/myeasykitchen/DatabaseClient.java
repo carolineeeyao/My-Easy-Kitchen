@@ -34,15 +34,22 @@ public class DatabaseClient {
         return instance;
     }
 
-    public void setUser(String userUID) {
+    public void setUser(String userUID, final String username) {
         userListsReference = mFirebaseDatabaseReference.child(USER_CHILD).child(userUID);
         userListsReference.addListenerForSingleValueEvent(new ValueEventListener() {
             @Override
             public void onDataChange(DataSnapshot dataSnapshot) {
                 Iterator<DataSnapshot> iterator = dataSnapshot.getChildren().iterator();
                 if(!iterator.hasNext()) {
-                    String newListID = mFirebaseDatabaseReference.child(USER_LIST).push().getKey();
-                    userListsReference.child("lists").child(newListID).child("name").setValue("List");
+                    String newKitchenList = mFirebaseDatabaseReference.child(USER_LIST).push().getKey();
+                    userListsReference.child("lists").child(newKitchenList).child("name").setValue("Kitchen List");
+                    userListsReference.child("lists").child(newKitchenList).child("kitchenList").setValue("kitchen");
+
+                    String newGroceryList = mFirebaseDatabaseReference.child(USER_LIST).push().getKey();
+                    userListsReference.child("lists").child(newGroceryList).child("name").setValue("Grocery List");
+                    userListsReference.child("lists").child(newGroceryList).child("kitchenList").setValue("grocery");
+
+                    userListsReference.child("name").setValue(username);
                 }
             }
 
@@ -53,14 +60,14 @@ public class DatabaseClient {
     }
     public void addItem(String listID, Item newItem) {
         DatabaseReference mListRef = mFirebaseDatabaseReference.child(LIST_CHILD).child(listID);
-//        String key = mListRef.push().getKey();
-//        newItem.setKey(key);
-        mListRef.child(newItem.getName()).setValue(newItem);
+        String key = mListRef.push().getKey();
+        newItem.setKey(key);
+        mListRef.child(key).setValue(newItem);
     }
 
     public void removeItem(String listID, Item item) {
         DatabaseReference mListRef = mFirebaseDatabaseReference.child(LIST_CHILD).child(listID);
-        mListRef.child(item.getName()).removeValue();
+        mListRef.child(item.getKey()).removeValue();
     }
 
     public Query getList(String listID) {

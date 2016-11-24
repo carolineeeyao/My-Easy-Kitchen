@@ -18,7 +18,8 @@ public class ItemListViewHolder extends RecyclerView.ViewHolder {
         name = (TextView) itemView.findViewById(R.id.list_name);
     }
 
-    public void bindToItem(ItemList list) {
+    public void bindToItem(ItemList list, View.OnClickListener listener) {
         name.setText(list.getName());
+        itemView.setOnClickListener(listener);
     }
 }

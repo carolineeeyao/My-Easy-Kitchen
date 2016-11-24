@@ -46,7 +46,7 @@ public class KitchenActivity extends AppCompatActivity {
         mManager.setStackFromEnd(true);
         mRecycler.setLayoutManager(mManager);
         mAdapter = new FirebaseRecyclerAdapter<Item, ItemViewHolder>(Item.class, R.layout.kitchen_item_row,
-                ItemViewHolder.class, databaseClient.getList("1")) {
+                ItemViewHolder.class, databaseClient.getList(getIntent().getStringExtra("list name"))) {
             @Override
             protected void populateViewHolder(ItemViewHolder viewHolder, final Item model, int position) {
                 final DatabaseReference itemRef = getRef(position);
@@ -70,6 +70,7 @@ public class KitchenActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent myIntent = new Intent(context, AddItemActivity.class);
+                myIntent.putExtra("list name", getIntent().getStringExtra("list name"));
                 context.startActivity(myIntent);
             }
         });
