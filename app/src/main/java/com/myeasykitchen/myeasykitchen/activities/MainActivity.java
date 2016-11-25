@@ -96,11 +96,10 @@ public class MainActivity extends AppCompatActivity {
                         } else {
                             myIntent = new Intent(context, GroceryActivity.class);
                         }
-                        myIntent.putExtra("list name", itemRef.getKey());
+                        myIntent.putExtra("list key", itemRef.getKey());
                         context.startActivity(myIntent);
                     }
                 });
-                Log.d(TAG,"stuff should happen");
             }
         };
 

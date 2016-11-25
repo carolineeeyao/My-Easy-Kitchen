@@ -23,8 +23,6 @@ public class KitchenActivity extends AppCompatActivity {
 
     Context context = this;
 
-    private ListView listView1;
-
     private DatabaseClient databaseClient;
 
     private FirebaseRecyclerAdapter<Item, ItemViewHolder> mAdapter;
@@ -46,7 +44,7 @@ public class KitchenActivity extends AppCompatActivity {
         mManager.setStackFromEnd(true);
         mRecycler.setLayoutManager(mManager);
         mAdapter = new FirebaseRecyclerAdapter<Item, ItemViewHolder>(Item.class, R.layout.kitchen_item_row,
-                ItemViewHolder.class, databaseClient.getList(getIntent().getStringExtra("list name"))) {
+                ItemViewHolder.class, databaseClient.getList(getIntent().getStringExtra("list key"))) {
             @Override
             protected void populateViewHolder(ItemViewHolder viewHolder, final Item model, int position) {
                 final DatabaseReference itemRef = getRef(position);
@@ -55,7 +53,7 @@ public class KitchenActivity extends AppCompatActivity {
                     @Override
                     public boolean onLongClick(View v) {
                         FragmentManager fm = getSupportFragmentManager();
-                        ItemMenuFragment fragment = ItemMenuFragment.newInstance(model);
+                        ItemMenuFragment fragment = ItemMenuFragment.newInstance(model, getIntent().getStringExtra("list key"), itemRef.getKey());
                         fragment.show(fm, "fragment_item_menu");
 
                         return false;
@@ -70,7 +68,8 @@ public class KitchenActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent myIntent = new Intent(context, AddItemActivity.class);
-                myIntent.putExtra("list name", getIntent().getStringExtra("list name"));
+                myIntent.putExtra("list key", getIntent().getStringExtra("list key"));
+                myIntent.putExtra("item id", "");
                 context.startActivity(myIntent);
             }
         });

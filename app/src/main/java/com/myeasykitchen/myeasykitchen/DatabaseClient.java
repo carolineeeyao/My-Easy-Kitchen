@@ -1,5 +1,11 @@
 package com.myeasykitchen.myeasykitchen;
 
+import android.util.Log;
+import android.view.View;
+import android.widget.EditText;
+import android.widget.TextView;
+
+import com.google.firebase.auth.api.model.StringList;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
@@ -65,9 +71,25 @@ public class DatabaseClient {
         mListRef.child(key).setValue(newItem);
     }
 
-    public void removeItem(String listID, Item item) {
+    public void removeItem(String listID, String itemKey) {
         DatabaseReference mListRef = mFirebaseDatabaseReference.child(LIST_CHILD).child(listID);
-        mListRef.child(item.getKey()).removeValue();
+        mListRef.child(itemKey).removeValue();
+    }
+
+    public void editItem(String listID, final String itemKey, final EditText editText) {
+        DatabaseReference mListRef = mFirebaseDatabaseReference.child(LIST_CHILD).child(listID);
+        mListRef.child(itemKey).addListenerForSingleValueEvent(new ValueEventListener() {
+            @Override
+            public void onDataChange(DataSnapshot dataSnapshot) {
+                Item item = dataSnapshot.getValue(Item.class);
+                editText.setText(item.getName());
+            }
+
+            @Override
+            public void onCancelled(DatabaseError databaseError) {
+
+            }
+        });
     }
 
     public Query getList(String listID) {
