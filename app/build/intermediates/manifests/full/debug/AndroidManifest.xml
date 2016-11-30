@@ -40,10 +40,18 @@
         <activity
             android:name="com.myeasykitchen.myeasykitchen.activities.LoginActivity"
             android:label="@string/title_activity_login" />
-        <activity android:name="com.myeasykitchen.myeasykitchen.activities.KitchenActivity" />
-        <activity android:name="com.myeasykitchen.myeasykitchen.activities.AddKitchenItemActivity" />
-        <activity android:name="com.myeasykitchen.myeasykitchen.activities.GroceryActivity" />
-        <activity android:name="com.myeasykitchen.myeasykitchen.activities.AddGroceryItemActivity" />
+        <activity
+            android:name="com.myeasykitchen.myeasykitchen.activities.KitchenActivity"
+            android:label="@string/title_activity_kitchen" />
+        <activity
+            android:name="com.myeasykitchen.myeasykitchen.activities.AddKitchenItemActivity"
+            android:label="@string/title_activity_add_item" />
+        <activity
+            android:name="com.myeasykitchen.myeasykitchen.activities.GroceryActivity"
+            android:label="@string/title_activity_grocery" />
+        <activity
+            android:name="com.myeasykitchen.myeasykitchen.activities.AddGroceryItemActivity"
+            android:label="@string/title_activity_add_item" />
 
         <receiver android:name="com.myeasykitchen.myeasykitchen.notifications.AlarmReceiver" />
         <!--

@@ -3,6 +3,7 @@ package com.myeasykitchen.myeasykitchen.activities;
 import android.widget.EditText;
 import android.widget.Toast;
 
+import com.google.firebase.auth.FirebaseAuth;
 import com.myeasykitchen.myeasykitchen.R;
 import com.myeasykitchen.myeasykitchen.models.KitchenItem;
 
@@ -19,6 +20,7 @@ public class AddKitchenItemActivity extends ItemDetailsActivity {
             double amount = Double.parseDouble(quantityText.getText().toString());
             String expiration = expirationText.getText().toString().trim();
             String[] date = expiration.split("/");
+            String ownerName = FirebaseAuth.getInstance().getCurrentUser().getDisplayName();
             KitchenItem newItem;
             if(date.length == 3) {
                 Calendar calendar = Calendar.getInstance();
@@ -27,9 +29,9 @@ public class AddKitchenItemActivity extends ItemDetailsActivity {
                 calendar.set(Calendar.YEAR, Integer.parseInt(date[3]));
                 calendar.set(Calendar.HOUR_OF_DAY, 11);
                 calendar.set(Calendar.MINUTE, 0);
-                newItem = new KitchenItem(name, amount, calendar);
+                newItem = new KitchenItem(name, amount, ownerName, calendar);
             } else {
-                newItem = new KitchenItem(name, amount);
+                newItem = new KitchenItem(name, amount, ownerName);
             }
             String itemID = getIntent().getStringExtra(getString(R.string.item_id));
             if(!itemID.equals("")) {

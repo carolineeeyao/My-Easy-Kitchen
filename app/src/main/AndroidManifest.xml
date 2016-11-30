@@ -26,10 +26,14 @@
         <activity
             android:name=".activities.LoginActivity"
             android:label="@string/title_activity_login" />
-        <activity android:name=".activities.KitchenActivity" />
-        <activity android:name=".activities.AddKitchenItemActivity" />
-        <activity android:name=".activities.GroceryActivity" />
-        <activity android:name=".activities.AddGroceryItemActivity" />
+        <activity android:name=".activities.KitchenActivity"
+            android:label="@string/title_activity_kitchen"/>
+        <activity android:name=".activities.AddKitchenItemActivity"
+            android:label="@string/title_activity_add_item" />
+        <activity android:name=".activities.GroceryActivity"
+            android:label="@string/title_activity_grocery" />
+        <activity android:name=".activities.AddGroceryItemActivity"
+            android:label="@string/title_activity_add_item" />
 
         <receiver android:name=".notifications.AlarmReceiver" /><!-- ATTENTION: This was auto-generated to add Google Play services to your project for
      App Indexing.  See https://g.co/AppIndexing/AndroidStudio for more information. -->

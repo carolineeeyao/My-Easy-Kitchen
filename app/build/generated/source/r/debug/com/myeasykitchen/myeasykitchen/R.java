@@ -3211,8 +3211,10 @@ containing a value of this type.
         public static final int server_client_id=0x7f06004c;
         public static final int server_client_id2=0x7f06004d;
         public static final int status_bar_notification_info_overflow=0x7f060025;
-        public static final int title_activity_login=0x7f06004e;
-        public static final int title_activity_main2=0x7f06004f;
+        public static final int title_activity_add_item=0x7f06004e;
+        public static final int title_activity_grocery=0x7f06004f;
+        public static final int title_activity_kitchen=0x7f060050;
+        public static final int title_activity_login=0x7f060051;
     }
     public static final class style {
         public static final int AlertDialog_AppCompat=0x7f08009a;

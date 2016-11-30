@@ -14,13 +14,15 @@ public abstract class Item {
     private String name;
     private String key;
     private double amount;
+    private String ownerName;
 
     public Item () {
-        this("",0);
+        this("",0, "");
     }
-    public Item(String name, double amount) {
+    public Item(String name, double amount, String ownerName) {
         this.name = name;
         this.amount = amount;
+        this.ownerName = ownerName;
     }
 
     public void setName(String name)
@@ -39,6 +41,14 @@ public abstract class Item {
 
     public void setAmount(double amount) {
         this.amount = amount;
+    }
+
+    public String getOwnerName() {
+        return ownerName;
+    }
+
+    public void setOwnerName(String ownerName) {
+        this.ownerName = ownerName;
     }
 
     @Exclude

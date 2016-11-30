@@ -1,5 +1,8 @@
 <resources>
     <string name="app_name">My Easy Kitchen</string>
+    <string name="title_activity_grocery">Grocery List</string>
+    <string name="title_activity_kitchen">Kitchen List</string>
+    <string name="title_activity_add_item">Edit item</string>
     <string name="title_activity_login">Sign in</string>
 
     <!-- Strings related to login -->
@@ -16,7 +19,6 @@
     </string>
     <string name="server_client_id">936145210267-gg341qnqfipe3n1t3vpgtgjpqcfilm3m.apps.googleusercontent.com</string>
     <string name="server_client_id2">936145210267-2apv1728j8b3aammo52k1tjfincidauq.apps.googleusercontent.com</string>
-    <string name="title_activity_main2">Main2Activity</string>
 
     <string name="item_name">itemName</string>
     <string name="item_id">itemID</string>

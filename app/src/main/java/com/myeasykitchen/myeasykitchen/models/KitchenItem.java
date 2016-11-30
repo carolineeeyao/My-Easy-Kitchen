@@ -1,7 +1,6 @@
 package com.myeasykitchen.myeasykitchen.models;
 
 import java.util.Calendar;
-import java.util.Date;
 
 /**
  * Created by Ali on 11/25/2016.
@@ -13,12 +12,12 @@ public class KitchenItem extends Item {
         super();
         calendar = null;
     }
-    public KitchenItem (String name, double amount, Calendar calendar) {
-        super(name, amount);
+    public KitchenItem (String name, double amount, String ownerName, Calendar calendar) {
+        super(name, amount, ownerName);
         this.calendar = calendar;
     }
-    public KitchenItem (String name, double amount) {
-        super(name, amount);
+    public KitchenItem (String name, double amount, String ownerName) {
+        super(name, amount, ownerName);
         calendar = Calendar.getInstance();
         calendar.clear();
     }

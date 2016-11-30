@@ -1,6 +1,6 @@
 -- Merging decision tree log ---
 manifest
-ADDED from C:\Users\Ali\Documents\My-Easy-Kitchen\app\src\main\AndroidManifest.xml:2:1-42:12
+ADDED from C:\Users\Ali\Documents\My-Easy-Kitchen\app\src\main\AndroidManifest.xml:2:1-46:12
 	package
 		ADDED from C:\Users\Ali\Documents\My-Easy-Kitchen\app\src\main\AndroidManifest.xml:3:5-46
 		INJECTED from C:\Users\Ali\Documents\My-Easy-Kitchen\app\src\main\AndroidManifest.xml
@@ -38,7 +38,7 @@ ADDED from C:\Users\Ali\Documents\My-Easy-Kitchen\app\src\main\AndroidManifest.x
 	android:name
 		ADDED from C:\Users\Ali\Documents\My-Easy-Kitchen\app\src\main\AndroidManifest.xml:10:22-75
 application
-ADDED from C:\Users\Ali\Documents\My-Easy-Kitchen\app\src\main\AndroidManifest.xml:12:5-40:19
+ADDED from C:\Users\Ali\Documents\My-Easy-Kitchen\app\src\main\AndroidManifest.xml:12:5-44:19
 MERGED from [com.android.support:design:23.4.0] C:\Users\Ali\Documents\My-Easy-Kitchen\app\build\intermediates\exploded-aar\com.android.support\design\23.4.0\AndroidManifest.xml:22:5-20
 MERGED from [com.android.support:support-compat:25.0.0] C:\Users\Ali\Documents\My-Easy-Kitchen\app\build\intermediates\exploded-aar\com.android.support\support-compat\25.0.0\AndroidManifest.xml:25:5-20
 MERGED from [com.android.support:support-core-ui:25.0.0] C:\Users\Ali\Documents\My-Easy-Kitchen\app\build\intermediates\exploded-aar\com.android.support\support-core-ui\25.0.0\AndroidManifest.xml:25:5-20
@@ -93,33 +93,41 @@ ADDED from C:\Users\Ali\Documents\My-Easy-Kitchen\app\src\main\AndroidManifest.x
 	android:name
 		ADDED from C:\Users\Ali\Documents\My-Easy-Kitchen\app\src\main\AndroidManifest.xml:27:13-53
 activity#com.myeasykitchen.myeasykitchen.activities.KitchenActivity
-ADDED from C:\Users\Ali\Documents\My-Easy-Kitchen\app\src\main\AndroidManifest.xml:29:9-64
+ADDED from C:\Users\Ali\Documents\My-Easy-Kitchen\app\src\main\AndroidManifest.xml:29:9-30:61
+	android:label
+		ADDED from C:\Users\Ali\Documents\My-Easy-Kitchen\app\src\main\AndroidManifest.xml:30:13-59
 	android:name
 		ADDED from C:\Users\Ali\Documents\My-Easy-Kitchen\app\src\main\AndroidManifest.xml:29:19-61
 activity#com.myeasykitchen.myeasykitchen.activities.AddKitchenItemActivity
-ADDED from C:\Users\Ali\Documents\My-Easy-Kitchen\app\src\main\AndroidManifest.xml:30:9-71
+ADDED from C:\Users\Ali\Documents\My-Easy-Kitchen\app\src\main\AndroidManifest.xml:31:9-32:63
+	android:label
+		ADDED from C:\Users\Ali\Documents\My-Easy-Kitchen\app\src\main\AndroidManifest.xml:32:13-60
 	android:name
-		ADDED from C:\Users\Ali\Documents\My-Easy-Kitchen\app\src\main\AndroidManifest.xml:30:19-68
+		ADDED from C:\Users\Ali\Documents\My-Easy-Kitchen\app\src\main\AndroidManifest.xml:31:19-68
 activity#com.myeasykitchen.myeasykitchen.activities.GroceryActivity
-ADDED from C:\Users\Ali\Documents\My-Easy-Kitchen\app\src\main\AndroidManifest.xml:31:9-64
+ADDED from C:\Users\Ali\Documents\My-Easy-Kitchen\app\src\main\AndroidManifest.xml:33:9-34:62
+	android:label
+		ADDED from C:\Users\Ali\Documents\My-Easy-Kitchen\app\src\main\AndroidManifest.xml:34:13-59
 	android:name
-		ADDED from C:\Users\Ali\Documents\My-Easy-Kitchen\app\src\main\AndroidManifest.xml:31:19-61
+		ADDED from C:\Users\Ali\Documents\My-Easy-Kitchen\app\src\main\AndroidManifest.xml:33:19-61
 activity#com.myeasykitchen.myeasykitchen.activities.AddGroceryItemActivity
-ADDED from C:\Users\Ali\Documents\My-Easy-Kitchen\app\src\main\AndroidManifest.xml:32:9-71
+ADDED from C:\Users\Ali\Documents\My-Easy-Kitchen\app\src\main\AndroidManifest.xml:35:9-36:63
+	android:label
+		ADDED from C:\Users\Ali\Documents\My-Easy-Kitchen\app\src\main\AndroidManifest.xml:36:13-60
 	android:name
-		ADDED from C:\Users\Ali\Documents\My-Easy-Kitchen\app\src\main\AndroidManifest.xml:32:19-68
+		ADDED from C:\Users\Ali\Documents\My-Easy-Kitchen\app\src\main\AndroidManifest.xml:35:19-68
 receiver#com.myeasykitchen.myeasykitchen.notifications.AlarmReceiver
-ADDED from C:\Users\Ali\Documents\My-Easy-Kitchen\app\src\main\AndroidManifest.xml:34:9-65
+ADDED from C:\Users\Ali\Documents\My-Easy-Kitchen\app\src\main\AndroidManifest.xml:38:9-65
 	android:name
-		ADDED from C:\Users\Ali\Documents\My-Easy-Kitchen\app\src\main\AndroidManifest.xml:34:19-62
+		ADDED from C:\Users\Ali\Documents\My-Easy-Kitchen\app\src\main\AndroidManifest.xml:38:19-62
 meta-data#com.google.android.gms.version
-ADDED from C:\Users\Ali\Documents\My-Easy-Kitchen\app\src\main\AndroidManifest.xml:36:9-38:69
+ADDED from C:\Users\Ali\Documents\My-Easy-Kitchen\app\src\main\AndroidManifest.xml:40:9-42:69
 MERGED from [com.google.android.gms:play-services-basement:9.8.0] C:\Users\Ali\Documents\My-Easy-Kitchen\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-basement\9.8.0\AndroidManifest.xml:20:9-121
 MERGED from [com.firebaseui:firebase-ui-database:0.6.2] C:\Users\Ali\Documents\My-Easy-Kitchen\app\build\intermediates\exploded-aar\com.firebaseui\firebase-ui-database\0.6.2\AndroidManifest.xml:14:9-16:69
 	android:value
-		ADDED from C:\Users\Ali\Documents\My-Easy-Kitchen\app\src\main\AndroidManifest.xml:38:13-66
+		ADDED from C:\Users\Ali\Documents\My-Easy-Kitchen\app\src\main\AndroidManifest.xml:42:13-66
 	android:name
-		ADDED from C:\Users\Ali\Documents\My-Easy-Kitchen\app\src\main\AndroidManifest.xml:37:13-58
+		ADDED from C:\Users\Ali\Documents\My-Easy-Kitchen\app\src\main\AndroidManifest.xml:41:13-58
 uses-sdk
 INJECTED from C:\Users\Ali\Documents\My-Easy-Kitchen\app\src\main\AndroidManifest.xml reason: use-sdk injection requested
 MERGED from [com.android.support:design:23.4.0] C:\Users\Ali\Documents\My-Easy-Kitchen\app\build\intermediates\exploded-aar\com.android.support\design\23.4.0\AndroidManifest.xml:20:5-43
