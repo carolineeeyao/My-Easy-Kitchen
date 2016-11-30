@@ -214,7 +214,7 @@
         jumboMode="true"
         optimize="true"
         revision="23.0.3"
-        sha1="0e7f590f3bfae8ff8e1dc6d5300b2e9f05bca9d5">
+        sha1="3094bcea44bd3c3c1f6d9f46a24112fbe390189d">
         <dex dex="C:\Users\Ali\Documents\My-Easy-Kitchen\app\build\intermediates\transforms\dex\debug\folders\1000\10\instant-run-bootstrap_b05719f385994dce5bc6e8d4c1114e512e66d9bb\classes.dex" />
     </item>
     <item
@@ -333,6 +333,15 @@
         revision="23.0.3"
         sha1="26674000177e45447a0326a6ad84612761199a13">
         <dex dex="C:\Users\Ali\Documents\My-Easy-Kitchen\app\build\intermediates\pre-dexed\debug\com.android.support-support-core-ui-25.0.0_81e29d9a47c06d50921407142660e7631383fe2b.jar" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Ali\Documents\My-Easy-Kitchen\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-appindexing\9.8.0\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="23.0.3"
+        sha1="e3234cd25e23069abd48ecd2117bc0e8011bf45a">
+        <dex dex="C:\Users\Ali\Documents\My-Easy-Kitchen\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.android.gms-play-services-appindexing-9.8.0_edaa31a739dd7760c9ad5708e12d4dc6ce1b8a0a\classes.dex" />
     </item>
     <item
         is-multidex="true"

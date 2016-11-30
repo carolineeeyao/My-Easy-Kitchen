@@ -3,6 +3,7 @@ package com.myeasykitchen.myeasykitchen.activities;
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.net.Uri;
 import android.os.Bundle;
 import android.preference.PreferenceManager;
 import android.support.v7.app.AppCompatActivity;
@@ -11,8 +12,13 @@ import android.support.v7.widget.RecyclerView;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
+import android.widget.TextView;
 
 import com.firebase.ui.database.FirebaseRecyclerAdapter;
+import com.google.android.gms.appindexing.Action;
+import com.google.android.gms.appindexing.AppIndex;
+import com.google.android.gms.appindexing.Thing;
+import com.google.android.gms.auth.api.Auth;
 import com.google.android.gms.common.api.GoogleApiClient;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
@@ -46,7 +52,14 @@ public class MainActivity extends AppCompatActivity {
     private RecyclerView mRecycler;
     private LinearLayoutManager mManager;
 
+    private TextView logoutButton;
+
     private static final String TAG = "MainActivity";
+    /**
+     * ATTENTION: This was auto-generated to implement the App Indexing API.
+     * See https://g.co/AppIndexing/AndroidStudio for more information.
+     */
+    private GoogleApiClient client;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -71,68 +84,10 @@ public class MainActivity extends AppCompatActivity {
                 mPhotoUrl = mFirebaseUser.getPhotoUrl().toString();
             }
             databaseClient = DatabaseClient.getInstance();
-            databaseClient.setUser(mFirebaseUser.getUid(),mUsername);
+            databaseClient.setUser(mFirebaseUser.getUid(), mUsername);
         }
 
-        mRecycler = (RecyclerView) findViewById(R.id.user_lists);
-
-        mManager = new LinearLayoutManager(this);
-        mManager.setReverseLayout(true);
-        mManager.setStackFromEnd(true);
-        mRecycler.setLayoutManager(mManager);
-        mAdapter = new FirebaseRecyclerAdapter<ItemList, ItemListViewHolder>(ItemList.class, R.layout.user_list_item_row,
-                ItemListViewHolder.class, databaseClient.getUserLists()) {
-            @Override
-            protected void populateViewHolder(ItemListViewHolder viewHolder, final ItemList model, int position) {
-                final DatabaseReference itemRef = getRef(position);
-
-                viewHolder.bindToItem(model, new View.OnClickListener() {
-                    @Override
-                    public void onClick(View v) {
-                        Intent myIntent;
-//                        if(model.getListType().equals("kitchen")) {
-//                            myIntent = new Intent(context, KitchenActivity.class);
-//                        } else {
-                            myIntent = new Intent(context, GroceryActivity.class);
-//                        }
-                        myIntent.putExtra(getString(R.string.list_id), itemRef.getKey());
-                        context.startActivity(myIntent);
-                    }
-                });
-            }
-        };
-
-        mRecycler.setAdapter(mAdapter);
-        
-
-
-        Button kitchen_button = (Button)findViewById(R.id.kitchen_button);
-        Button grocery_button = (Button)findViewById(R.id.grocery_button);
-
-        kitchen_button.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent myIntent = new Intent(context, KitchenActivity.class);
-                context.startActivity(myIntent);
-            }
-        });
-
-        kitchen_button.setOnLongClickListener(new View.OnLongClickListener() {
-
-            @Override
-            public boolean onLongClick(View v) {
-                return true;
-            }
-        });
-
-        grocery_button.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent myIntent = new Intent(context, GroceryActivity.class);
-                context.startActivity(myIntent);
-            }
-        });
-
+        initNavBar();
 
         //how to create notifications
         //ADD THIS TO WHEN CREATE/ADD ITEM
@@ -149,20 +104,98 @@ public class MainActivity extends AppCompatActivity {
         AlarmCreator.create(context, calendar, uniqueId, title, text);
 
 
+        // ATTENTION: This was auto-generated to implement the App Indexing API.
+        // See https://g.co/AppIndexing/AndroidStudio for more information.
+        client = new GoogleApiClient.Builder(this).addApi(AppIndex.API).build();
     }
 
-//    @Override
-//    public boolean onOptionsItemSelected(MenuItem item) {
-//        switch (item.getItemId()) {
-//            case R.id.sign_out_menu:
-//                mFirebaseAuth.signOut();
-//                Auth.GoogleSignInApi.signOut(mGoogleApiClient);
-//                mUsername = ANONYMOUS;
-//                startActivity(new Intent(this, LoginActivity.class));
-//                return true;
-//            default:
-//                return super.onOptionsItemSelected(item);
-//        }
-//
-//    }
+    private void initNavBar() {
+        mRecycler = (RecyclerView) findViewById(R.id.user_lists);
+
+        mManager = new LinearLayoutManager(this);
+        mManager.setReverseLayout(true);
+        mManager.setStackFromEnd(true);
+        mRecycler.setLayoutManager(mManager);
+        mAdapter = new FirebaseRecyclerAdapter<ItemList, ItemListViewHolder>(ItemList.class, R.layout.user_list_item_row,
+                ItemListViewHolder.class, databaseClient.getUserLists()) {
+            @Override
+            protected void populateViewHolder(ItemListViewHolder viewHolder, final ItemList model, int position) {
+                final DatabaseReference itemRef = getRef(position);
+                Intent myIntent;
+//                        if(model.getListType().equals("kitchen")) {
+//                            myIntent = new Intent(context, KitchenActivity.class);
+//                        } else {
+                myIntent = new Intent(context, GroceryActivity.class);
+//                        }
+                myIntent.putExtra(getString(R.string.list_id), itemRef.getKey());
+                context.startActivity(myIntent);
+
+                viewHolder.bindToItem(model, new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        Intent myIntent;
+//                        if(model.getListType().equals("kitchen")) {
+//                            myIntent = new Intent(context, KitchenActivity.class);
+//                        } else {
+                        myIntent = new Intent(context, GroceryActivity.class);
+//                        }
+                        myIntent.putExtra(getString(R.string.list_id), itemRef.getKey());
+                        context.startActivity(myIntent);
+                    }
+                });
+            }
+        };
+
+        mRecycler.setAdapter(mAdapter);
+
+        logoutButton = (TextView) findViewById(R.id.logout);
+        logoutButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                mFirebaseAuth.signOut();
+                mUsername = ANONYMOUS;
+                startActivity(new Intent(MainActivity.this, LoginActivity.class));
+                finish();
+                return;
+
+            }
+        });
+    }
+
+    /**
+     * ATTENTION: This was auto-generated to implement the App Indexing API.
+     * See https://g.co/AppIndexing/AndroidStudio for more information.
+     */
+    public Action getIndexApiAction() {
+        Thing object = new Thing.Builder()
+                .setName("Main Page") // TODO: Define a title for the content shown.
+                // TODO: Make sure this auto-generated URL is correct.
+                .setUrl(Uri.parse("http://[ENTER-YOUR-URL-HERE]"))
+                .build();
+        return new Action.Builder(Action.TYPE_VIEW)
+                .setObject(object)
+                .setActionStatus(Action.STATUS_TYPE_COMPLETED)
+                .build();
+    }
+
+    @Override
+    public void onStart() {
+        super.onStart();
+
+        // ATTENTION: This was auto-generated to implement the App Indexing API.
+        // See https://g.co/AppIndexing/AndroidStudio for more information.
+        client.connect();
+        AppIndex.AppIndexApi.start(client, getIndexApiAction());
+    }
+
+    @Override
+    public void onStop() {
+        super.onStop();
+
+        // ATTENTION: This was auto-generated to implement the App Indexing API.
+        // See https://g.co/AppIndexing/AndroidStudio for more information.
+        AppIndex.AppIndexApi.end(client, getIndexApiAction());
+        client.disconnect();
+    }
+
 }

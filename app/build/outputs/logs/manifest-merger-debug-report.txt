@@ -1,6 +1,6 @@
 -- Merging decision tree log ---
 manifest
-ADDED from C:\Users\Ali\Documents\My-Easy-Kitchen\app\src\main\AndroidManifest.xml:2:1-38:12
+ADDED from C:\Users\Ali\Documents\My-Easy-Kitchen\app\src\main\AndroidManifest.xml:2:1-42:12
 	package
 		ADDED from C:\Users\Ali\Documents\My-Easy-Kitchen\app\src\main\AndroidManifest.xml:3:5-46
 		INJECTED from C:\Users\Ali\Documents\My-Easy-Kitchen\app\src\main\AndroidManifest.xml
@@ -38,7 +38,7 @@ ADDED from C:\Users\Ali\Documents\My-Easy-Kitchen\app\src\main\AndroidManifest.x
 	android:name
 		ADDED from C:\Users\Ali\Documents\My-Easy-Kitchen\app\src\main\AndroidManifest.xml:10:22-75
 application
-ADDED from C:\Users\Ali\Documents\My-Easy-Kitchen\app\src\main\AndroidManifest.xml:12:5-36:19
+ADDED from C:\Users\Ali\Documents\My-Easy-Kitchen\app\src\main\AndroidManifest.xml:12:5-40:19
 MERGED from [com.android.support:design:23.4.0] C:\Users\Ali\Documents\My-Easy-Kitchen\app\build\intermediates\exploded-aar\com.android.support\design\23.4.0\AndroidManifest.xml:22:5-20
 MERGED from [com.android.support:support-compat:25.0.0] C:\Users\Ali\Documents\My-Easy-Kitchen\app\build\intermediates\exploded-aar\com.android.support\support-compat\25.0.0\AndroidManifest.xml:25:5-20
 MERGED from [com.android.support:support-core-ui:25.0.0] C:\Users\Ali\Documents\My-Easy-Kitchen\app\build\intermediates\exploded-aar\com.android.support\support-core-ui\25.0.0\AndroidManifest.xml:25:5-20
@@ -61,6 +61,7 @@ MERGED from [com.google.android.gms:play-services-base:9.8.0] C:\Users\Ali\Docum
 MERGED from [com.google.firebase:firebase-auth-common:9.8.0] C:\Users\Ali\Documents\My-Easy-Kitchen\app\build\intermediates\exploded-aar\com.google.firebase\firebase-auth-common\9.8.0\AndroidManifest.xml:19:5-20:19
 MERGED from [com.google.android.gms:play-services-auth:9.8.0] C:\Users\Ali\Documents\My-Easy-Kitchen\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-auth\9.8.0\AndroidManifest.xml:19:5-25:19
 MERGED from [com.firebaseui:firebase-ui-database:0.6.2] C:\Users\Ali\Documents\My-Easy-Kitchen\app\build\intermediates\exploded-aar\com.firebaseui\firebase-ui-database\0.6.2\AndroidManifest.xml:13:5-17:19
+MERGED from [com.google.android.gms:play-services-appindexing:9.8.0] C:\Users\Ali\Documents\My-Easy-Kitchen\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-appindexing\9.8.0\AndroidManifest.xml:18:5-19
 	android:label
 		ADDED from C:\Users\Ali\Documents\My-Easy-Kitchen\app\src\main\AndroidManifest.xml:15:9-41
 	android:supportsRtl
@@ -111,6 +112,14 @@ receiver#com.myeasykitchen.myeasykitchen.notifications.AlarmReceiver
 ADDED from C:\Users\Ali\Documents\My-Easy-Kitchen\app\src\main\AndroidManifest.xml:34:9-65
 	android:name
 		ADDED from C:\Users\Ali\Documents\My-Easy-Kitchen\app\src\main\AndroidManifest.xml:34:19-62
+meta-data#com.google.android.gms.version
+ADDED from C:\Users\Ali\Documents\My-Easy-Kitchen\app\src\main\AndroidManifest.xml:36:9-38:69
+MERGED from [com.google.android.gms:play-services-basement:9.8.0] C:\Users\Ali\Documents\My-Easy-Kitchen\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-basement\9.8.0\AndroidManifest.xml:20:9-121
+MERGED from [com.firebaseui:firebase-ui-database:0.6.2] C:\Users\Ali\Documents\My-Easy-Kitchen\app\build\intermediates\exploded-aar\com.firebaseui\firebase-ui-database\0.6.2\AndroidManifest.xml:14:9-16:69
+	android:value
+		ADDED from C:\Users\Ali\Documents\My-Easy-Kitchen\app\src\main\AndroidManifest.xml:38:13-66
+	android:name
+		ADDED from C:\Users\Ali\Documents\My-Easy-Kitchen\app\src\main\AndroidManifest.xml:37:13-58
 uses-sdk
 INJECTED from C:\Users\Ali\Documents\My-Easy-Kitchen\app\src\main\AndroidManifest.xml reason: use-sdk injection requested
 MERGED from [com.android.support:design:23.4.0] C:\Users\Ali\Documents\My-Easy-Kitchen\app\build\intermediates\exploded-aar\com.android.support\design\23.4.0\AndroidManifest.xml:20:5-43
@@ -140,6 +149,7 @@ MERGED from [com.google.android.gms:play-services-auth-base:9.8.0] C:\Users\Ali\
 MERGED from [com.firebaseui:firebase-ui-database:0.6.2] C:\Users\Ali\Documents\My-Easy-Kitchen\app\build\intermediates\exploded-aar\com.firebaseui\firebase-ui-database\0.6.2\AndroidManifest.xml:7:5-9:41
 MERGED from [com.google.firebase:firebase-database:9.8.0] C:\Users\Ali\Documents\My-Easy-Kitchen\app\build\intermediates\exploded-aar\com.google.firebase\firebase-database\9.8.0\AndroidManifest.xml:3:5-42
 MERGED from [com.google.firebase:firebase-database-connection:9.8.0] C:\Users\Ali\Documents\My-Easy-Kitchen\app\build\intermediates\exploded-aar\com.google.firebase\firebase-database-connection\9.8.0\AndroidManifest.xml:3:5-42
+MERGED from [com.google.android.gms:play-services-appindexing:9.8.0] C:\Users\Ali\Documents\My-Easy-Kitchen\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-appindexing\9.8.0\AndroidManifest.xml:17:5-42
 	tools:overrideLibrary
 		ADDED from [com.android.support:support-compat:25.0.0] C:\Users\Ali\Documents\My-Easy-Kitchen\app\build\intermediates\exploded-aar\com.android.support\support-compat\25.0.0\AndroidManifest.xml:23:9-55
 	android:targetSdkVersion
@@ -192,13 +202,6 @@ MERGED from [com.google.firebase:firebase-analytics-impl:9.8.0] C:\Users\Ali\Doc
 		ADDED from [com.google.firebase:firebase-analytics:9.8.0] C:\Users\Ali\Documents\My-Easy-Kitchen\app\build\intermediates\exploded-aar\com.google.firebase\firebase-analytics\9.8.0\AndroidManifest.xml:32:111-135
 	android:name
 		ADDED from [com.google.firebase:firebase-analytics:9.8.0] C:\Users\Ali\Documents\My-Easy-Kitchen\app\build\intermediates\exploded-aar\com.google.firebase\firebase-analytics\9.8.0\AndroidManifest.xml:32:16-87
-meta-data#com.google.android.gms.version
-ADDED from [com.google.android.gms:play-services-basement:9.8.0] C:\Users\Ali\Documents\My-Easy-Kitchen\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-basement\9.8.0\AndroidManifest.xml:20:9-121
-MERGED from [com.firebaseui:firebase-ui-database:0.6.2] C:\Users\Ali\Documents\My-Easy-Kitchen\app\build\intermediates\exploded-aar\com.firebaseui\firebase-ui-database\0.6.2\AndroidManifest.xml:14:9-16:69
-	android:value
-		ADDED from [com.google.android.gms:play-services-basement:9.8.0] C:\Users\Ali\Documents\My-Easy-Kitchen\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-basement\9.8.0\AndroidManifest.xml:20:66-119
-	android:name
-		ADDED from [com.google.android.gms:play-services-basement:9.8.0] C:\Users\Ali\Documents\My-Easy-Kitchen\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-basement\9.8.0\AndroidManifest.xml:20:20-65
 provider#com.google.firebase.provider.FirebaseInitProvider
 ADDED from [com.google.firebase:firebase-common:9.8.0] C:\Users\Ali\Documents\My-Easy-Kitchen\app\build\intermediates\exploded-aar\com.google.firebase\firebase-common\9.8.0\AndroidManifest.xml:6:9-175
 	android:authorities

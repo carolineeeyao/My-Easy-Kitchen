@@ -46,6 +46,14 @@
         <activity android:name="com.myeasykitchen.myeasykitchen.activities.AddGroceryItemActivity" />
 
         <receiver android:name="com.myeasykitchen.myeasykitchen.notifications.AlarmReceiver" />
+        <!--
+ ATTENTION: This was auto-generated to add Google Play services to your project for
+     App Indexing.  See https://g.co/AppIndexing/AndroidStudio for more information.
+        -->
+        <meta-data
+            android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version" />
+
         <receiver
             android:name="com.google.android.gms.measurement.AppMeasurementReceiver"
             android:enabled="true"
@@ -64,10 +72,6 @@
             android:name="com.google.android.gms.measurement.AppMeasurementService"
             android:enabled="true"
             android:exported="false" />
-
-        <meta-data
-            android:name="com.google.android.gms.version"
-            android:value="@integer/google_play_services_version" />
 
         <provider
             android:name="com.google.firebase.provider.FirebaseInitProvider"

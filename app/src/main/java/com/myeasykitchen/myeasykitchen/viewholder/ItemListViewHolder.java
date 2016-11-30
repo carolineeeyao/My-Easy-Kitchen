@@ -11,7 +11,7 @@ import com.myeasykitchen.myeasykitchen.R;
  * Created by Ali on 11/8/2016.
  */
 public class ItemListViewHolder extends RecyclerView.ViewHolder {
-    private TextView name;
+    protected TextView name;
     public ItemListViewHolder(View itemView) {
         super(itemView);
 
