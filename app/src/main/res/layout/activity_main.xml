@@ -1,4 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.DrawerLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/activity_main3"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -26,11 +31,13 @@
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true" />
 
+</RelativeLayout>
 
     <android.support.v7.widget.RecyclerView
         android:id="@+id/user_lists"
-        android:layout_below="@+id/grocery_button"
+        android:layout_gravity="left"
         android:scrollbars="vertical"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent" />
-</RelativeLayout>
+        android:layout_width="240dp"
+        android:layout_height="match_parent"
+        android:background="#ffeeeeee"/>
+</android.support.v4.widget.DrawerLayout>
