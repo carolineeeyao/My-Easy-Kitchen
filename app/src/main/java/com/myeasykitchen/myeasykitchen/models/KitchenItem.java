@@ -1,32 +1,25 @@
 package com.myeasykitchen.myeasykitchen.models;
 
-import java.util.Calendar;
-
 /**
  * Created by Ali on 11/25/2016.
  */
 
 public class KitchenItem extends Item {
-    protected Calendar calendar;
+    protected String expiration;
     public KitchenItem () {
         super();
-        calendar = null;
+        this.expiration = "";
     }
-    public KitchenItem (String name, double amount, String ownerName, Calendar calendar) {
+    public KitchenItem (String name, double amount, String ownerName, String expiration) {
         super(name, amount, ownerName);
-        this.calendar = calendar;
-    }
-    public KitchenItem (String name, double amount, String ownerName) {
-        super(name, amount, ownerName);
-        calendar = Calendar.getInstance();
-        calendar.clear();
+        this.expiration = expiration;
     }
 
-    public Calendar getCalendar() {
-        return calendar;
+    public String getExpiration() {
+        return expiration;
     }
 
-    public void setCalendar(Calendar calendar) {
-        this.calendar = calendar;
+    public void setExpiration(String expiration) {
+        this.expiration = expiration;
     }
 }

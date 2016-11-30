@@ -125,12 +125,7 @@ public class DatabaseClient {
                 EditText dateText = (EditText) activity.findViewById(R.id.date_text);
                 nameText.setText(item.getName());
                 quantityText.setText(Double.toString(item.getAmount()));
-                if(item.getCalendar().after(Calendar.getInstance())) {
-                    String date = item.getCalendar().get(Calendar.MONTH) +
-                            "/" + item.getCalendar().get(Calendar.DAY_OF_MONTH) +
-                            "/" + item.getCalendar().get(Calendar.YEAR);
-                    dateText.setText(date);
-                }
+                dateText.setText(item.getExpiration());
             }
 
             @Override

@@ -8,6 +8,7 @@ import com.myeasykitchen.myeasykitchen.R;
 import com.myeasykitchen.myeasykitchen.models.KitchenItem;
 
 import java.util.Calendar;
+import java.util.GregorianCalendar;
 
 public class AddKitchenItemActivity extends ItemDetailsActivity {
     private EditText expirationText;
@@ -20,19 +21,11 @@ public class AddKitchenItemActivity extends ItemDetailsActivity {
             double amount = Double.parseDouble(quantityText.getText().toString());
             String expiration = expirationText.getText().toString().trim();
             String[] date = expiration.split("/");
-            String ownerName = FirebaseAuth.getInstance().getCurrentUser().getDisplayName();
-            KitchenItem newItem;
-            if(date.length == 3) {
-                Calendar calendar = Calendar.getInstance();
-                calendar.set(Calendar.MONTH, Integer.parseInt(date[0]));
-                calendar.set(Calendar.DAY_OF_MONTH, Integer.parseInt(date[1]));
-                calendar.set(Calendar.YEAR, Integer.parseInt(date[3]));
-                calendar.set(Calendar.HOUR_OF_DAY, 11);
-                calendar.set(Calendar.MINUTE, 0);
-                newItem = new KitchenItem(name, amount, ownerName, calendar);
-            } else {
-                newItem = new KitchenItem(name, amount, ownerName);
+            if(date.length != 3) {
+                expiration = "";
             }
+            String ownerName = FirebaseAuth.getInstance().getCurrentUser().getDisplayName();
+            KitchenItem newItem = new KitchenItem(name, amount, ownerName, expiration);
             String itemID = getIntent().getStringExtra(getString(R.string.item_id));
             if(!itemID.equals("")) {
                 databaseClient.setKitchenItem(getIntent().getStringExtra(getString(R.string.list_id)), itemID, newItem);
