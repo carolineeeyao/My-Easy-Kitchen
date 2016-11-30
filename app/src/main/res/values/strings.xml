@@ -18,6 +18,12 @@
     <string name="server_client_id2">936145210267-2apv1728j8b3aammo52k1tjfincidauq.apps.googleusercontent.com</string>
     <string name="title_activity_main2">Main2Activity</string>
 
+    <!-- Strings for navigation bar -->
+    <string-array name="navigation_titles">
+        <item>Kitchen List</item>
+        <item>Grocery List</item>
+    </string-array>
+
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>

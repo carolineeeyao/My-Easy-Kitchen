@@ -31,11 +31,6 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme" >
         <activity android:name="com.myeasykitchen.myeasykitchen.activities.MainActivity" >
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
         </activity>
         <activity
             android:name="com.myeasykitchen.myeasykitchen.activities.LoginActivity"
@@ -45,6 +40,15 @@
         <activity android:name="com.myeasykitchen.myeasykitchen.activities.GroceryActivity" />
 
         <receiver android:name="com.myeasykitchen.myeasykitchen.notifications.AlarmReceiver" />
+
+        <activity android:name="com.myeasykitchen.myeasykitchen.activities.Main3Activity" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
         <receiver
             android:name="com.google.android.gms.measurement.AppMeasurementReceiver"
             android:enabled="true"
