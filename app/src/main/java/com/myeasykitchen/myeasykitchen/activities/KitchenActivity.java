@@ -2,32 +2,36 @@ package com.myeasykitchen.myeasykitchen.activities;
 
 import android.content.Context;
 import android.content.Intent;
+import android.support.annotation.NonNull;
 import android.support.v4.app.FragmentManager;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.firebase.ui.database.FirebaseRecyclerAdapter;
+import com.google.android.gms.auth.api.Auth;
+import com.google.android.gms.common.ConnectionResult;
+import com.google.android.gms.common.api.GoogleApiClient;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.DatabaseReference;
 import com.myeasykitchen.myeasykitchen.DatabaseClient;
 import com.myeasykitchen.myeasykitchen.R;
 import com.myeasykitchen.myeasykitchen.fragments.ItemMenuFragment;
 import com.myeasykitchen.myeasykitchen.fragments.KitchenItemMenuFragment;
-import com.myeasykitchen.myeasykitchen.models.Item;
 import com.myeasykitchen.myeasykitchen.models.ItemList;
 import com.myeasykitchen.myeasykitchen.models.KitchenItem;
 import com.myeasykitchen.myeasykitchen.viewholder.ItemListViewHolder;
-import com.myeasykitchen.myeasykitchen.viewholder.ItemViewHolder;
 import com.myeasykitchen.myeasykitchen.viewholder.KitchenItemViewHolder;
 
 import static com.myeasykitchen.myeasykitchen.activities.MainActivity.ANONYMOUS;
 
-public class KitchenActivity extends AppCompatActivity {
+public class KitchenActivity extends AppCompatActivity implements GoogleApiClient.OnConnectionFailedListener {
 
     Context context = this;
 
@@ -37,16 +41,27 @@ public class KitchenActivity extends AppCompatActivity {
     private RecyclerView mRecycler;
     private LinearLayoutManager mManager;
 
-    private RecyclerView mNavRecycler;
-    private LinearLayoutManager mNavManager;
-    private FirebaseRecyclerAdapter<ItemList, ItemListViewHolder> mNavAdapter;
+    private RecyclerView mNavKitchenRecycler;
+    private LinearLayoutManager mNavKitchenManager;
+    private FirebaseRecyclerAdapter<ItemList, ItemListViewHolder> mNavKitchenAdapter;
+    private RecyclerView mNavGroceryRecycler;
+    private LinearLayoutManager mNavGroceryManager;
+    private FirebaseRecyclerAdapter<ItemList, ItemListViewHolder> mNavGroceryAdapter;
     private TextView logoutButton;
     private String mUsername;
+
+    private GoogleApiClient mGoogleApiClient;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_kitchen);
+
+        mGoogleApiClient = new GoogleApiClient.Builder(this)
+                .enableAutoManage(this /* FragmentActivity */, this /* OnConnectionFailedListener */)
+                .addApi(Auth.GOOGLE_SIGN_IN_API)
+                .build();
+
 
         databaseClient = DatabaseClient.getInstance();
         mRecycler = (RecyclerView) findViewById(R.id.activity_kitchen_recycler_view);
@@ -95,14 +110,14 @@ public class KitchenActivity extends AppCompatActivity {
 
 
     private void initNavBar() {
-        mNavRecycler = (RecyclerView) findViewById(R.id.user_lists);
+        mNavKitchenRecycler = (RecyclerView) findViewById(R.id.kitchen_lists);
 
-        mNavManager = new LinearLayoutManager(this);
-        mNavManager.setReverseLayout(true);
-        mNavManager.setStackFromEnd(true);
-        mNavRecycler.setLayoutManager(mNavManager);
-        mNavAdapter = new FirebaseRecyclerAdapter<ItemList, ItemListViewHolder>(ItemList.class, R.layout.user_list_item_row,
-                ItemListViewHolder.class, databaseClient.getUserLists()) {
+        mNavKitchenManager = new LinearLayoutManager(this);
+        mNavKitchenManager.setReverseLayout(true);
+        mNavKitchenManager.setStackFromEnd(true);
+        mNavKitchenRecycler.setLayoutManager(mNavKitchenManager);
+        mNavKitchenAdapter = new FirebaseRecyclerAdapter<ItemList, ItemListViewHolder>(ItemList.class, R.layout.user_list_item_row,
+                ItemListViewHolder.class, databaseClient.getUserKitchenLists()) {
             @Override
             protected void populateViewHolder(ItemListViewHolder viewHolder, final ItemList model, int position) {
                 final DatabaseReference itemRef = getRef(position);
@@ -111,11 +126,7 @@ public class KitchenActivity extends AppCompatActivity {
                     @Override
                     public void onClick(View v) {
                         Intent myIntent;
-//                        if(model.getListType().equals("kitchen")) {
-//                            myIntent = new Intent(context, KitchenActivity.class);
-//                        } else {
-                        myIntent = new Intent(context, GroceryActivity.class);
-//                        }
+                        myIntent = new Intent(context, KitchenActivity.class);
                         myIntent.putExtra(getString(R.string.list_id), itemRef.getKey());
                         context.startActivity(myIntent);
                     }
@@ -123,13 +134,40 @@ public class KitchenActivity extends AppCompatActivity {
             }
         };
 
-        mNavRecycler.setAdapter(mNavAdapter);
+        mNavKitchenRecycler.setAdapter(mNavKitchenAdapter);
+
+        mNavGroceryRecycler = (RecyclerView) findViewById(R.id.grocery_lists);
+
+        mNavGroceryManager = new LinearLayoutManager(this);
+        mNavGroceryManager.setReverseLayout(true);
+        mNavGroceryManager.setStackFromEnd(true);
+        mNavGroceryRecycler.setLayoutManager(mNavGroceryManager);
+        mNavGroceryAdapter = new FirebaseRecyclerAdapter<ItemList, ItemListViewHolder>(ItemList.class, R.layout.user_list_item_row,
+                ItemListViewHolder.class, databaseClient.getUserGroceryLists()) {
+            @Override
+            protected void populateViewHolder(ItemListViewHolder viewHolder, final ItemList model, int position) {
+                final DatabaseReference itemRef = getRef(position);
+
+                viewHolder.bindToItem(model, new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        Intent myIntent;
+                        myIntent = new Intent(context, GroceryActivity.class);
+                        myIntent.putExtra(getString(R.string.list_id), itemRef.getKey());
+                        context.startActivity(myIntent);
+                    }
+                });
+            }
+        };
+
+        mNavGroceryRecycler.setAdapter(mNavGroceryAdapter);
 
         logoutButton = (TextView) findViewById(R.id.logout);
         logoutButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 FirebaseAuth.getInstance().signOut();
+                Auth.GoogleSignInApi.signOut(mGoogleApiClient);
                 mUsername = ANONYMOUS;
                 startActivity(new Intent(context, LoginActivity.class));
                 finish();
@@ -139,4 +177,11 @@ public class KitchenActivity extends AppCompatActivity {
         });
     }
 
+    @Override
+    public void onConnectionFailed(@NonNull ConnectionResult connectionResult) {
+        // An unresolvable error has occurred and Google APIs (including Sign-In) will not
+        // be available.
+        Log.d("GroceryActivity", "onConnectionFailed:" + connectionResult);
+        Toast.makeText(this, "Google Play Services error.", Toast.LENGTH_SHORT).show();
+    }
 }

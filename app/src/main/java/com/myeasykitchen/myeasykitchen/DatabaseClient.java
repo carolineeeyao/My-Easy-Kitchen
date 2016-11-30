@@ -31,9 +31,11 @@ public class DatabaseClient {
     private DatabaseReference userListsReference;
     private static final DatabaseClient instance = new DatabaseClient();
 
-    private final String USER_CHILD = "users";
-    private final String USER_LIST = "list users";
-    private final String LIST_CHILD = "list items";
+    private final String USERS = "users";
+    private final String ITEMS = "items";
+    private final String NAME = "name";
+    private final String KITCHEN_LISTS = "kitchen lists";
+    private final String GROCERY_LISTS = "grocery lists";
 
     private static final String TAG = "DatabaseClient";
 
@@ -45,22 +47,24 @@ public class DatabaseClient {
         return instance;
     }
 
-    public void setUser(String userUID, final String username) {
-        userListsReference = mFirebaseDatabaseReference.child(USER_CHILD).child(userUID);
+    public void setUser(final String userUID, final String username) {
+        userListsReference = mFirebaseDatabaseReference.child(USERS).child(userUID);
         userListsReference.addListenerForSingleValueEvent(new ValueEventListener() {
             @Override
             public void onDataChange(DataSnapshot dataSnapshot) {
                 Iterator<DataSnapshot> iterator = dataSnapshot.getChildren().iterator();
                 if(!iterator.hasNext()) {
-                    String newKitchenList = mFirebaseDatabaseReference.child(USER_LIST).push().getKey();
-                    userListsReference.child("lists").child(newKitchenList).child("name").setValue("Kitchen List");
-                    userListsReference.child("lists").child(newKitchenList).child("kitchenList").setValue("kitchen");
+                    String newKitchenList = mFirebaseDatabaseReference.child(KITCHEN_LISTS).push().getKey();
+                    userListsReference.child(KITCHEN_LISTS).child(newKitchenList).child(NAME).setValue("Kitchen List");
+                    mFirebaseDatabaseReference.child(KITCHEN_LISTS).child(newKitchenList).child(NAME).setValue("Kitchen List");
+                    mFirebaseDatabaseReference.child(KITCHEN_LISTS).child(newKitchenList).child(USERS).child(userUID).child(NAME).setValue(username);
 
-                    String newGroceryList = mFirebaseDatabaseReference.child(USER_LIST).push().getKey();
-                    userListsReference.child("lists").child(newGroceryList).child("name").setValue("Grocery List");
-                    userListsReference.child("lists").child(newGroceryList).child("kitchenList").setValue("grocery");
+                    String newGroceryList = mFirebaseDatabaseReference.child(GROCERY_LISTS).push().getKey();
+                    userListsReference.child(GROCERY_LISTS).child(newGroceryList).child(NAME).setValue("Grocery List");
+                    mFirebaseDatabaseReference.child(GROCERY_LISTS).child(newGroceryList).child(NAME).setValue("Grocery List");
+                    mFirebaseDatabaseReference.child(GROCERY_LISTS).child(newGroceryList).child(USERS).child(userUID).child(NAME).setValue(username);
 
-                    userListsReference.child("name").setValue(username);
+                    userListsReference.child(NAME).setValue(username);
                 }
             }
 
@@ -70,29 +74,29 @@ public class DatabaseClient {
         });
     }
     public void addItem(String listID, Item newItem) {
-        DatabaseReference mListRef = mFirebaseDatabaseReference.child(LIST_CHILD).child(listID);
+        DatabaseReference mListRef = mFirebaseDatabaseReference.child(ITEMS).child(listID);
         String key = mListRef.push().getKey();
         newItem.setKey(key);
         mListRef.child(key).setValue(newItem);
     }
 
     public void setKitchenItem(String listID, String itemID, KitchenItem item) {
-        DatabaseReference mListRef = mFirebaseDatabaseReference.child(LIST_CHILD).child(listID);
+        DatabaseReference mListRef = mFirebaseDatabaseReference.child(ITEMS).child(listID);
         mListRef.child(itemID).setValue(item);
     }
 
     public void setGroceryItem(String listID, String itemID, GroceryItem item) {
-        DatabaseReference mListRef = mFirebaseDatabaseReference.child(LIST_CHILD).child(listID);
+        DatabaseReference mListRef = mFirebaseDatabaseReference.child(ITEMS).child(listID);
         mListRef.child(itemID).setValue(item);
     }
 
     public void removeItem(String listID, String itemKey) {
-        DatabaseReference mListRef = mFirebaseDatabaseReference.child(LIST_CHILD).child(listID);
+        DatabaseReference mListRef = mFirebaseDatabaseReference.child(ITEMS).child(listID);
         mListRef.child(itemKey).removeValue();
     }
 
     public void displayGroceryItem(String listID, final String itemKey, final AddGroceryItemActivity activity) {
-        DatabaseReference mListRef = mFirebaseDatabaseReference.child(LIST_CHILD).child(listID);
+        DatabaseReference mListRef = mFirebaseDatabaseReference.child(ITEMS).child(listID);
         mListRef.child(itemKey).addListenerForSingleValueEvent(new ValueEventListener() {
             @Override
             public void onDataChange(DataSnapshot dataSnapshot) {
@@ -111,7 +115,7 @@ public class DatabaseClient {
     }
 
     public void displayKitchenItem(String listID, final String itemKey, final AddKitchenItemActivity activity) {
-        DatabaseReference mListRef = mFirebaseDatabaseReference.child(LIST_CHILD).child(listID);
+        DatabaseReference mListRef = mFirebaseDatabaseReference.child(ITEMS).child(listID);
         mListRef.child(itemKey).addListenerForSingleValueEvent(new ValueEventListener() {
             @Override
             public void onDataChange(DataSnapshot dataSnapshot) {
@@ -137,10 +141,14 @@ public class DatabaseClient {
     }
 
     public Query getList(String listID) {
-        return mFirebaseDatabaseReference.child(LIST_CHILD).child(listID);
+        return mFirebaseDatabaseReference.child(ITEMS).child(listID);
     }
 
-    public Query getUserLists() {
-        return userListsReference.child("lists");
+    public Query getUserKitchenLists() {
+        return userListsReference.child(KITCHEN_LISTS);
+    }
+
+    public Query getUserGroceryLists() {
+        return userListsReference.child(GROCERY_LISTS);
     }
 }

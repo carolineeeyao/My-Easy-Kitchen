@@ -9,16 +9,13 @@ import android.preference.PreferenceManager;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
-import android.util.Log;
 import android.view.View;
-import android.widget.Button;
 import android.widget.TextView;
 
 import com.firebase.ui.database.FirebaseRecyclerAdapter;
 import com.google.android.gms.appindexing.Action;
 import com.google.android.gms.appindexing.AppIndex;
 import com.google.android.gms.appindexing.Thing;
-import com.google.android.gms.auth.api.Auth;
 import com.google.android.gms.common.api.GoogleApiClient;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
@@ -48,7 +45,7 @@ public class MainActivity extends AppCompatActivity {
     private SharedPreferences mSharedPreferences;
     private GoogleApiClient mGoogleApiClient;
 
-    private FirebaseRecyclerAdapter<ItemList, ItemListViewHolder> mAdapter;
+    private FirebaseRecyclerAdapter<ItemList, ItemListViewHolder> mKitchenAdapter;
     private RecyclerView mRecycler;
     private LinearLayoutManager mManager;
 
@@ -113,40 +110,20 @@ public class MainActivity extends AppCompatActivity {
         mRecycler = (RecyclerView) findViewById(R.id.user_lists);
 
         mManager = new LinearLayoutManager(this);
-        mManager.setReverseLayout(true);
-        mManager.setStackFromEnd(true);
         mRecycler.setLayoutManager(mManager);
-        mAdapter = new FirebaseRecyclerAdapter<ItemList, ItemListViewHolder>(ItemList.class, R.layout.user_list_item_row,
-                ItemListViewHolder.class, databaseClient.getUserLists()) {
+        mKitchenAdapter = new FirebaseRecyclerAdapter<ItemList, ItemListViewHolder>(ItemList.class, R.layout.user_list_item_row,
+                ItemListViewHolder.class, databaseClient.getUserKitchenLists()) {
             @Override
             protected void populateViewHolder(ItemListViewHolder viewHolder, final ItemList model, int position) {
                 final DatabaseReference itemRef = getRef(position);
                 Intent myIntent;
-//                        if(model.getListType().equals("kitchen")) {
-//                            myIntent = new Intent(context, KitchenActivity.class);
-//                        } else {
-                myIntent = new Intent(context, GroceryActivity.class);
-//                        }
+                myIntent = new Intent(context, KitchenActivity.class);
                 myIntent.putExtra(getString(R.string.list_id), itemRef.getKey());
                 context.startActivity(myIntent);
-
-                viewHolder.bindToItem(model, new View.OnClickListener() {
-                    @Override
-                    public void onClick(View v) {
-                        Intent myIntent;
-//                        if(model.getListType().equals("kitchen")) {
-//                            myIntent = new Intent(context, KitchenActivity.class);
-//                        } else {
-                        myIntent = new Intent(context, GroceryActivity.class);
-//                        }
-                        myIntent.putExtra(getString(R.string.list_id), itemRef.getKey());
-                        context.startActivity(myIntent);
-                    }
-                });
             }
         };
 
-        mRecycler.setAdapter(mAdapter);
+        mRecycler.setAdapter(mKitchenAdapter);
 
         logoutButton = (TextView) findViewById(R.id.logout);
         logoutButton.setOnClickListener(new View.OnClickListener() {
