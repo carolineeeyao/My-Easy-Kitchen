@@ -6,16 +6,13 @@ package com.myeasykitchen.myeasykitchen.models;
 
 public class ItemList  {
     private String name;
-    private String listType;
 
     public ItemList() {
         this.name = "";
-        this.listType = "kitchen";
     }
 
     public ItemList(String name, String listType) {
         this.name = name;
-        this.listType = listType;
     }
 
     public String getName() {
@@ -25,14 +22,5 @@ public class ItemList  {
     public void setName(String name)
     {
         this.name = name;
-    }
-
-    public String getListType() {
-        return listType;
-    }
-
-    public void setListType(String listType)
-    {
-        this.listType = listType;
     }
 }

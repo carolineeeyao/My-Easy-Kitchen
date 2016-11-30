@@ -14,8 +14,12 @@ import com.firebase.ui.database.FirebaseRecyclerAdapter;
 import com.google.firebase.database.DatabaseReference;
 import com.myeasykitchen.myeasykitchen.DatabaseClient;
 import com.myeasykitchen.myeasykitchen.R;
+import com.myeasykitchen.myeasykitchen.fragments.GroceryItemMenuFragment;
 import com.myeasykitchen.myeasykitchen.fragments.ItemMenuFragment;
+import com.myeasykitchen.myeasykitchen.fragments.KitchenItemMenuFragment;
+import com.myeasykitchen.myeasykitchen.models.GroceryItem;
 import com.myeasykitchen.myeasykitchen.models.Item;
+import com.myeasykitchen.myeasykitchen.viewholder.GroceryItemViewHolder;
 import com.myeasykitchen.myeasykitchen.viewholder.ItemViewHolder;
 
 public class GroceryActivity extends AppCompatActivity {
@@ -24,7 +28,7 @@ public class GroceryActivity extends AppCompatActivity {
 
     private DatabaseClient databaseClient;
 
-    private FirebaseRecyclerAdapter<Item, ItemViewHolder> mAdapter;
+    private FirebaseRecyclerAdapter<GroceryItem, GroceryItemViewHolder> mAdapter;
     private RecyclerView mRecycler;
     private LinearLayoutManager mManager;
 
@@ -35,25 +39,26 @@ public class GroceryActivity extends AppCompatActivity {
 
 
         databaseClient = DatabaseClient.getInstance();
-        mRecycler = (RecyclerView) findViewById(R.id.activity_kitchen_recycler_view);
-        Button add_button = (Button) findViewById(R.id.add_kitchen_item);
+        mRecycler = (RecyclerView) findViewById(R.id.activity_grocery_recycler_view);
+        Button add_button = (Button) findViewById(R.id.add_grocery_item);
 
 
         mManager = new LinearLayoutManager(this);
         mManager.setReverseLayout(true);
         mManager.setStackFromEnd(true);
         mRecycler.setLayoutManager(mManager);
-        mAdapter = new FirebaseRecyclerAdapter<Item, ItemViewHolder>(Item.class, R.layout.kitchen_item_row,
-                ItemViewHolder.class, databaseClient.getList(getIntent().getStringExtra("list name"))) {
+        mAdapter = new FirebaseRecyclerAdapter<GroceryItem, GroceryItemViewHolder>(GroceryItem.class, R.layout.kitchen_item_row,
+                GroceryItemViewHolder.class, databaseClient.getList(getIntent().getStringExtra(getString(R.string.list_id)))) {
             @Override
-            protected void populateViewHolder(ItemViewHolder viewHolder, final Item model, int position) {
+            protected void populateViewHolder(GroceryItemViewHolder viewHolder, final GroceryItem model, int position) {
                 final DatabaseReference itemRef = getRef(position);
 
                 viewHolder.bindToItem(model, new View.OnLongClickListener() {
                     @Override
                     public boolean onLongClick(View v) {
                         FragmentManager fm = getSupportFragmentManager();
-                        ItemMenuFragment fragment = ItemMenuFragment.newInstance(model, getIntent().getStringExtra("list name"), itemRef.getKey());
+                        ItemMenuFragment fragment = GroceryItemMenuFragment.newInstance(model,
+                                getIntent().getStringExtra(getString(R.string.list_id)), itemRef.getKey());
                         fragment.show(fm, "fragment_item_menu");
 
                         return false;
@@ -67,8 +72,9 @@ public class GroceryActivity extends AppCompatActivity {
         add_button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent myIntent = new Intent(context, AddItemActivity.class);
-                myIntent.putExtra("list name", getIntent().getStringExtra("list name"));
+                Intent myIntent = new Intent(context, AddGroceryItemActivity.class);
+                myIntent.putExtra(getString(R.string.list_id), getIntent().getStringExtra(getString(R.string.list_id)));
+                myIntent.putExtra(getString(R.string.item_id), "");
                 context.startActivity(myIntent);
             }
         });

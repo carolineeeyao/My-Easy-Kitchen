@@ -5,4 +5,10 @@ package com.myeasykitchen.myeasykitchen.models;
  */
 
 public class GroceryItem extends Item {
+    public GroceryItem () {
+        super();
+    }
+    public GroceryItem (String name, double amount) {
+        super(name, amount);
+    }
 }

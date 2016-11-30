@@ -12,8 +12,13 @@ import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.Query;
 import com.google.firebase.database.ValueEventListener;
+import com.myeasykitchen.myeasykitchen.activities.AddGroceryItemActivity;
+import com.myeasykitchen.myeasykitchen.activities.AddKitchenItemActivity;
+import com.myeasykitchen.myeasykitchen.models.GroceryItem;
 import com.myeasykitchen.myeasykitchen.models.Item;
+import com.myeasykitchen.myeasykitchen.models.KitchenItem;
 
+import java.util.Calendar;
 import java.util.Iterator;
 
 /**
@@ -71,18 +76,57 @@ public class DatabaseClient {
         mListRef.child(key).setValue(newItem);
     }
 
+    public void setKitchenItem(String listID, String itemID, KitchenItem item) {
+        DatabaseReference mListRef = mFirebaseDatabaseReference.child(LIST_CHILD).child(listID);
+        mListRef.child(itemID).setValue(item);
+    }
+
+    public void setGroceryItem(String listID, String itemID, GroceryItem item) {
+        DatabaseReference mListRef = mFirebaseDatabaseReference.child(LIST_CHILD).child(listID);
+        mListRef.child(itemID).setValue(item);
+    }
+
     public void removeItem(String listID, String itemKey) {
         DatabaseReference mListRef = mFirebaseDatabaseReference.child(LIST_CHILD).child(listID);
         mListRef.child(itemKey).removeValue();
     }
 
-    public void editItem(String listID, final String itemKey, final EditText editText) {
+    public void displayGroceryItem(String listID, final String itemKey, final AddGroceryItemActivity activity) {
         DatabaseReference mListRef = mFirebaseDatabaseReference.child(LIST_CHILD).child(listID);
         mListRef.child(itemKey).addListenerForSingleValueEvent(new ValueEventListener() {
             @Override
             public void onDataChange(DataSnapshot dataSnapshot) {
-                Item item = dataSnapshot.getValue(Item.class);
-                editText.setText(item.getName());
+                GroceryItem item = dataSnapshot.getValue(GroceryItem.class);
+                EditText nameText = (EditText)  activity.findViewById(R.id.name_text);
+                EditText quantityText = (EditText)  activity.findViewById(R.id.quantity_text);
+                nameText.setText(item.getName());
+                quantityText.setText(Double.toString(item.getAmount()));
+            }
+
+            @Override
+            public void onCancelled(DatabaseError databaseError) {
+
+            }
+        });
+    }
+
+    public void displayKitchenItem(String listID, final String itemKey, final AddKitchenItemActivity activity) {
+        DatabaseReference mListRef = mFirebaseDatabaseReference.child(LIST_CHILD).child(listID);
+        mListRef.child(itemKey).addListenerForSingleValueEvent(new ValueEventListener() {
+            @Override
+            public void onDataChange(DataSnapshot dataSnapshot) {
+                KitchenItem item = dataSnapshot.getValue(KitchenItem.class);
+                EditText nameText = (EditText)  activity.findViewById(R.id.name_text);
+                EditText quantityText = (EditText)  activity.findViewById(R.id.quantity_text);
+                EditText dateText = (EditText) activity.findViewById(R.id.date_text);
+                nameText.setText(item.getName());
+                quantityText.setText(Double.toString(item.getAmount()));
+                if(item.getCalendar().after(Calendar.getInstance())) {
+                    String date = item.getCalendar().get(Calendar.MONTH) +
+                            "/" + item.getCalendar().get(Calendar.DAY_OF_MONTH) +
+                            "/" + item.getCalendar().get(Calendar.YEAR);
+                    dateText.setText(date);
+                }
             }
 
             @Override

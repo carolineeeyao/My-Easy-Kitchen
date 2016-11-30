@@ -90,12 +90,12 @@ public class MainActivity extends AppCompatActivity {
                     @Override
                     public void onClick(View v) {
                         Intent myIntent;
-                        if(model.getListType().equals("kitchen")) {
-                            myIntent = new Intent(context, KitchenActivity.class);
-                        } else {
+//                        if(model.getListType().equals("kitchen")) {
+//                            myIntent = new Intent(context, KitchenActivity.class);
+//                        } else {
                             myIntent = new Intent(context, GroceryActivity.class);
-                        }
-                        myIntent.putExtra("list key", itemRef.getKey());
+//                        }
+                        myIntent.putExtra(getString(R.string.list_id), itemRef.getKey());
                         context.startActivity(myIntent);
                     }
                 });
@@ -121,7 +121,6 @@ public class MainActivity extends AppCompatActivity {
 
             @Override
             public boolean onLongClick(View v) {
-                Log.d(TAG,"hi");
                 return true;
             }
         });

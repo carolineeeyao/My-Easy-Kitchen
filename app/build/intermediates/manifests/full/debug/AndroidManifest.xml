@@ -41,8 +41,9 @@
             android:name="com.myeasykitchen.myeasykitchen.activities.LoginActivity"
             android:label="@string/title_activity_login" />
         <activity android:name="com.myeasykitchen.myeasykitchen.activities.KitchenActivity" />
-        <activity android:name="com.myeasykitchen.myeasykitchen.activities.AddItemActivity" />
+        <activity android:name="com.myeasykitchen.myeasykitchen.activities.AddKitchenItemActivity" />
         <activity android:name="com.myeasykitchen.myeasykitchen.activities.GroceryActivity" />
+        <activity android:name="com.myeasykitchen.myeasykitchen.activities.AddGroceryItemActivity" />
 
         <receiver android:name="com.myeasykitchen.myeasykitchen.notifications.AlarmReceiver" />
         <receiver

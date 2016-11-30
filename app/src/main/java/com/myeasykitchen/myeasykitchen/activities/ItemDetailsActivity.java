@@ -5,7 +5,6 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.TextView;
 
 import com.myeasykitchen.myeasykitchen.DatabaseClient;
 import com.myeasykitchen.myeasykitchen.R;
@@ -23,17 +22,15 @@ public abstract class ItemDetailsActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_add_item);
+        databaseClient = DatabaseClient.getInstance();
+
+        setup();
 
         nameText = (EditText)findViewById(R.id.name_text);
         quantityText = (EditText)findViewById(R.id.quantity_text);
 
         Button save_button = (Button)findViewById(R.id.save_button);
         Button cancel_button = (Button)findViewById(R.id.cancel_button);
-
-        databaseClient = DatabaseClient.getInstance();
-
-        setup();
 
         save_button.setOnClickListener(new View.OnClickListener() {
             @Override

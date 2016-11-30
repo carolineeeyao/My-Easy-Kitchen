@@ -27,8 +27,9 @@
             android:name=".activities.LoginActivity"
             android:label="@string/title_activity_login" />
         <activity android:name=".activities.KitchenActivity" />
-        <activity android:name=".activities.AddItemActivity" />
+        <activity android:name=".activities.AddKitchenItemActivity" />
         <activity android:name=".activities.GroceryActivity" />
+        <activity android:name=".activities.AddGroceryItemActivity" />
 
         <receiver android:name=".notifications.AlarmReceiver" />
 

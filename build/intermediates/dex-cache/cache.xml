@@ -210,21 +210,21 @@
     </item>
     <item
         is-multidex="true"
+        jar="C:\Users\Ali\Documents\My-Easy-Kitchen\app\build\intermediates\incremental-classes\debug\instant-run-bootstrap.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="23.0.3"
+        sha1="0e7f590f3bfae8ff8e1dc6d5300b2e9f05bca9d5">
+        <dex dex="C:\Users\Ali\Documents\My-Easy-Kitchen\app\build\intermediates\transforms\dex\debug\folders\1000\10\instant-run-bootstrap_b05719f385994dce5bc6e8d4c1114e512e66d9bb\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
         jar="C:\Users\Ali\Documents\My-Easy-Kitchen\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-tasks\9.8.0\jars\classes.jar"
         jumboMode="true"
         optimize="true"
         revision="23.0.3"
         sha1="bf2e1838e4428616c1aa26edf43de72b5b99bf84">
         <dex dex="C:\Users\Ali\Documents\My-Easy-Kitchen\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.android.gms-play-services-tasks-9.8.0_10f24f6976a6bc5f9a97488c4e9842fab85df90e\classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="C:\Users\Ali\Documents\My-Easy-Kitchen\app\build\intermediates\incremental-classes\debug\instant-run-bootstrap.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="23.0.3"
-        sha1="444db3c39a12c8027e8ff1131e01778026ab2fe8">
-        <dex dex="C:\Users\Ali\Documents\My-Easy-Kitchen\app\build\intermediates\transforms\dex\debug\folders\1000\10\instant-run-bootstrap_b05719f385994dce5bc6e8d4c1114e512e66d9bb\classes.dex" />
     </item>
     <item
         is-multidex="false"

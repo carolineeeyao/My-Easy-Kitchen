@@ -9,16 +9,18 @@ import java.util.Map;
 
 
 @IgnoreExtraProperties
-public class Item {
+public abstract class Item {
 
     private String name;
     private String key;
+    private double amount;
 
     public Item () {
-        this.name = "";
+        this("",0);
     }
-    public Item(String name) {
+    public Item(String name, double amount) {
         this.name = name;
+        this.amount = amount;
     }
 
     public void setName(String name)
@@ -29,6 +31,14 @@ public class Item {
     public String getName()
     {
         return this.name;
+    }
+
+    public double getAmount() {
+        return amount;
+    }
+
+    public void setAmount(double amount) {
+        this.amount = amount;
     }
 
     @Exclude
