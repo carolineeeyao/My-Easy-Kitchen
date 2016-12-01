@@ -4,6 +4,8 @@ import android.content.Context;
 import android.content.Intent;
 import android.support.annotation.NonNull;
 import android.support.v4.app.FragmentManager;
+import android.support.v4.view.GravityCompat;
+import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
@@ -180,6 +182,7 @@ public class GroceryActivity extends AppCompatActivity implements GoogleApiClien
                         myIntent = new Intent(context, KitchenActivity.class);
                         myIntent.putExtra(getString(R.string.list_id), itemRef.getKey());
                         context.startActivity(myIntent);
+                        finish();
                     }
                 });
             }
@@ -206,6 +209,7 @@ public class GroceryActivity extends AppCompatActivity implements GoogleApiClien
                         myIntent = new Intent(context, GroceryActivity.class);
                         myIntent.putExtra(getString(R.string.list_id), itemRef.getKey());
                         context.startActivity(myIntent);
+                        finish();
                     }
                 });
             }
@@ -226,6 +230,16 @@ public class GroceryActivity extends AppCompatActivity implements GoogleApiClien
 
             }
         });
+    }
+
+    @Override
+    public void onBackPressed() {
+        DrawerLayout drawerLayout = (DrawerLayout) findViewById(R.id.activity_grocery_drawer);
+        if (drawerLayout.isDrawerOpen(GravityCompat.START)) {
+            drawerLayout.closeDrawer(GravityCompat.START);
+        } else {
+            super.onBackPressed();
+        }
     }
 
     @Override
