@@ -8,9 +8,12 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.support.v7.widget.helper.ItemTouchHelper;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
+import android.widget.CheckBox;
+import android.widget.CompoundButton;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -28,6 +31,11 @@ import com.myeasykitchen.myeasykitchen.models.GroceryItem;
 import com.myeasykitchen.myeasykitchen.models.ItemList;
 import com.myeasykitchen.myeasykitchen.viewholder.GroceryItemViewHolder;
 import com.myeasykitchen.myeasykitchen.viewholder.ItemListViewHolder;
+
+import java.util.HashMap;
+import java.util.HashSet;
+import java.util.Map;
+import java.util.Set;
 
 import static com.myeasykitchen.myeasykitchen.activities.MainActivity.ANONYMOUS;
 
@@ -51,6 +59,8 @@ public class GroceryActivity extends AppCompatActivity implements GoogleApiClien
     private String mUsername;
     private GoogleApiClient mGoogleApiClient;
 
+    private Map<Integer,CompoundButton> checked;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -64,8 +74,11 @@ public class GroceryActivity extends AppCompatActivity implements GoogleApiClien
         databaseClient = DatabaseClient.getInstance();
         mRecycler = (RecyclerView) findViewById(R.id.activity_grocery_recycler_view);
         Button add_button = (Button) findViewById(R.id.add_grocery_item);
+        Button remove_all = (Button) findViewById(R.id.remove_all);
 
         initNavBar();
+
+        checked = new HashMap<>();
 
         mManager = new LinearLayoutManager(this);
         mManager.setReverseLayout(true);
@@ -74,7 +87,7 @@ public class GroceryActivity extends AppCompatActivity implements GoogleApiClien
         mAdapter = new FirebaseRecyclerAdapter<GroceryItem, GroceryItemViewHolder>(GroceryItem.class, R.layout.grocery_item_row,
                 GroceryItemViewHolder.class, databaseClient.getList(getIntent().getStringExtra(getString(R.string.list_id)))) {
             @Override
-            protected void populateViewHolder(GroceryItemViewHolder viewHolder, final GroceryItem model, int position) {
+            protected void populateViewHolder(GroceryItemViewHolder viewHolder, final GroceryItem model, final int position) {
                 final DatabaseReference itemRef = getRef(position);
 
                 viewHolder.bindToItem(model, new View.OnLongClickListener() {
@@ -86,6 +99,14 @@ public class GroceryActivity extends AppCompatActivity implements GoogleApiClien
                         fragment.show(fm, "fragment_item_menu");
 
                         return false;
+                    }
+                }, new CompoundButton.OnCheckedChangeListener() {
+                    @Override
+                    public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+                        if (isChecked)
+                            checked.put(position,buttonView);
+                        else
+                            checked.remove(position);
                     }
                 });
             }
@@ -102,6 +123,33 @@ public class GroceryActivity extends AppCompatActivity implements GoogleApiClien
                 context.startActivity(myIntent);
             }
         });
+
+        remove_all.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                for(int i: checked.keySet()) {
+                    checked.get(i).setChecked(false);
+                    mAdapter.getRef(i).removeValue();
+                }
+                mAdapter.notifyDataSetChanged();
+                checked.clear();
+            }
+        });
+
+        ItemTouchHelper.SimpleCallback simpleItemTouchCallback = new ItemTouchHelper.SimpleCallback(0, ItemTouchHelper.LEFT | ItemTouchHelper.RIGHT) {
+            @Override
+            public boolean onMove(RecyclerView recyclerView, RecyclerView.ViewHolder viewHolder, RecyclerView.ViewHolder target) {
+                return false;
+            }
+
+            @Override
+            public void onSwiped(RecyclerView.ViewHolder viewHolder, int swipeDir) {
+                mAdapter.getRef(viewHolder.getAdapterPosition()).removeValue();
+            }
+        };
+
+        ItemTouchHelper itemTouchHelper = new ItemTouchHelper(simpleItemTouchCallback);
+        itemTouchHelper.attachToRecyclerView(mRecycler);
 
     }
 

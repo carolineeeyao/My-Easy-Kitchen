@@ -8,6 +8,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.support.v7.widget.helper.ItemTouchHelper;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
@@ -76,7 +77,6 @@ public class KitchenActivity extends AppCompatActivity implements GoogleApiClien
         mAdapter = new FirebaseRecyclerAdapter<KitchenItem, KitchenItemViewHolder>(KitchenItem.class, R.layout.kitchen_item_row,
                 KitchenItemViewHolder.class, databaseClient.getList(getIntent().getStringExtra(getString(R.string.list_id)))) {
             @Override
-
             protected void populateViewHolder(KitchenItemViewHolder viewHolder, final KitchenItem model, int position) {
                 final DatabaseReference itemRef = getRef(position);
 
@@ -105,6 +105,22 @@ public class KitchenActivity extends AppCompatActivity implements GoogleApiClien
                 context.startActivity(myIntent);
             }
         });
+
+        ItemTouchHelper.SimpleCallback simpleItemTouchCallback = new ItemTouchHelper.SimpleCallback(0, ItemTouchHelper.LEFT | ItemTouchHelper.RIGHT) {
+            @Override
+            public boolean onMove(RecyclerView recyclerView, RecyclerView.ViewHolder viewHolder, RecyclerView.ViewHolder target) {
+                return false;
+            }
+
+            @Override
+            public void onSwiped(RecyclerView.ViewHolder viewHolder, int swipeDir) {
+                mAdapter.getRef(viewHolder.getAdapterPosition()).removeValue();
+            }
+        };
+
+        ItemTouchHelper itemTouchHelper = new ItemTouchHelper(simpleItemTouchCallback);
+        itemTouchHelper.attachToRecyclerView(mRecycler);
+
     }
 
 
