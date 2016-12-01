@@ -71,7 +71,7 @@ public class GroceryActivity extends AppCompatActivity implements GoogleApiClien
         mManager.setReverseLayout(true);
         mManager.setStackFromEnd(true);
         mRecycler.setLayoutManager(mManager);
-        mAdapter = new FirebaseRecyclerAdapter<GroceryItem, GroceryItemViewHolder>(GroceryItem.class, R.layout.kitchen_item_row,
+        mAdapter = new FirebaseRecyclerAdapter<GroceryItem, GroceryItemViewHolder>(GroceryItem.class, R.layout.grocery_item_row,
                 GroceryItemViewHolder.class, databaseClient.getList(getIntent().getStringExtra(getString(R.string.list_id)))) {
             @Override
             protected void populateViewHolder(GroceryItemViewHolder viewHolder, final GroceryItem model, int position) {
