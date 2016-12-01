@@ -83,24 +83,11 @@ public class MainActivity extends AppCompatActivity {
                 mPhotoUrl = mFirebaseUser.getPhotoUrl().toString();
             }
             databaseClient = DatabaseClient.getInstance();
-            databaseClient.setUser(mFirebaseUser.getUid(), mUsername);
+            databaseClient.setUser(mFirebaseUser.getUid(), mUsername, this);
         }
 
         initNavBar();
 
-        //how to create notifications
-        //ADD THIS TO WHEN CREATE/ADD ITEM
-        //set the time using Calendar
-        Calendar calendar = Calendar.getInstance();
-
-        int minute = 15;
-        calendar.set(Calendar.HOUR_OF_DAY, 11);
-        calendar.set(Calendar.MINUTE, minute);
-
-        int uniqueId = 1;
-        String title = "This item is about to expire";
-        String text = "Name of Item";
-        AlarmCreator.create(context, calendar, uniqueId, title, text);
 
 
         // ATTENTION: This was auto-generated to implement the App Indexing API.

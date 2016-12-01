@@ -14,12 +14,6 @@ public class AlarmCreator {
 
     public static void create(Context context, Calendar calendar, int uniqueId, String title, String text)
     {
-//        Calendar calendar = Calendar.getInstance();
-//
-//        int minute = 46;
-//        calendar.set(Calendar.HOUR_OF_DAY,19);
-//        calendar.set(Calendar.MINUTE, minute);
-
         Intent intent = new Intent(context, AlarmReceiver.class);
         intent.putExtra("unique_id", uniqueId);
         intent.putExtra("title", title);

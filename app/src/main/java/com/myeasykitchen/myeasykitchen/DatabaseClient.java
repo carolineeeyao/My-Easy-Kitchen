@@ -1,11 +1,13 @@
 package com.myeasykitchen.myeasykitchen;
 
+import android.content.Context;
 import android.util.Log;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.TextView;
 
 import com.google.firebase.auth.api.model.StringList;
+import com.google.firebase.database.ChildEventListener;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
@@ -14,11 +16,13 @@ import com.google.firebase.database.Query;
 import com.google.firebase.database.ValueEventListener;
 import com.myeasykitchen.myeasykitchen.activities.AddGroceryItemActivity;
 import com.myeasykitchen.myeasykitchen.activities.AddKitchenItemActivity;
+import com.myeasykitchen.myeasykitchen.activities.KitchenActivity;
 import com.myeasykitchen.myeasykitchen.adapters.GroceryItemAdapter;
 import com.myeasykitchen.myeasykitchen.adapters.KitchenItemAdapter;
 import com.myeasykitchen.myeasykitchen.models.GroceryItem;
 import com.myeasykitchen.myeasykitchen.models.Item;
 import com.myeasykitchen.myeasykitchen.models.KitchenItem;
+import com.myeasykitchen.myeasykitchen.notifications.AlarmCreator;
 
 import java.util.ArrayList;
 import java.util.Calendar;
@@ -41,6 +45,7 @@ public class DatabaseClient {
     private final String GROCERY_LISTS = "grocery lists";
 
     private static final String TAG = "DatabaseClient";
+    private int alarmID;
 
     private DatabaseClient() {
         mFirebaseDatabaseReference = FirebaseDatabase.getInstance().getReference();
@@ -50,7 +55,7 @@ public class DatabaseClient {
         return instance;
     }
 
-    public void setUser(final String userUID, final String username) {
+    public void setUser(final String userUID, final String username, final Context context) {
         userListsReference = mFirebaseDatabaseReference.child(USERS).child(userUID);
         userListsReference.addListenerForSingleValueEvent(new ValueEventListener() {
             @Override
@@ -68,6 +73,39 @@ public class DatabaseClient {
                     mFirebaseDatabaseReference.child(GROCERY_LISTS).child(newGroceryList).child(USERS).child(userUID).child(NAME).setValue(username);
 
                     userListsReference.child(NAME).setValue(username);
+
+                    mFirebaseDatabaseReference.child(ITEMS).child(newKitchenList).addChildEventListener(new ChildEventListener() {
+                        @Override
+                        public void onChildAdded(DataSnapshot dataSnapshot, String s) {
+                            KitchenItem item = dataSnapshot.getValue(KitchenItem.class);
+                            item.setAlarmID(alarmID++);
+                            dataSnapshot.getRef().setValue(item);
+
+                            AlarmCreator.create(context, item.getExpirationDate(),item.getAlarmID(), item.getName(), "This item is about to expire");
+                        }
+
+                        @Override
+                        public void onChildChanged(DataSnapshot dataSnapshot, String s) {
+                            KitchenItem item = dataSnapshot.getValue(KitchenItem.class);
+                            AlarmCreator.create(context, item.getExpirationDate(),item.getAlarmID(), item.getName(), "This item is about to expire");
+
+                        }
+
+                        @Override
+                        public void onChildRemoved(DataSnapshot dataSnapshot) {
+
+                        }
+
+                        @Override
+                        public void onChildMoved(DataSnapshot dataSnapshot, String s) {
+
+                        }
+
+                        @Override
+                        public void onCancelled(DatabaseError databaseError) {
+
+                        }
+                    });
                 }
             }
 
