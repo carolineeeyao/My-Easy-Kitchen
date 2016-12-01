@@ -2914,7 +2914,7 @@ containing a value of this type.
         public static final int design_menu_item_text=0x7f0c00a7;
         public static final int design_navigation_view=0x7f0c00a6;
         public static final int disableHome=0x7f0c000e;
-        public static final int edit_item=0x7f0c00ab;
+        public static final int edit_item=0x7f0c00aa;
         public static final int edit_query=0x7f0c007d;
         public static final int email=0x7f0c003d;
         public static final int email_login_form=0x7f0c009d;
@@ -2987,7 +2987,7 @@ containing a value of this type.
         public static final int quantity_label=0x7f0c008e;
         public static final int quantity_text=0x7f0c008f;
         public static final int radio=0x7f0c0074;
-        public static final int remove_item=0x7f0c00aa;
+        public static final int remove_item=0x7f0c00ab;
         public static final int rfc822=0x7f0c004a;
         public static final int right=0x7f0c002a;
         public static final int right_icon=0x7f0c00bd;

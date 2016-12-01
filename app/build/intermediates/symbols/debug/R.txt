@@ -772,7 +772,7 @@ int id design_menu_item_action_area_stub 0x7f0c00a8
 int id design_menu_item_text 0x7f0c00a7
 int id design_navigation_view 0x7f0c00a6
 int id disableHome 0x7f0c000e
-int id edit_item 0x7f0c00ab
+int id edit_item 0x7f0c00aa
 int id edit_query 0x7f0c007d
 int id email 0x7f0c003d
 int id email_login_form 0x7f0c009d
@@ -845,7 +845,7 @@ int id progress_horizontal 0x7f0c0007
 int id quantity_label 0x7f0c008e
 int id quantity_text 0x7f0c008f
 int id radio 0x7f0c0074
-int id remove_item 0x7f0c00aa
+int id remove_item 0x7f0c00ab
 int id rfc822 0x7f0c004a
 int id right 0x7f0c002a
 int id right_icon 0x7f0c00bd
