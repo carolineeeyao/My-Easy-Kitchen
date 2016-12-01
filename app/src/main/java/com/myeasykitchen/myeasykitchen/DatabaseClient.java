@@ -74,11 +74,28 @@ public class DatabaseClient {
 
                     userListsReference.child(NAME).setValue(username);
 
-                    mFirebaseDatabaseReference.child(ITEMS).child(newKitchenList).addChildEventListener(new ChildEventListener() {
+
+                }
+            }
+
+            @Override
+            public void onCancelled(DatabaseError databaseError) {
+            }
+        });
+
+        DatabaseReference userKitchenLists = userListsReference.child(KITCHEN_LISTS);
+        userKitchenLists.addListenerForSingleValueEvent(new ValueEventListener() {
+            @Override
+            public void onDataChange(DataSnapshot dataSnapshot) {
+                Iterator<DataSnapshot> iterator = dataSnapshot.getChildren().iterator();
+                while(iterator.hasNext()) {
+                    final String kList = iterator.next().getKey();
+                    mFirebaseDatabaseReference.child(ITEMS).child(kList).addChildEventListener(new ChildEventListener() {
                         @Override
                         public void onChildAdded(DataSnapshot dataSnapshot, String s) {
                             KitchenItem item = dataSnapshot.getValue(KitchenItem.class);
-                            item.setAlarmID(alarmID++);
+                            item.setAlarmID(alarmID);
+                            alarmID++;
                             dataSnapshot.getRef().setValue(item);
 
                             AlarmCreator.create(context, item.getExpirationDate(),item.getAlarmID(), item.getName(), "This item is about to expire");
@@ -111,6 +128,7 @@ public class DatabaseClient {
 
             @Override
             public void onCancelled(DatabaseError databaseError) {
+
             }
         });
     }

@@ -1,6 +1,10 @@
 [
     {
-        "merged": "/Users/sonal/Documents/Android/My-Easy-Kitchen/app/build/intermediates/res/merged/debug/layout-sw600dp-v13/design_layout_snackbar.xml",
-        "source": "/Users/sonal/Documents/Android/My-Easy-Kitchen/app/build/intermediates/exploded-aar/com.android.support/design/23.4.0/res/layout-sw600dp-v13/design_layout_snackbar.xml"
+        "merged": "C:\\Users\\Ali\\Documents\\My-Easy-Kitchen\\app\\build\\intermediates\\res\\merged\\debug\\layout-sw600dp-v13\\design_layout_snackbar.xml",
+        "source": "C:\\Users\\Ali\\Documents\\My-Easy-Kitchen\\app\\build\\intermediates\\exploded-aar\\com.android.support\\design\\23.4.0\\res\\layout-sw600dp-v13\\design_layout_snackbar.xml"
+    },
+    {
+        "merged": "C:\\Users\\sonal\\Documents\\Android\\My-Easy-Kitchen\\app\\build\\intermediates\\res\\merged\\debug\\layout-sw600dp-v13\\design_layout_snackbar.xml",
+        "source": "C:\\Users\\sonal\\Documents\\Android\\My-Easy-Kitchen\\app\\build\\intermediates\\exploded-aar\\com.android.support\\design\\23.4.0\\res\\layout-sw600dp-v13\\design_layout_snackbar.xml"
     }
 ]

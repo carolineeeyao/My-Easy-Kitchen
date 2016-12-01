@@ -7,6 +7,7 @@ import android.content.Context;
 import android.content.Intent;
 import android.support.v4.app.NotificationCompat;
 
+import com.myeasykitchen.myeasykitchen.R;
 import com.myeasykitchen.myeasykitchen.activities.MainActivity;
 
 /**
@@ -31,7 +32,7 @@ public class AlarmReceiver extends BroadcastReceiver {
 
         NotificationCompat.Builder builder = new NotificationCompat.Builder(context)
                 .setContentIntent(pendingIntent)
-                .setSmallIcon(android.R.drawable.arrow_up_float)
+                .setSmallIcon(R.mipmap.logo)
                 .setContentTitle(title)
                 .setContentText(text)
                 .setAutoCancel(true);

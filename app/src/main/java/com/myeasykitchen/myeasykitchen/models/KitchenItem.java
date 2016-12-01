@@ -40,11 +40,11 @@ public class KitchenItem extends Item {
     public Calendar getExpirationDate() {
         Calendar calendar = Calendar.getInstance();
         String[] date = expiration.split("/");
-        calendar.set(Calendar.MONTH,Integer.parseInt(date[0]));
+        calendar.set(Calendar.MONTH,Integer.parseInt(date[0])-1);
         calendar.set(Calendar.DAY_OF_MONTH,Integer.parseInt(date[1]));
         calendar.set(Calendar.YEAR,Integer.parseInt(date[2]));
-        calendar.set(Calendar.HOUR_OF_DAY, 1);
-        calendar.set(Calendar.MINUTE, 47);
+        calendar.set(Calendar.HOUR_OF_DAY, 10);
+        calendar.set(Calendar.MINUTE, 20);
         return calendar;
     }
 }
