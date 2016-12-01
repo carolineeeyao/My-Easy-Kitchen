@@ -38,6 +38,7 @@ import com.myeasykitchen.myeasykitchen.viewholder.ItemListViewHolder;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.HashSet;
+import java.util.Iterator;
 import java.util.Map;
 import java.util.Set;
 
@@ -64,6 +65,7 @@ public class GroceryActivity extends AppCompatActivity implements GoogleApiClien
     private GoogleApiClient mGoogleApiClient;
 
     private Map<Integer,CompoundButton> checked;
+    private boolean removing = false;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -107,10 +109,12 @@ public class GroceryActivity extends AppCompatActivity implements GoogleApiClien
                 }, new CompoundButton.OnCheckedChangeListener() {
                     @Override
                     public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
-                        if (isChecked)
-                            checked.put(position,buttonView);
-                        else
-                            checked.remove(position);
+                        if(!removing) {
+                            if (isChecked)
+                                checked.put(position, buttonView);
+                            else
+                                checked.remove(position);
+                        }
                     }
                 });
             }
@@ -131,10 +135,12 @@ public class GroceryActivity extends AppCompatActivity implements GoogleApiClien
         remove_all.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                removing = true;
                 for(int i: checked.keySet()) {
                     checked.get(i).setChecked(false);
                     databaseClient.exportToKitchen(mAdapter.getRef(i));
                 }
+                removing = false;
                 mAdapter.notifyDataSetChanged();
                 checked.clear();
                 Toast.makeText(context, "Items Moved to Kitchen List",Toast.LENGTH_SHORT).show();
