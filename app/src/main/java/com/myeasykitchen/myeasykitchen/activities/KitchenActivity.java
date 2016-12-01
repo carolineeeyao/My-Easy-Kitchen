@@ -168,6 +168,7 @@ public class KitchenActivity extends AppCompatActivity implements GoogleApiClien
             protected void populateViewHolder(ItemListViewHolder viewHolder, final ItemList model, int position) {
                 final DatabaseReference itemRef = getRef(position);
 
+
                 viewHolder.bindToItem(model, new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {

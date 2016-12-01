@@ -98,13 +98,15 @@ public class DatabaseClient {
                             alarmID++;
                             dataSnapshot.getRef().setValue(item);
 
-                            AlarmCreator.create(context, item.getExpirationDate(),item.getAlarmID(), item.getName(), "This item is about to expire");
+                            if(!item.getExpiration().equals(""))
+                                AlarmCreator.create(context, item.getExpirationDate(),item.getAlarmID(), item.getName(), "This item is about to expire");
                         }
 
                         @Override
                         public void onChildChanged(DataSnapshot dataSnapshot, String s) {
                             KitchenItem item = dataSnapshot.getValue(KitchenItem.class);
-                            AlarmCreator.create(context, item.getExpirationDate(),item.getAlarmID(), item.getName(), "This item is about to expire");
+                            if(!item.getExpiration().equals(""))
+                                AlarmCreator.create(context, item.getExpirationDate(),item.getAlarmID(), item.getName(), "This item is about to expire");
 
                         }
 

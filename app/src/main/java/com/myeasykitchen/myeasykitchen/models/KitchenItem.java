@@ -1,5 +1,8 @@
 package com.myeasykitchen.myeasykitchen.models;
 
+import com.google.firebase.database.Exclude;
+import com.google.firebase.database.IgnoreExtraProperties;
+
 import java.util.Calendar;
 import java.util.StringTokenizer;
 
@@ -7,6 +10,7 @@ import java.util.StringTokenizer;
  * Created by Ali on 11/25/2016.
  */
 
+@IgnoreExtraProperties
 public class KitchenItem extends Item {
     protected String expiration;
     protected int alarmID;
@@ -37,14 +41,16 @@ public class KitchenItem extends Item {
         this.alarmID = alarmID;
     }
 
+    @Exclude
     public Calendar getExpirationDate() {
         Calendar calendar = Calendar.getInstance();
         String[] date = expiration.split("/");
         calendar.set(Calendar.MONTH,Integer.parseInt(date[0])-1);
         calendar.set(Calendar.DAY_OF_MONTH,Integer.parseInt(date[1]));
         calendar.set(Calendar.YEAR,Integer.parseInt(date[2]));
-        calendar.set(Calendar.HOUR_OF_DAY, 10);
+        calendar.set(Calendar.HOUR_OF_DAY, 3);
         calendar.set(Calendar.MINUTE, 20);
+        calendar.set(Calendar.SECOND, 0);
         return calendar;
     }
 }
