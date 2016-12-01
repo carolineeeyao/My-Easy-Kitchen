@@ -14,7 +14,6 @@ import android.support.v7.widget.helper.ItemTouchHelper;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
-import android.widget.CheckBox;
 import android.widget.CompoundButton;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -31,16 +30,11 @@ import com.myeasykitchen.myeasykitchen.fragments.GroceryItemMenuFragment;
 import com.myeasykitchen.myeasykitchen.fragments.ItemMenuFragment;
 import com.myeasykitchen.myeasykitchen.models.GroceryItem;
 import com.myeasykitchen.myeasykitchen.models.ItemList;
-import com.myeasykitchen.myeasykitchen.models.KitchenItem;
 import com.myeasykitchen.myeasykitchen.viewholder.GroceryItemViewHolder;
 import com.myeasykitchen.myeasykitchen.viewholder.ItemListViewHolder;
 
-import java.util.ArrayList;
 import java.util.HashMap;
-import java.util.HashSet;
-import java.util.Iterator;
 import java.util.Map;
-import java.util.Set;
 
 import static com.myeasykitchen.myeasykitchen.activities.MainActivity.ANONYMOUS;
 
@@ -80,7 +74,7 @@ public class GroceryActivity extends AppCompatActivity implements GoogleApiClien
         databaseClient = DatabaseClient.getInstance();
         mRecycler = (RecyclerView) findViewById(R.id.activity_grocery_recycler_view);
         Button add_button = (Button) findViewById(R.id.add_grocery_item);
-        Button remove_all = (Button) findViewById(R.id.remove_all);
+        Button import_all = (Button) findViewById(R.id.import_all);
 
         initNavBar();
 
@@ -132,7 +126,7 @@ public class GroceryActivity extends AppCompatActivity implements GoogleApiClien
             }
         });
 
-        remove_all.setOnClickListener(new View.OnClickListener() {
+        import_all.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 removing = true;

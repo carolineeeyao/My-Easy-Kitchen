@@ -2943,6 +2943,7 @@ containing a value of this type.
         public static final int ifRoom=0x7f0c0045;
         public static final int image=0x7f0c005f;
         public static final int imageView1=0x7f0c00a0;
+        public static final int import_all=0x7f0c0096;
         public static final int index_entity_types=0x7f0c004e;
         public static final int info=0x7f0c00c0;
         public static final int instant_message=0x7f0c003e;
@@ -2991,7 +2992,6 @@ containing a value of this type.
         public static final int quantity_label=0x7f0c008e;
         public static final int quantity_text=0x7f0c008f;
         public static final int radio=0x7f0c0074;
-        public static final int remove_all=0x7f0c0096;
         public static final int remove_item=0x7f0c00ae;
         public static final int rfc822=0x7f0c004a;
         public static final int right=0x7f0c002a;
