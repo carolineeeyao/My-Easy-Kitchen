@@ -29,9 +29,11 @@ import com.myeasykitchen.myeasykitchen.fragments.GroceryItemMenuFragment;
 import com.myeasykitchen.myeasykitchen.fragments.ItemMenuFragment;
 import com.myeasykitchen.myeasykitchen.models.GroceryItem;
 import com.myeasykitchen.myeasykitchen.models.ItemList;
+import com.myeasykitchen.myeasykitchen.models.KitchenItem;
 import com.myeasykitchen.myeasykitchen.viewholder.GroceryItemViewHolder;
 import com.myeasykitchen.myeasykitchen.viewholder.ItemListViewHolder;
 
+import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.Map;
@@ -129,10 +131,11 @@ public class GroceryActivity extends AppCompatActivity implements GoogleApiClien
             public void onClick(View v) {
                 for(int i: checked.keySet()) {
                     checked.get(i).setChecked(false);
-                    mAdapter.getRef(i).removeValue();
+                    databaseClient.exportToKitchen(mAdapter.getRef(i));
                 }
                 mAdapter.notifyDataSetChanged();
                 checked.clear();
+                Toast.makeText(context, "Items Moved to Kitchen List",Toast.LENGTH_SHORT).show();
             }
         });
 
@@ -144,7 +147,8 @@ public class GroceryActivity extends AppCompatActivity implements GoogleApiClien
 
             @Override
             public void onSwiped(RecyclerView.ViewHolder viewHolder, int swipeDir) {
-                mAdapter.getRef(viewHolder.getAdapterPosition()).removeValue();
+                databaseClient.exportToKitchen(mAdapter.getRef(viewHolder.getAdapterPosition()));
+                Toast.makeText(context, "Item Moved to Kitchen List",Toast.LENGTH_SHORT).show();
             }
         };
 

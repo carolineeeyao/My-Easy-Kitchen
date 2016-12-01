@@ -14,10 +14,13 @@ import com.google.firebase.database.Query;
 import com.google.firebase.database.ValueEventListener;
 import com.myeasykitchen.myeasykitchen.activities.AddGroceryItemActivity;
 import com.myeasykitchen.myeasykitchen.activities.AddKitchenItemActivity;
+import com.myeasykitchen.myeasykitchen.adapters.GroceryItemAdapter;
+import com.myeasykitchen.myeasykitchen.adapters.KitchenItemAdapter;
 import com.myeasykitchen.myeasykitchen.models.GroceryItem;
 import com.myeasykitchen.myeasykitchen.models.Item;
 import com.myeasykitchen.myeasykitchen.models.KitchenItem;
 
+import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.Iterator;
 
@@ -145,5 +148,70 @@ public class DatabaseClient {
 
     public Query getUserGroceryLists() {
         return userListsReference.child(GROCERY_LISTS);
+    }
+
+    public void exportToGrocery(final DatabaseReference itemRef) {
+        DatabaseReference userGroceryLists = userListsReference.child(GROCERY_LISTS);
+        userGroceryLists.addListenerForSingleValueEvent(new ValueEventListener() {
+            @Override
+            public void onDataChange(DataSnapshot dataSnapshot) {
+                Iterator<DataSnapshot> iterator = dataSnapshot.getChildren().iterator();
+                if(iterator.hasNext()) {
+                    final String gList = iterator.next().getKey();
+                    itemRef.addListenerForSingleValueEvent(new ValueEventListener() {
+                        @Override
+                        public void onDataChange(DataSnapshot dataSnapshot) {
+                            KitchenItem item = dataSnapshot.getValue(KitchenItem.class);
+                            addItem(gList, new GroceryItemAdapter(item));
+                            itemRef.removeValue();
+                        }
+
+                        @Override
+                        public void onCancelled(DatabaseError databaseError) {
+
+                        }
+                    });
+
+                }
+            }
+
+            @Override
+            public void onCancelled(DatabaseError databaseError) {
+
+            }
+        });
+    }
+
+    public void exportToKitchen(final DatabaseReference itemRef) {
+        DatabaseReference userKitchenLists = userListsReference.child(KITCHEN_LISTS);
+        userKitchenLists.addListenerForSingleValueEvent(new ValueEventListener() {
+            @Override
+            public void onDataChange(DataSnapshot dataSnapshot) {
+                Iterator<DataSnapshot> iterator = dataSnapshot.getChildren().iterator();
+                if(iterator.hasNext()) {
+                    final String kList = iterator.next().getKey();
+                    itemRef.addListenerForSingleValueEvent(new ValueEventListener() {
+                        @Override
+                        public void onDataChange(DataSnapshot dataSnapshot) {
+                            GroceryItem item = dataSnapshot.getValue(GroceryItem.class);
+                            addItem(kList, new KitchenItemAdapter(item));
+                            itemRef.removeValue();
+
+                        }
+
+                        @Override
+                        public void onCancelled(DatabaseError databaseError) {
+
+                        }
+                    });
+
+                }
+            }
+
+            @Override
+            public void onCancelled(DatabaseError databaseError) {
+
+            }
+        });
     }
 }

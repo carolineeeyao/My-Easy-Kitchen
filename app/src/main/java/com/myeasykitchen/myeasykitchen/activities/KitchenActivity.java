@@ -114,7 +114,8 @@ public class KitchenActivity extends AppCompatActivity implements GoogleApiClien
 
             @Override
             public void onSwiped(RecyclerView.ViewHolder viewHolder, int swipeDir) {
-                mAdapter.getRef(viewHolder.getAdapterPosition()).removeValue();
+                databaseClient.exportToGrocery(mAdapter.getRef(viewHolder.getAdapterPosition()));
+                Toast.makeText(context, "Item Moved to Grocery List",Toast.LENGTH_SHORT).show();
             }
         };
 
