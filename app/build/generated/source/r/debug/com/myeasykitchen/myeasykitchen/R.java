@@ -2874,7 +2874,7 @@ containing a value of this type.
         public static final int activity_grocery=0x7f0c0093;
         public static final int activity_grocery_drawer=0x7f0c0092;
         public static final int activity_grocery_recycler_view=0x7f0c0094;
-        public static final int activity_kitchen=0x7f0c009a;
+        public static final int activity_kitchen_drawer=0x7f0c009a;
         public static final int activity_kitchen_recycler_view=0x7f0c009b;
         public static final int activity_main3=0x7f0c00a2;
         public static final int add=0x7f0c001a;

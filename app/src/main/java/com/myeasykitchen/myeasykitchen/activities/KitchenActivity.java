@@ -200,7 +200,7 @@ public class KitchenActivity extends AppCompatActivity implements GoogleApiClien
 
     @Override
     public void onBackPressed() {
-        DrawerLayout drawerLayout = (DrawerLayout) findViewById(R.id.activity_kitchen);
+        DrawerLayout drawerLayout = (DrawerLayout) findViewById(R.id.activity_kitchen_drawer);
         if (drawerLayout.isDrawerOpen(GravityCompat.START)) {
             drawerLayout.closeDrawer(GravityCompat.START);
         } else {

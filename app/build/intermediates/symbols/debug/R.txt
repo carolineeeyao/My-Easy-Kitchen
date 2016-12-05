@@ -732,7 +732,7 @@ int id activity_chooser_view_content 0x7f0c005d
 int id activity_grocery 0x7f0c0093
 int id activity_grocery_drawer 0x7f0c0092
 int id activity_grocery_recycler_view 0x7f0c0094
-int id activity_kitchen 0x7f0c009a
+int id activity_kitchen_drawer 0x7f0c009a
 int id activity_kitchen_recycler_view 0x7f0c009b
 int id activity_main3 0x7f0c00a2
 int id add 0x7f0c001a
