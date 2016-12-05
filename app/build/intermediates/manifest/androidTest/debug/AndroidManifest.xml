@@ -1,16 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.myeasykitchen.myeasykitchen.test">
+    package="com.myeasykitchen.myeasykitchen.test" >
 
-    <uses-sdk android:minSdkVersion="19" android:targetSdkVersion="23" />
+    <uses-sdk
+        android:minSdkVersion="19"
+        android:targetSdkVersion="23" />
 
-    <application>
+    <instrumentation
+        android:name="android.support.test.runner.AndroidJUnitRunner"
+        android:functionalTest="false"
+        android:handleProfiling="false"
+        android:label="Tests for com.myeasykitchen.myeasykitchen"
+        android:targetPackage="com.myeasykitchen.myeasykitchen" />
+
+    <application android:label="Intents" >
         <uses-library android:name="android.test.runner" />
     </application>
 
-    <instrumentation android:name="android.test.InstrumentationTestRunner"
-                     android:targetPackage="com.myeasykitchen.myeasykitchen"
-                     android:handleProfiling="false"
-                     android:functionalTest="false"
-                     android:label="Tests for com.myeasykitchen.myeasykitchen"/>
 </manifest>

@@ -35,7 +35,7 @@ public abstract class ItemMenuFragment extends DialogFragment {
         View view = inflater.inflate(R.layout.fragment_item_menu, container);
         editItem = (TextView) view.findViewById(R.id.edit_item);
         removeItem = (TextView) view.findViewById(R.id.remove_item);
-        getDialog().setTitle(getArguments().getString(ITEM_ID));
+        getDialog().setTitle(getArguments().getString(ITEM_NAME));
 
         setEditItemListener();
 

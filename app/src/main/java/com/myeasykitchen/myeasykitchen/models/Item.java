@@ -61,11 +61,4 @@ public abstract class Item {
         this.key = key;
     }
 
-    @Exclude
-    public Map<String, Object> toMap() {
-        HashMap<String, Object> result = new HashMap<>();
-        result.put("name", name);
-
-        return result;
-    }
 }
